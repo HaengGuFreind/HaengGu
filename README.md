@@ -21,14 +21,14 @@ So we planned and developed this app to help college students in that situation.
 9. MyPage --> 
 
 ## Development Environment
+
 Android Version</br>
----------</br>
 - minSdkVersion : 26</br>
 - targetSdkVersion : 31</br>
 --------</br>
-- Android Studio @4.2.1</br>
-- Language: Kotlin</br>
-- API: KaKap Login API, Retrofit API, ETC </br>
+Android Studio @4.2.1</br>
+Language: Kotlin</br>
+API: KaKap Login API, Retrofit API, ETC </br>
 </br>
 
 
