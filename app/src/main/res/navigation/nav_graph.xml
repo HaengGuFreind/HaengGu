@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.haenggu.login.LoginActivity"
+        android:label="LoginActivity" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.haenggu.main.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.haenggu.login.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.example.haenggu.login.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment2_to_userIptFragment"
+            app:destination="@id/userIptFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userIptFragment"
+        android:name="com.example.haenggu.login.UserIptFragment"
+        android:label="UserIptFragment" >
+        <action
+            android:id="@+id/action_userIptFragment_to_schoolSearchFragment"
+            app:destination="@id/schoolSearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/schoolSearchFragment"
+        android:name="com.example.haenggu.login.SchoolSearchFragment"
+        android:label="SchoolSearchFragment" >
+        <action
+            android:id="@+id/action_schoolSearchFragment_to_userIptFragment"
+            app:destination="@id/userIptFragment" />
+    </fragment>
+</navigation>

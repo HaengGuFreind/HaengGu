@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:layout_width="match_parent"
+                android:layout_height="140dp"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/activity_main_imgvnothumbnail"></Button>
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/fragment_mainNewevent1_tbTitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "2021년 디자인 살롱 서울 컨퍼런스"></TextView>
+                <TextView
+                    android:id="@+id/fragment_mainNewevent1_tbBody1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "디자인 및 소비자 트렌드 인사이트를 얻을 수 있는 디자인살롱 서울 컨퍼런스"></TextView>
+                <TextView
+                    android:id="@+id/fragment_mainNewevent1_tbDate1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "2021.12.9-2021.12.10"></TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/activity_main_imgvnothumbnail"></Button>
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/fragment_mainNewevent1_tbTitle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "2021년 디자인 살롱 서울 컨퍼런스"></TextView>
+                <TextView
+                    android:id="@+id/fragment_mainNewevent1_tbBody2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "디자인 및 소비자 트렌드 인사이트를 얻을 수 있는 디자인살롱 서울 컨퍼런스"></TextView>
+                <TextView
+                    android:id="@+id/fragment_mainNewevent1_tbDate2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "2021.12.9-2021.12.10"></TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/activity_main_imgvnothumbnail"></Button>
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/fragment_mainNewevent1_tbTitle3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "2021년 디자인 살롱 서울 컨퍼런스"></TextView>
+                <TextView
+                    android:id="@+id/fragment_mainNewevent1_tbBody3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "디자인 및 소비자 트렌드 인사이트를 얻을 수 있는 디자인살롱 서울 컨퍼런스"></TextView>
+                <TextView
+                    android:id="@+id/fragment_mainNewevent1_tbDate3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "2021.12.9-2021.12.10"></TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
