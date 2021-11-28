@@ -8,7 +8,7 @@ Under this terrible covid circumstance, Many Korean College students are felt sc
 Especially, You can find the many students worry about their school life(such like meeting friends, getting information for the preparation about job search, etc)
 So we planned and developed this app to help college students in that situation.
 
-## UI
+<!-- ## UI
 1. Splash <br />
 <img src = "" width="30%" height="70%"><br />
 <!-- 2. Main <br/>
@@ -18,19 +18,17 @@ So we planned and developed this app to help college students in that situation.
 6. Chat
 7. ChatList
 8. Profile
-9. MyPage -->
+9. MyPage --> 
 
 ## Development Environment
 Android Version</br>
 ---------</br>
 - minSdkVersion : 26</br>
 - targetSdkVersion : 31</br>
-</br>
 --------</br>
 - Android Studio @4.2.1</br>
-- Labguage: Kotlin, 
-- API: KaKap Login API2, Retrofit 
-- OpenSource: 
+- Language: Kotlin</br>
+- API: KaKap Login API, Retrofit API, ETC </br>
 </br>
 
 
