@@ -1,2 +1,2 @@
 # HaengGu
-This is an App for  college students to get an event information(ex. college club seminar) and to find a companion
+This is a branch for login of the haenggu app
