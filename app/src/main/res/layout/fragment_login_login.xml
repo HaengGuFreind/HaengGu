@@ -1,22 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-    <Button
+    android:id="@+id/fragment_login_login"
+    android:background="@drawable/fragment_login_login">
+
+    <ImageButton
         android:id="@+id/fragment_login_btnKakaoLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="224dp"
-        android:background="@drawable/fragment_login_btnkakaologin"
+        android:layout_width="302dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="134dp"
+        android:scaleType="center"
+        android:src="@drawable/fragment_login_btnkakaologin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="SpeakableTextPresentCheck"></ImageButton>
+
+    <Button
+        android:id="@+id/fragment_login_nomember"
+        android:layout_width="259dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="89dp"
+        android:background="#00FFFFFF"
+        android:fontFamily="@font/notosanskr_regular"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="회원가입 없이 둘러보기"
+        android:textColor="#000000"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
-    ">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
-
-    <!--  //회원가입 없이 둘러보기 버튼  <Button-->
-    <!--        android:id=>-->
 </androidx.constraintlayout.widget.ConstraintLayout>
