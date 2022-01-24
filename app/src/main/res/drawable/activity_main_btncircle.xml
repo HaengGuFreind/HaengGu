@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/activity_main_iconbtncircle"
+        android:width="41dp"
+        android:height="32.63dp"
+        ></item>
+</layer-list>

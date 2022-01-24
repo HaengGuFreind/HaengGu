@@ -1,29 +1,3 @@
 <resources>
-    <string name="app_name">haenggu</string>
-
-    <string-array name="grade_spinner">
-        <item>1학년</item>
-        <item>2학년</item>
-        <item>3학년</item>
-        <item>4학년</item>
-        <item>졸업예전</item>
-    </string-array>
-    <string-array name="mbti_spinner">
-        <item>ISTJ</item>
-        <item>ISFJ</item>
-        <item>INFJ</item>
-        <item>INTJ</item>
-        <item>ISTP</item>
-        <item>ISFP</item>
-        <item>INFP</item>
-        <item>INTP</item>
-        <item>ESTP</item>
-        <item>ESFP</item>
-        <item>ENFP</item>
-        <item>ENTP</item>
-        <item>ESTJ</item>
-        <item>ESFJ</item>
-        <item>ENFJ</item>
-        <item>ENTJ</item>
-    </string-array>
+    <string name="app_name">HaengGu</string>
 </resources>
