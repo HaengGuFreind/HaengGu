@@ -8,26 +8,39 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbars="none"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
 
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/activity_main_ViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="173dp"
+                app:layout_constraintBottom_toTopOf="@+id/activity_main_iconaccompany"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"></androidx.viewpager2.widget.ViewPager2>
 
             <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
                 android:id="@+id/activity_main_dots_indicator"
-                android:layout_width="match_parent"
-                android:layout_height="173dp"
+                android:layout_width="wrap_content"
+                android:layout_height="6dp"
                 app:dotsColor="#C4C4C4"
                 app:dotsCornerRadius="8dp"
                 app:dotsSize="6dp"
                 app:dotsSpacing="5.16dp"
                 app:dotsWidthFactor="2.5"
-                app:layout_constraintBottom_toTopOf="@+id/activity_main_iconaccompany"
+                app:layout_constraintBottom_toTopOf="@+id/activity_main_ViewPager"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -236,41 +249,46 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="20.68dp"
                 android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/imageView2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewCutomEvents"
-                app:layout_constraintBottom_toTopOf="@+id/imageView2">
+                app:layout_constraintTop_toBottomOf="@+id/textViewCutomEvents">
 
-                <androidx.cardview.widget.CardView
-                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/card_view"
-                    android:layout_width="130dp"
-                    android:layout_gravity="center"
-                    android:layout_height="match_parent">
-                    <Button
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"></Button>
-                    <TextView
-                        android:layout_marginTop="6.32dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content"
-                        android:text="청친강소 온라인 채용 설명회"
-                        android:textColor="#000000"
-                        android:fontFamily="@font/notosanskr_regular"></TextView>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="130dp"
-                    android:layout_height="match_parent"></androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="130dp"
-                    android:layout_height="match_parent"></androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="130dp"
-                    android:layout_height="match_parent"></androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="130dp"
-                    android:layout_height="match_parent"></androidx.cardview.widget.CardView>
+<!--                <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"-->
+<!--                    android:id="@+id/card_view"-->
+<!--                    android:layout_width="130dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_gravity="center">-->
+
+<!--                    <Button-->
+<!--                        android:layout_width="130dp"-->
+<!--                        android:layout_height="130dp"></Button>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="120dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="6.32dp"-->
+<!--                        android:layout_marginBottom="8dp"-->
+<!--                        android:fontFamily="@font/notosanskr_regular"-->
+<!--                        android:text="청친강소 온라인 채용 설명회"-->
+<!--                        android:textColor="#000000"></TextView>-->
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="130dp"-->
+<!--                    android:layout_height="match_parent"></androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="130dp"-->
+<!--                    android:layout_height="match_parent"></androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="130dp"-->
+<!--                    android:layout_height="match_parent"></androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="130dp"-->
+<!--                    android:layout_height="match_parent"></androidx.cardview.widget.CardView>-->
 
             </ScrollView>
 
@@ -280,10 +298,10 @@
                 android:layout_height="8dp"
                 android:layout_marginTop="29dp"
                 android:background="#F2F2F2"
+                app:layout_constraintBottom_toTopOf="@+id/textViewRegionEvents"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/scrollView"
-                app:layout_constraintBottom_toTopOf="@+id/textViewRegionEvents"></ImageView>
+                app:layout_constraintTop_toBottomOf="@+id/scrollView"></ImageView>
 
             <TextView
                 android:id="@+id/textViewRegionEvents"
@@ -309,55 +327,54 @@
                 android:layout_marginTop="20.32dp"
                 android:orientation="horizontal"
                 android:weightSum="4"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout_Region2"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewRegionEvents"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout_Region2">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewRegionEvents">
 
                 <Button
                     android:id="@+id/activity_main_btnSeoul"
-                    android:textColor="#0D0D0D"
-                    android:text="서울"
-                    android:textSize="14.4sp"
-                    android:fontFamily="@font/notosanskr_regular"
-                    android:background="@drawable/gray_stroke_whitebutton"
-                    android:layout_height="match_parent"
                     android:layout_width="match_parent"
-                    android:layout_weight="1">
-                </Button>
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/gray_stroke_whitebutton"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:text="서울"
+                    android:textColor="#0D0D0D"
+                    android:textSize="14.4sp"></Button>
+
                 <Button
                     android:id="@+id/activity_main_btnGyeonggi"
-                    android:textColor="#0D0D0D"
-                    android:text="경기"
-                    android:textSize="14.4sp"
-                    android:fontFamily="@font/notosanskr_regular"
-                    android:background="@drawable/gray_stroke_whitebutton"
-                    android:layout_height="match_parent"
                     android:layout_width="match_parent"
-                    android:layout_weight="1">
-                </Button>
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/gray_stroke_whitebutton"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:text="경기"
+                    android:textColor="#0D0D0D"
+                    android:textSize="14.4sp"></Button>
+
                 <Button
                     android:id="@+id/activity_main_btnGangwon"
-                    android:textColor="#0D0D0D"
-                    android:text="강원"
-                    android:textSize="14.4sp"
-                    android:fontFamily="@font/notosanskr_regular"
-                    android:background="@drawable/gray_stroke_whitebutton"
-                    android:layout_height="match_parent"
                     android:layout_width="match_parent"
-                    android:layout_weight="1">
-                </Button>
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/gray_stroke_whitebutton"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:text="강원"
+                    android:textColor="#0D0D0D"
+                    android:textSize="14.4sp"></Button>
+
                 <Button
                     android:id="@+id/activity_main_btnChungcheong"
-                    android:textColor="#0D0D0D"
-                    android:text="충청"
-                    android:textSize="14.4sp"
-                    android:fontFamily="@font/notosanskr_regular"
-                    android:background="@drawable/gray_stroke_whitebutton"
-                    android:layout_height="match_parent"
                     android:layout_width="match_parent"
-                    android:layout_weight="1">
-                </Button>
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/gray_stroke_whitebutton"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:text="충청"
+                    android:textColor="#0D0D0D"
+                    android:textSize="14.4sp"></Button>
 
             </LinearLayout>
 
@@ -367,55 +384,54 @@
                 android:layout_height="40.32dp"
                 android:orientation="horizontal"
                 android:weightSum="4"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/imageView3"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout_Region1"
-                app:layout_constraintBottom_toTopOf="@+id/imageView3">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout_Region1">
 
                 <Button
                     android:id="@+id/activity_main_btnJeolla"
-                    android:textColor="#0D0D0D"
-                    android:text="전라"
-                    android:textSize="14.4sp"
-                    android:fontFamily="@font/notosanskr_regular"
-                    android:background="@drawable/gray_stroke_whitebutton"
-                    android:layout_height="match_parent"
                     android:layout_width="match_parent"
-                    android:layout_weight="1">
-                </Button>
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/gray_stroke_whitebutton"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:text="전라"
+                    android:textColor="#0D0D0D"
+                    android:textSize="14.4sp"></Button>
+
                 <Button
                     android:id="@+id/activity_main_btnGyeongsang"
-                    android:textColor="#0D0D0D"
-                    android:text="경상"
-                    android:textSize="14.4sp"
-                    android:fontFamily="@font/notosanskr_regular"
-                    android:background="@drawable/gray_stroke_whitebutton"
-                    android:layout_height="match_parent"
                     android:layout_width="match_parent"
-                    android:layout_weight="1">
-                </Button>
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/gray_stroke_whitebutton"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:text="경상"
+                    android:textColor="#0D0D0D"
+                    android:textSize="14.4sp"></Button>
+
                 <Button
                     android:id="@+id/activity_main_btnJeju"
-                    android:textColor="#0D0D0D"
-                    android:text="제주"
-                    android:textSize="14.4sp"
-                    android:fontFamily="@font/notosanskr_regular"
-                    android:background="@drawable/gray_stroke_whitebutton"
-                    android:layout_height="match_parent"
                     android:layout_width="match_parent"
-                    android:layout_weight="1">
-                </Button>
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/gray_stroke_whitebutton"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:text="제주"
+                    android:textColor="#0D0D0D"
+                    android:textSize="14.4sp"></Button>
+
                 <Button
                     android:id="@+id/activity_main_btnAllRegion"
-                    android:textColor="#0D0D0D"
-                    android:text="전체보기"
-                    android:textSize="14.4sp"
-                    android:fontFamily="@font/notosanskr_regular"
-                    android:background="@drawable/gray_stroke_whitebutton"
-                    android:layout_height="match_parent"
                     android:layout_width="match_parent"
-                    android:layout_weight="1">
-                </Button>
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/gray_stroke_whitebutton"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:text="전체보기"
+                    android:textColor="#0D0D0D"
+                    android:textSize="14.4sp"></Button>
 
             </LinearLayout>
 
@@ -430,22 +446,22 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout_Region2"></ImageView>
 
 
-            <TextView
-                android:id="@+id/textViewNewEvents"
-                android:layout_width="121dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="14dp"
-                android:layout_marginTop="25dp"
-                android:fontFamily="@font/notosanskr_bold"
-                android:includeFontPadding="false"
-                android:text="새로운 행사"
-                android:textColor="#383838"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView3"></TextView>
+            <!--            <TextView-->
+            <!--                android:id="@+id/textViewNewEvents"-->
+            <!--                android:layout_width="121dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="14dp"-->
+            <!--                android:layout_marginTop="25dp"-->
+            <!--                android:fontFamily="@font/notosanskr_bold"-->
+            <!--                android:includeFontPadding="false"-->
+            <!--                android:text="새로운 행사"-->
+            <!--                android:textColor="#383838"-->
+            <!--                android:textSize="20sp"-->
+            <!--                app:layout_constraintBottom_toTopOf="@+id/"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintHorizontal_bias="0.0"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/imageView3"></TextView>-->
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
