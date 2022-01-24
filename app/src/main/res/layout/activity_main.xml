@@ -24,27 +24,29 @@
                 android:id="@+id/activity_main_ViewPager"
                 android:layout_width="match_parent"
                 android:layout_height="173dp"
-                app:layout_constraintBottom_toTopOf="@+id/activity_main_iconaccompany"
+                app:layout_constraintBottom_toTopOf="@+id/activity_main_dots_indicator"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"></androidx.viewpager2.widget.ViewPager2>
+                app:layout_constraintVertical_bias="0.0">
+            </androidx.viewpager2.widget.ViewPager2>
 
             <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
                 android:id="@+id/activity_main_dots_indicator"
                 android:layout_width="wrap_content"
                 android:layout_height="6dp"
+                android:layout_marginTop="9dp"
                 app:dotsColor="#C4C4C4"
                 app:dotsCornerRadius="8dp"
                 app:dotsSize="6dp"
                 app:dotsSpacing="5.16dp"
                 app:dotsWidthFactor="2.5"
-                app:layout_constraintBottom_toTopOf="@+id/activity_main_ViewPager"
+                app:layout_constraintBottom_toTopOf="@+id/activity_main_iconaccompany"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_main_ViewPager"
                 app:layout_constraintVertical_bias="0.0"
                 app:progressMode="true"
                 app:selectedDotColor="#FF7171" />
@@ -54,7 +56,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="102dp"
                 android:layout_marginStart="15dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginEnd="15dp"
                 android:background="@drawable/activity_main_iconaccompany"
                 app:layout_constraintBottom_toTopOf="@+id/textViewCategory"
