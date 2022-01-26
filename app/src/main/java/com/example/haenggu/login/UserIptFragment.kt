@@ -23,6 +23,7 @@ class UserIptFragment : Fragment(){
     var count_region:Int = 0
     var events: ArrayList<String> = arrayListOf<String>("", "", "")
     var regions: ArrayList<String> = arrayListOf<String>("", "", "")
+    var school = arguments?.getString("schoolname")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,7 +42,6 @@ class UserIptFragment : Fragment(){
         var gender:String = ""
         var nickname:String = ""
         var birth:String = ""
-        var school:String = ""
         var major:String = ""
         var grade:String = ""
         var mbti:String = ""
@@ -92,7 +92,7 @@ class UserIptFragment : Fragment(){
                     major = major,
                     mbti = mbti,
                     nickname = nickname,
-                    school = school
+                    school = school!!
                 )
 
                 // LoginActivity에 JSON 보내서 Presenter에서 처리하게 하기

@@ -21,16 +21,16 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginStart="15dp"
         android:layout_marginBottom="92dp"
+        android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -56,26 +56,25 @@
                 android:layout_width="313dp"
                 android:layout_height="41dp"
                 android:layout_marginTop="11dp"
-                android:fontFamily="@font/notosanskr_regular"
-                android:text="관심사에 맞는 행사 추천과 구인 글 작성을 위해 몇 가지\n간단한 정보를 입력해 주세요. "
-                android:textSize="14sp"
                 android:bufferType="spannable"
-                android:includeFontPadding="false"/>
+                android:fontFamily="@font/notosanskr_regular"
+                android:includeFontPadding="false"
+                android:text="관심사에 맞는 행사 추천과 구인 글 작성을 위해 몇 가지\n간단한 정보를 입력해 주세요. "
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="70dp"
+                android:layout_width="49dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="11dp"
                 android:layout_marginTop="50dp"
+                android:drawableEnd="@drawable/ic_icon_star"
                 android:drawablePadding="3dp"
                 android:fontFamily="@font/notosanskr_bold"
-                android:gravity="center_vertical"
                 android:includeFontPadding="false"
                 android:text="닉네임"
                 android:textColor="@color/black"
-                android:textSize="14sp"
-                app:drawableEndCompat="@drawable/drawable_icon_star" />
+                android:textSize="14sp" />
 
             <EditText
                 android:id="@+id/fragment_useript_etNickname"
@@ -85,15 +84,16 @@
                 android:background="@drawable/gray_button"
                 android:ems="10"
                 android:fontFamily="@font/notosanskr_regular"
+                android:hint="한글 최대 8자, 영문 10자"
+                android:includeFontPadding="false"
                 android:inputType="textPersonName"
                 android:paddingLeft="15dp"
                 android:paddingTop="13dp"
                 android:paddingBottom="15dp"
-                android:hint="한글 최대 8자, 영문 10자"
                 android:textColor="#949494"
                 android:textSize="14sp"
-                tools:ignore="TouchTargetSizeCheck"
-                android:includeFontPadding="false"/>
+                tools:ignore="TouchTargetSizeCheck" />
+            <!--보고 1.width 관련-->
 
             <TextView
                 android:id="@+id/textView4"
@@ -101,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="11dp"
                 android:layout_marginTop="19dp"
-                android:drawableRight="@drawable/icon_star"
+                android:drawableRight="@drawable/ic_icon_star"
                 android:drawablePadding="3dp"
                 android:fontFamily="@font/notosanskr_bold"
                 android:includeFontPadding="false"
@@ -119,30 +119,30 @@
                     android:id="@+id/fragment_useript_btnMan"
                     android:layout_width="157.37dp"
                     android:layout_height="43dp"
-                    android:gravity="center"
                     android:layout_weight="1"
+                    android:background="@drawable/gray_button"
                     android:fontFamily="@font/notosanskr_regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
                     android:text="남성"
                     android:textColor="@color/black"
                     android:textSize="14.31sp"
-                    android:background="@drawable/gray_button"
-                    tools:ignore="TouchTargetSizeCheck"
-                    android:includeFontPadding="false"/>
+                    tools:ignore="TouchTargetSizeCheck" />
 
                 <Button
                     android:id="@+id/fragment_useript_btnWoman"
                     android:layout_width="157.37dp"
                     android:layout_height="43dp"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/notosanskr_regular"
-                    android:text="여성"
                     android:layout_marginLeft="15.26dp"
-                    android:textSize="14.31sp"
+                    android:layout_weight="1"
                     android:background="@drawable/gray_button"
-                    tools:ignore="TouchTargetSizeCheck"
-                    android:includeFontPadding="false"/>
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="여성"
+                    android:textColor="@color/black"
+                    android:textSize="14.31sp"
+                    tools:ignore="TouchTargetSizeCheck" />
             </LinearLayout>
 
             <TextView
@@ -158,14 +158,14 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:layout_marginTop="12dp"
                 android:id="@+id/fragment_useript_edtBirth"
                 android:layout_width="330dp"
                 android:layout_height="43dp"
+                android:layout_marginTop="12dp"
                 android:background="@drawable/gray_button"
                 android:ems="4"
-                android:inputType="number"
                 android:includeFontPadding="false"
+                android:inputType="number"
                 tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
             <TextView
@@ -186,7 +186,8 @@
                 android:layout_height="43dp"
                 android:layout_marginTop="12dp"
                 android:background="@drawable/gray_button"
-                android:drawableEnd="@drawable/icon_search"
+                android:drawableEnd="@drawable/ic_icon_search"
+                android:paddingRight="13dp"
                 android:fontFamily="@font/notosanskr_regular"
                 android:gravity="center|left"
                 android:includeFontPadding="false"
@@ -201,11 +202,12 @@
                 android:layout_height="43dp"
                 android:layout_marginTop="12dp"
                 android:background="@drawable/gray_button"
-                android:drawableEnd="@drawable/icon_search"
+                android:drawableEnd="@drawable/ic_icon_search"
                 android:fontFamily="@font/notosanskr_regular"
                 android:gravity="center|left"
                 android:includeFontPadding="false"
                 android:paddingLeft="15dp"
+                android:paddingRight="13dp"
                 android:text="학과 검색"
                 android:textColor="#949494"
                 tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
@@ -272,10 +274,10 @@
                 android:layout_height="16dp"
                 android:layout_marginTop="11dp"
                 android:fontFamily="@font/notosanskr_regular"
+                android:includeFontPadding="false"
                 android:text="선택한 카테고리와 지역에 따라 맞춤 행사 기능이 제공됩니다."
                 android:textColor="#797979"
-                android:textSize="12.5sp"
-                android:includeFontPadding="false"/>
+                android:textSize="12.5sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -283,24 +285,25 @@
                 android:layout_marginTop="15dp"
                 android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/fragment_useript_btnEvent1"
-                android:layout_width="90dp"
-                android:layout_height="32dp"
-                android:background="@drawable/solid_button"
-                android:fontFamily="@font/notosanskr_regular"
-                android:includeFontPadding="false"
-                android:minWidth="0dp"
-                android:minHeight="0dp"
-                android:text="동아리 행사"
-                android:textColor="@color/haenggu_main"
-                android:textSize="14sp"
-                tools:ignore="TouchTargetSizeCheck"></Button>
+                <Button
+                    android:id="@+id/fragment_useript_btnEvent1"
+                    android:layout_width="90dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/solid_button"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:includeFontPadding="false"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:text="동아리 행사"
+                    android:textColor="@color/haenggu_main"
+                    android:textSize="14sp"
+                    tools:ignore="TouchTargetSizeCheck"></Button>
 
                 <Button
                     android:id="@+id/fragment_useript_btnEvent2"
                     android:layout_width="61dp"
                     android:layout_height="32dp"
+                    android:layout_marginLeft="7dp"
                     android:background="@drawable/solid_button"
                     android:fontFamily="@font/notosanskr_regular"
                     android:includeFontPadding="false"
@@ -309,13 +312,13 @@
                     android:text="박람회"
                     android:textColor="@color/haenggu_main"
                     android:textSize="14sp"
-                    tools:ignore="TouchTargetSizeCheck"
-                    android:layout_marginLeft="7dp"></Button>
+                    tools:ignore="TouchTargetSizeCheck"></Button>
 
                 <Button
                     android:id="@+id/fragment_useript_btnEvent3"
                     android:layout_width="74dp"
                     android:layout_height="32dp"
+                    android:layout_marginLeft="7dp"
                     android:background="@drawable/solid_button"
                     android:fontFamily="@font/notosanskr_regular"
                     android:includeFontPadding="false"
@@ -324,8 +327,7 @@
                     android:text="컨퍼런스"
                     android:textColor="@color/haenggu_main"
                     android:textSize="14sp"
-                    tools:ignore="TouchTargetSizeCheck"
-                    android:layout_marginLeft="7dp"></Button>
+                    tools:ignore="TouchTargetSizeCheck"></Button>
 
                 <Button
                     android:id="@+id/fragment_useript_btnEvent4"
@@ -369,6 +371,7 @@
                     android:id="@+id/fragment_useript_btnEvent6"
                     android:layout_width="61dp"
                     android:layout_height="32dp"
+                    android:layout_marginLeft="7dp"
                     android:background="@drawable/solid_button"
                     android:fontFamily="@font/notosanskr_regular"
                     android:includeFontPadding="false"
@@ -377,13 +380,13 @@
                     android:text="콘서트"
                     android:textColor="@color/haenggu_main"
                     android:textSize="14sp"
-                    tools:ignore="TouchTargetSizeCheck"
-                    android:layout_marginLeft="7dp"></Button>
+                    tools:ignore="TouchTargetSizeCheck"></Button>
 
                 <Button
                     android:id="@+id/fragment_useript_btnEvent7"
                     android:layout_width="92dp"
                     android:layout_height="32dp"
+                    android:layout_marginLeft="7dp"
                     android:background="@drawable/solid_button"
                     android:fontFamily="@font/notosanskr_regular"
                     android:includeFontPadding="false"
@@ -392,8 +395,7 @@
                     android:text="연극/뮤지컬"
                     android:textColor="@color/haenggu_main"
                     android:textSize="14sp"
-                    tools:ignore="TouchTargetSizeCheck"
-                    android:layout_marginLeft="7dp"></Button>
+                    tools:ignore="TouchTargetSizeCheck"></Button>
 
                 <Button
                     android:id="@+id/fragment_useript_btnEvent8"
@@ -449,6 +451,7 @@
                     android:id="@+id/fragment_useript_btnRegion2"
                     android:layout_width="48dp"
                     android:layout_height="32dp"
+                    android:layout_marginLeft="7dp"
                     android:background="@drawable/solid_button"
                     android:fontFamily="@font/notosanskr_regular"
                     android:includeFontPadding="false"
@@ -457,13 +460,13 @@
                     android:text="경기"
                     android:textColor="@color/haenggu_main"
                     android:textSize="14sp"
-                    tools:ignore="TouchTargetSizeCheck"
-                    android:layout_marginLeft="7dp"></Button>
+                    tools:ignore="TouchTargetSizeCheck"></Button>
 
                 <Button
                     android:id="@+id/fragment_useript_btnRegion3"
                     android:layout_width="48dp"
                     android:layout_height="32dp"
+                    android:layout_marginLeft="7dp"
                     android:background="@drawable/solid_button"
                     android:fontFamily="@font/notosanskr_regular"
                     android:includeFontPadding="false"
@@ -472,8 +475,7 @@
                     android:text="충청"
                     android:textColor="@color/haenggu_main"
                     android:textSize="14sp"
-                    tools:ignore="TouchTargetSizeCheck"
-                    android:layout_marginLeft="7dp"></Button>
+                    tools:ignore="TouchTargetSizeCheck"></Button>
 
                 <Button
                     android:id="@+id/fragment_useript_btnRegion4"
@@ -531,16 +533,16 @@
                     android:id="@+id/fragment_useript_btnRegion7"
                     android:layout_width="48dp"
                     android:layout_height="32dp"
+                    android:layout_marginLeft="7dp"
                     android:background="@drawable/solid_button"
                     android:fontFamily="@font/notosanskr_regular"
                     android:includeFontPadding="false"
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:text="제주"
-                   android:textColor="@color/haenggu_main"
+                    android:textColor="@color/haenggu_main"
                     android:textSize="14sp"
-                    tools:ignore="TouchTargetSizeCheck"
-                    android:layout_marginLeft="7dp"></Button>
+                    tools:ignore="TouchTargetSizeCheck"></Button>
             </LinearLayout>
 
         </LinearLayout>
@@ -550,6 +552,7 @@
         android:id="@+id/fragment_useript_btnStore"
         android:layout_width="match_parent"
         android:layout_height="77dp"
+        android:layout_marginTop="15dp"
         android:background="@color/haenggu_main"
         android:fontFamily="@font/notosanskr_bold"
         android:text="완료"
@@ -558,6 +561,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toButtomOf="@+id/scrollView2"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
         tools:ignore="TextContrastCheck,TextContrastCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

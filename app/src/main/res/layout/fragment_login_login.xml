@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/fragment_login_login"
-    android:background="@drawable/fragment_login_login">
+    android:background="@drawable/ic_fragment_login_login">
 
     <ImageButton
         android:id="@+id/fragment_login_btnKakaoLogin"

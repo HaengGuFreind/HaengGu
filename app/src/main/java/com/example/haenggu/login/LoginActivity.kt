@@ -63,7 +63,7 @@ class LoginActivity : AppCompatActivity(), LoginContract.LoginView {
                 transaction.replace(R.id.fragment_login_login,LoginFragment()).commit()
             }
             2->{
-                transaction.replace(R.id.fragment_login_useript,UserIptFragment()).commit()
+                transaction.replace(R.id.fragment_login_useript,UserIptFragment()).addToBackStack(null).commit()
             }
 //            3->{
 //                transaction.replace(R.id.nav_host_fragment_login,SchoolSearchFragment()).commit()
