@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="grade">
+        <item> 1학년 </item>
+        <item> 2학년 </item>
+        <item> 3학년 </item>
+        <item> 4학년 </item>
+    </string-array>
+
+    <string-array name="mbti">
+        <item> ISTJ </item>
+        <item> ISFJ </item>
+        <item> ISTP </item>
+        <item> ISFP </item>
+        <item> INFJ </item>
+        <item> INTJ </item>
+        <item> INFP </item>
+        <item> INTP </item>
+        <item> ESTP </item>
+        <item> ESFP </item>
+        <item> ESTJ </item>
+        <item> ESFJ </item>
+        <item> ENFP </item>
+        <item> ENTP </item>
+        <item> ENFJ </item>
+        <item> ENTJ </item>
+    </string-array>
+</resources>

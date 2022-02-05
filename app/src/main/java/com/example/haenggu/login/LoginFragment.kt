@@ -5,27 +5,32 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
-import com.example.haenggu.R
-import kotlinx.android.synthetic.main.fragment_login_login.*
+import com.example.haenggu.databinding.FragmentLoginLoginBinding
+import com.example.haenggu.databinding.FragmentLoginSplashBinding
 
-class LoginFragment : Fragment() {
-    lateinit var navController : NavController
+class LoginFragment: Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login_login, container, false)
+    private var _binding: FragmentLoginLoginBinding? = null
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentLoginLoginBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        navController = Navigation.findNavController(view)
-        fragment_login_btnKakaoLogin.setOnClickListener{
+        binding.fragmentLoginBtnKakaoLogin.setOnClickListener {
             val lActivity = activity as LoginActivity
             lActivity.clickKaKaoLogin()
         }
-
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
