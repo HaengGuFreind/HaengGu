@@ -1,15 +1,15 @@
-package com.example.haenggu
+package com.example.haenggu.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import com.kakao.sdk.common.util.Utility
+import com.example.haenggu.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val keyHash = Utility.getKeyHash(this)
-        Log.d("Hash", keyHash)
+
+        //activity_main_vp.adapter = MainPagerAdapter(supportFragmentManager)
+        //activity_main_vp.offscreenPageLimit = 2;
     }
 }
