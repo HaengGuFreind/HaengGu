@@ -32,6 +32,16 @@
         <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/list_mainactivity_advertisementimg.xml" value="0.2672239108409321" />
         <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.32205128205128203" />
         <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/mipmap-anydpi-v26/ic_haengGu.xml" value="0.34322916666666664" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/activity_login.xml" value="0.18229166666666666" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_chat.xml" value="0.21875" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_home.xml" value="0.21875" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_login_login.xml" value="0.18229166666666666" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_login_searchschool.xml" value="0.18229166666666666" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_login_splash.xml" value="0.18229166666666666" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_login_useript.xml" value="0.18229166666666666" />
+        <entry key="..\:/HaengGu/app/src/main/res/menu/main_bottomnavigation.xml" value="0.18229166666666666" />
+        <entry key="..\:/HaengGu/app/src/main/res/menu/toolbar_menu.xml" value="0.18229166666666666" />
       </map>
     </option>
   </component>
