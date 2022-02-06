@@ -20,7 +20,6 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            app:src="@drawable/ic_icon_backstep"
             android:layout_gravity="center|left"
             android:id="@+id/fragment_searchschool_btnbackstep"></ImageView>
         <TextView
