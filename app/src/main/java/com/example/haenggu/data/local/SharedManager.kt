@@ -5,7 +5,7 @@ import android.content.SharedPreferences
 import com.example.haenggu.data.local.PreferenceHelper.set
 import com.example.haenggu.data.local.PreferenceHelper.get
 
-class SharedManager (context: Context) {
+class SharedManager(context: Context) {
 
     private val prefs: SharedPreferences = PreferenceHelper.defaultPrefs(context)
 

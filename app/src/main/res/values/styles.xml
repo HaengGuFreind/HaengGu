@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <style name="ActivityMain_TitleStyle">
-        <item name="android:textSize">20dp</item>
-        <item name="android:textColor">#FF000000</item>
-    </style>
-
-    <style name="ActivityMain_CategoryStyle">
-        <item name="android:text"></item>
-        <item name="android:textSize">10dp</item>
-        <item name="android:textColor">#FF000000</item>
-        <item name="android:textAlignment">center</item>
-    </style>
-    <style name="ActivityMain_TumbNailStyle">
-        <item name="android:textSize">10dp</item>
-        <item name="android:textColor">#FF000000</item>
-        <item name="android:textAlignment">center</item>
+    <style name="Widget.BottomNavigationView"
+        parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/notosanskr_medium</item>
+        <item name="android:textSize">9.5dp</item>
     </style>
 </resources>

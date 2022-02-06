@@ -59,5 +59,3 @@ Android Studio @4.2.1</br>
 Language: Kotlin</br>
 API: KaKap Login API, Retrofit API, ETC </br>
 </br>
-
-
