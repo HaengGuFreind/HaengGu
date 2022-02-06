@@ -4,6 +4,8 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -114,13 +116,19 @@ class UserIptFragment : Fragment(){
             binding.fragmentUseriptBtnMan.setTextColor(949494)
         }
 
+        binding.fragmentUseriptEdtBirth.addTextChangedListener(watcherListener )
+
         binding.fragmentUseriptBtnSchool.setOnClickListener {
 //            Intent
 //
 //            school =
+            binding.fragmentUseriptBtnSchool.setBackgroundResource(R.drawable.gray_stroke_button)
+
         }
 
         binding.fragmentUseriptBtnSMajor.setOnClickListener {
+
+            binding.fragmentUseriptBtnSMajor.setBackgroundResource(R.drawable.gray_stroke_button)
 
         }
 
@@ -215,6 +223,7 @@ class UserIptFragment : Fragment(){
                     16 -> {
                         mbti = "ENTJ"
                     }
+
 
                 }
             }
@@ -426,6 +435,26 @@ class UserIptFragment : Fragment(){
             count_region = (count_region + 1) % 3
         }
 
+    }
+
+    val watcherListener = object : TextWatcher {
+
+        // 문자열 변경 전
+        override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+        }
+
+        // 문자열 변경 직후
+        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+        }
+
+        // 문자열 변경 완료 ( 화면에 반영)
+        override fun afterTextChanged(s: Editable?) {
+            if (s != null){
+                binding.fragmentUseriptEdtBirth.setBackgroundResource(R.drawable.gray_stroke_button)
+            }else{
+                binding.fragmentUseriptEdtBirth.setBackgroundResource(R.drawable.gray_button)
+            }
+        }
     }
 
     fun isValidNickname_Korea(nickname: String?): Boolean {

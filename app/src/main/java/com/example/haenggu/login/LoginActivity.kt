@@ -24,7 +24,11 @@ class LoginActivity : AppCompatActivity(), LoginContract.LoginView {
 //        supportActionBar?.setDisplayShowTitleEnabled(false) //액션바에 표시되는 제목의 표시유무를 설정합니다. false로 해야 custom한 툴바의 이름이 화면에 보이게 됩니다.
 
         setFrag(0)
-        presenter!!.isLogin(applicationContext)
+        if (presenter != null){
+            presenter!!.isLogin(applicationContext)
+        }else{
+            setFrag(1)
+        }
 
 
     }
@@ -57,19 +61,18 @@ class LoginActivity : AppCompatActivity(), LoginContract.LoginView {
         when(fragNum)
         {
             0->{
-                transaction.add(R.id.fragment_login_splash,SplashFragment())
+                transaction.add(R.id.frameLayout_loginactivity,SplashFragment())
             }
             1->{
-                transaction.replace(R.id.fragment_login_login,LoginFragment()).commit()
+                transaction.replace(R.id.frameLayout_loginactivity,LoginFragment()).commit()
             }
             2->{
-                transaction.replace(R.id.fragment_login_useript,UserIptFragment()).addToBackStack(null).commit()
+                transaction.replace(R.id.frameLayout_loginactivity,UserIptFragment()).addToBackStack(null).commit()
             }
 //            3->{
 //                transaction.replace(R.id.nav_host_fragment_login,SchoolSearchFragment()).commit()
 //            }
         }
-        transaction.commit()
     }
 
     override fun toast(string: String) {
