@@ -12,5 +12,14 @@ class MainActivity : AppCompatActivity() {
 
         activity_main_vp.adapter = MainPagerAdapter(supportFragmentManager)
         activity_main_vp.offscreenPageLimit = 2
+
+        activity_main_bn.setOnNavigationItemReselectedListener {
+            when(it.itemId){
+                R.id.menu_home -> activity_main_vp.currentItem = 0
+                R.id.menu_find -> activity_main_vp.currentItem = 1
+                R.id.menu_chat -> activity_main_vp.currentItem = 2
+                R.id.menu_profile -> activity_main_vp.currentItem = 3
+            }
+        }
     }
 }
