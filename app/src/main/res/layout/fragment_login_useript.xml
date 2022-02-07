@@ -5,25 +5,39 @@
     android:layout_height="match_parent"
     android:id="@+id/fragment_login_useript"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/fragment_useript_tb"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
-<!--    <androidx.appcompat.widget.Toolbar-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="45dp"-->
-<!--        android:layout_marginBottom="686dp"-->
-<!--        android:background="?attr/colorOnPrimary"-->
-<!--        android:minHeight="?attr/actionBarSize"-->
-<!--        android:theme="?attr/actionBarTheme"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:navigationIcon="@drawable/login_toolbar_icon"></androidx.appcompat.widget.Toolbar>-->
+        <Button
+            android:id="@+id/fragment_useript_btnStore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:background="#00ff0000"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:text="완료"
+            android:textColor="#949494"
+            android:textSize="15sp"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="369dp"
+            tools:layout_editor_absoluteY="11dp"></Button>
+    </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginBottom="92dp"
+        android:layout_marginTop="60dp"
         android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,7 +56,6 @@
                 android:id="@+id/textView"
                 android:layout_width="332dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
                 android:fontFamily="@font/notosanskr_bold"
                 android:includeFontPadding="false"
                 android:minWidth="0dp"
@@ -187,11 +200,11 @@
                 android:layout_marginTop="12dp"
                 android:background="@drawable/gray_button"
                 android:drawableEnd="@drawable/ic_icon_search"
-                android:paddingRight="13dp"
                 android:fontFamily="@font/notosanskr_regular"
                 android:gravity="center|left"
                 android:includeFontPadding="false"
                 android:paddingLeft="15dp"
+                android:paddingRight="13dp"
                 android:text="학교 검색"
                 android:textColor="#949494"
                 tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
@@ -342,7 +355,6 @@
                     android:text="전시"
                     android:textColor="@color/haenggu_main"
                     android:textSize="14sp"
-                    android:txtColor="@color/haenggu_main"
                     tools:ignore="TouchTargetSizeCheck"></Button>
 
             </LinearLayout>
@@ -410,7 +422,6 @@
                     android:text="기타"
                     android:textColor="@color/haenggu_main"
                     android:textSize="14sp"
-                    android:txtColor="@color/haenggu_main"
                     tools:ignore="TouchTargetSizeCheck"></Button>
 
             </LinearLayout>
@@ -490,7 +501,6 @@
                     android:text="강원"
                     android:textColor="@color/haenggu_main"
                     android:textSize="14sp"
-                    android:txtColor="@color/haenggu_main"
                     tools:ignore="TouchTargetSizeCheck"></Button>
 
                 <Button
@@ -513,6 +523,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="7dp"
+                android:layout_marginBottom="26dp"
                 android:orientation="horizontal">
 
                 <Button
@@ -547,21 +558,5 @@
 
         </LinearLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/fragment_useript_btnStore"
-        android:layout_width="match_parent"
-        android:layout_height="77dp"
-        android:layout_marginTop="15dp"
-        android:background="@color/haenggu_main"
-        android:fontFamily="@font/notosanskr_bold"
-        android:text="완료"
-        android:textColor="@color/white"
-        android:textSize="17sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-        tools:ignore="TextContrastCheck,TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
