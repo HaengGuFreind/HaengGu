@@ -62,5 +62,9 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     //인디케이터
     implementation 'com.tbuonomo:dotsindicator:4.2'
+    //동그란 이미지 커스텀 뷰 라이브러리 : https://github.com/hdodenhof/CircleImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //Glide 적용 가능한 모서리 둥근 imageView 라이브러리 : https://github.com/rishabh876/RoundedImageView?utm_source=android-arsenal.com&utm_medium=referral&utm_campaign=7549
+    implementation 'com.makeramen:roundedimageview:2.3.0'
 
 }
