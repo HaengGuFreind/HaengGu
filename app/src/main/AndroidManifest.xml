@@ -2,9 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.haenggu">
-
     <!-- 인터넷 사용 권한 -->
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".data.api.GlobalApplication"
@@ -15,26 +14,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
         <activity
-            android:name=".main.MainActivity"
+            android:name=".main.chat.ChatActivity"
+            android:exported="false" />
+        <activity android:name=".main.MainActivity" />
+        <activity
+            android:name=".login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- 로그인 창이 되는 액티비티-->
-        <!--Redirect URL 설정하기-->
+        </activity> <!-- 로그인 창이 되는 액티비티 -->
+        <!-- Redirect URL 설정하기 -->
         <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth" -->
-                <data android:host="oauth"
+                <data
+                    android:host="oauth"
                     android:scheme="kakao{ebbf1d1a2bb30b68d03a94b1a115ddef}"
                     tools:ignore="AppLinkUrlError" />
             </intent-filter>

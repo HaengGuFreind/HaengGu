@@ -1,14 +1,450 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".main.home.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="173dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="102dp"
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/gray_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewPager" />
+
+        <TextView
+            android:id="@+id/tv_haenggu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:text="행구 구하기"
+            android:textColor="@color/haenggu_main"
+            android:textSize="19dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/viewPager" />
+
+        <TextView
+            android:id="@+id/tv_haenggu2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:text='"행사 같이가지 않을래?"'
+            android:textColor="#4d4d4d"
+            android:textSize="12dp"
+            android:layout_marginTop="3dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_haenggu"
+            app:layout_constraintTop_toBottomOf="@+id/tv_haenggu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosanskr_regular"
+            android:includeFontPadding="false"
+            android:text="함께 할 행사 친구를 구해보세요!"
+            android:textColor="#4d4d4d"
+            android:textSize="12dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_haenggu"
+            app:layout_constraintTop_toBottomOf="@+id/tv_haenggu2" />
+
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0sp"
+            android:text="카테고리"
+            android:textColor="#383838"
+            android:textSize="20dp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:rowCount="2"
+            android:alignmentMode="alignBounds"
+            app:layout_constraintTop_toBottomOf="@+id/tv_category">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/category_01"
+                android:fontFamily="@font/notosanskr_medium"
+                android:drawablePadding="10dp"
+                android:layout_gravity="center"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0.5sp"
+                android:padding="12dp"
+                android:text="동아리 행사"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/category_02"
+                android:fontFamily="@font/notosanskr_medium"
+                android:drawablePadding="10dp"
+                android:layout_gravity="center"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0.5sp"
+                android:padding="12dp"
+                android:text="박람회"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/category_03"
+                android:fontFamily="@font/notosanskr_medium"
+                android:drawablePadding="5dp"
+                android:layout_gravity="center"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0.5sp"
+                android:padding="12dp"
+                android:text="컨퍼런스"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/category_04"
+                android:fontFamily="@font/notosanskr_medium"
+                android:drawablePadding="8dp"
+                android:layout_gravity="center"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0.5sp"
+                android:padding="12dp"
+                android:text="연극/뮤지컬"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/category_05"
+                android:fontFamily="@font/notosanskr_medium"
+                android:layout_gravity="center"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0.5sp"
+                android:padding="12dp"
+                android:drawablePadding="5dp"
+                android:text="전시"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/category_06"
+                android:fontFamily="@font/notosanskr_medium"
+                android:layout_gravity="center"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0.5sp"
+                android:padding="12dp"
+                android:drawablePadding="6dp"
+                android:text="페스티벌"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/category_07"
+                android:fontFamily="@font/notosanskr_medium"
+                android:layout_gravity="center"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0.5sp"
+                android:padding="12dp"
+                android:text="콘서트"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/category_08"
+                android:fontFamily="@font/notosanskr_medium"
+                android:layout_gravity="center"
+                android:drawablePadding="7dp"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0.5sp"
+                android:padding="12dp"
+                android:text="기타"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"/>
+
+        </GridLayout>
+
+        <View
+            android:id="@+id/divide_line01"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="#f2f2f2"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/gridLayout"/>
+
+        <TextView
+            android:id="@+id/tv_cutomized"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0sp"
+            android:text="맞춤 행사"
+            android:textColor="#383838"
+            android:textSize="20dp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/divide_line01" />
+
+        <TextView
+            android:id="@+id/fragment_home_tv_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosanskr_bold"
+            android:lineSpacingExtra="0.5sp"
+            android:text="더보기"
+            android:textColor="@color/haenggu_main"
+            android:textSize="12dp"
+            android:layout_marginRight="15dp"
+            android:includeFontPadding="false"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_cutomized"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_cutomized" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_home_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:overScrollMode="never"
+            android:clipToPadding="false"
+            android:paddingHorizontal="15dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            tools:listitem="@layout/item_customized_event"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_cutomized" />
+
+        <View
+            android:id="@+id/divide_line02"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="#f2f2f2"
+            android:layout_marginTop="29dp"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_home_rv"/>
+
+        <TextView
+            android:id="@+id/tv_region"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:text="지역별 행사"
+            android:textColor="#383838"
+            android:textSize="20dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_cutomized"
+            app:layout_constraintTop_toBottomOf="@id/divide_line02" />
+
+        <GridLayout
+            android:id="@+id/gridLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="2"
+            android:columnCount="4"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_region">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosanskr_regular"
+                android:textSize="14.4dp"
+                android:textColor="#0d0d0d"
+                android:lineSpacingExtra="2.9sp"
+                android:gravity="center"
+                android:layout_columnWeight="1"
+                android:background="@drawable/grid_border"
+                android:text="서울"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosanskr_regular"
+                android:textSize="14.4dp"
+                android:textColor="#0d0d0d"
+                android:lineSpacingExtra="2.9sp"
+                android:gravity="center"
+                android:layout_columnWeight="1"
+                android:background="@drawable/grid_border"
+                android:text="경기"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosanskr_regular"
+                android:textSize="14.4dp"
+                android:textColor="#0d0d0d"
+                android:lineSpacingExtra="2.9sp"
+                android:gravity="center"
+                android:layout_columnWeight="1"
+                android:background="@drawable/grid_border"
+                android:text="강원"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosanskr_regular"
+                android:textSize="14.4dp"
+                android:textColor="#0d0d0d"
+                android:lineSpacingExtra="2.9sp"
+                android:gravity="center"
+                android:layout_columnWeight="1"
+                android:background="@drawable/grid_border"
+                android:text="춘천"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosanskr_regular"
+                android:textSize="14.4dp"
+                android:textColor="#0d0d0d"
+                android:lineSpacingExtra="2.9sp"
+                android:gravity="center"
+                android:layout_columnWeight="1"
+                android:background="@drawable/grid_border"
+                android:text="전라"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosanskr_regular"
+                android:textSize="14.4dp"
+                android:textColor="#0d0d0d"
+                android:lineSpacingExtra="2.9sp"
+                android:gravity="center"
+                android:layout_columnWeight="1"
+                android:background="@drawable/grid_border"
+                android:text="경상"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosanskr_regular"
+                android:textSize="14.4dp"
+                android:textColor="#0d0d0d"
+                android:lineSpacingExtra="2.9sp"
+                android:gravity="center"
+                android:layout_columnWeight="1"
+                android:background="@drawable/grid_border"
+                android:text="제주"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosanskr_regular"
+                android:textSize="14.4dp"
+                android:textColor="#0d0d0d"
+                android:lineSpacingExtra="2.9sp"
+                android:gravity="center"
+                android:layout_columnWeight="1"
+                android:background="@drawable/grid_border"
+                android:text="전체 보기"/>
+        </GridLayout>
+
+        <View
+            android:id="@+id/divide_line03"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="#f2f2f2"
+            android:layout_marginTop="29dp"
+            app:layout_constraintTop_toBottomOf="@+id/gridLayout2"/>
+
+        <TextView
+            android:id="@+id/tv_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0sp"
+            android:text="새로운 행사"
+            android:textColor="#383838"
+            android:textSize="20dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_region"
+            app:layout_constraintTop_toBottomOf="@id/divide_line03" />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbarlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            app:elevation="0dp"
+            android:theme="@style/TabTheme"
+            app:layout_constraintTop_toBottomOf="@id/tv_new">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                app:tabTextAppearance="@style/TabTextStyle"
+                app:tabRippleColor="@color/white"
+                app:tabIndicatorFullWidth="false"/>
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
