@@ -39,8 +39,21 @@
         <entry key="..\:/HaengGu/app/src/main/res/drawable/gray_stroke_button.xml" value="0.21" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/grid_border.xml" value="0.21" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/hcolor_button.xml" value="0.21" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_chat_check.xml" value="0.133" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_chat_unchecked.xml" value="0.133" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_find_checked.xml" value="0.133" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_find_unchecked.xml" value="0.133" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_home.xml" value="0.227" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_home_checked.xml" value="0.133" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_home_unchecked.xml" value="0.133" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_icon_star.xml" value="0.2305" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_profile_unchecked.xml" value="0.133" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/selector_chat.xml" value="0.133" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/selector_find.xml" value="0.133" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/selector_home.xml" value="0.133" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/selector_profile.xml" value="0.133" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/solid_button.xml" value="0.1715" />
+        <entry key="..\:/HaengGu/app/src/main/res/font/pretendard.xml" value="0.2838541666666667" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/activity_chat.xml" value="0.2" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/activity_login.xml" value="0.18229166666666666" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/activity_main.xml" value="0.264" />
