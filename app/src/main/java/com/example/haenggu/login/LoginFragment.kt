@@ -1,5 +1,6 @@
 package com.example.haenggu.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.haenggu.databinding.FragmentLoginLoginBinding
 import com.example.haenggu.databinding.FragmentLoginSplashBinding
+import com.example.haenggu.main.MainActivity
+import kotlinx.android.synthetic.main.fragment_login_login.*
 
 class LoginFragment: Fragment() {
 
@@ -28,6 +31,10 @@ class LoginFragment: Fragment() {
             val lActivity = activity as LoginActivity
             lActivity.clickKaKaoLogin()
         }
+        fragment_login_nomember.setOnClickListener {
+            startActivity(Intent(activity, MainActivity::class.java))
+        }
+
     }
     override fun onDestroyView() {
         super.onDestroyView()

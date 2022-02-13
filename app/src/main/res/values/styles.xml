@@ -19,6 +19,7 @@
     <style name="TabTextStyle" parent="@style/Widget.AppCompat.ActionBar.TabBar">
         <item name="android:textAllCaps">false</item>
         <item name="android:textSize">15dp</item>
-        <item name="android:fontFamily">@font/notosanskr_bold</item>
+        <item name="android:fontFamily">@font/pretendard</item>
+        <item name="android:fontWeight">700</item>
     </style>
 </resources>
