@@ -1,7 +1,6 @@
 package com.example.haenggu.data.remote.services
 
 import com.example.haenggu.data.remote.util.UrlConstants.Companion.BASE_URL
-import com.example.haenggu.data.remote.util.UrlConstants.Companion.BOARDS_URL
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
