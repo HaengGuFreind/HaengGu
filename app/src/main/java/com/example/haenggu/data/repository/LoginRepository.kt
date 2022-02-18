@@ -3,9 +3,6 @@ package com.example.haenggu.data.repository
 import android.content.Context
 import com.example.haenggu.data.local.SharedManager
 import com.example.haenggu.data.remote.datasources.LoginUserIpt
-import com.example.haenggu.data.remote.services.HToken
-import com.example.haenggu.data.remote.services.UserIpt
-import com.example.haenggu.data.remote.services.ServerAPI
 import com.example.haenggu.login.LoginContract
 import org.json.JSONObject
 import retrofit2.Call
