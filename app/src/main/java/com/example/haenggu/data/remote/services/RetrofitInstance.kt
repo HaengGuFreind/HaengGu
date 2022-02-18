@@ -17,16 +17,3 @@ object RetrofitInstance {
         retrofit.create(ApiRequest::class.java)
     }
 }
-
-object RetrofitInstance_Profile {
-    private val retrofit by lazy {
-        Retrofit.Builder()
-            .baseUrl(BOARDS_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-    }
-
-    val api: ApiRequest by lazy {
-        retrofit.create(ApiRequest::class.java)
-    }
-}
