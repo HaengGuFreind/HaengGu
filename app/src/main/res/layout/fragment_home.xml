@@ -11,10 +11,58 @@
         android:layout_height="match_parent">
 
         <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewPager"
+            android:id="@+id/fragment_home_vp"
             android:layout_width="match_parent"
             android:layout_height="173dp"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/LinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="9dp"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_home_vp"
+            app:layout_constraintStart_toStartOf="@+id/fragment_home_vp"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_home_vp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:padding="2dp"
+                android:src="@color/gray03" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:padding="2dp"
+                android:src="@color/gray03" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:padding="2dp"
+                android:src="@color/gray03" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:padding="2dp"
+                android:src="@color/gray03" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:padding="2dp"
+                android:src="@color/gray03" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:padding="2dp"
+                android:src="@color/gray03" />
+
+        </LinearLayout>
 
         <ImageView
             android:id="@+id/imageView"
@@ -22,32 +70,35 @@
             android:layout_height="102dp"
             android:layout_marginHorizontal="15dp"
             android:background="@drawable/gray_box"
+            android:layout_marginTop="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/viewPager" />
+            app:layout_constraintTop_toBottomOf="@+id/LinearLayout" />
 
         <TextView
             android:id="@+id/tv_haenggu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/notosanskr_bold"
+            android:layout_marginLeft="23dp"
+            android:fontFamily="@font/pretendard"
             android:includeFontPadding="false"
             android:text="행구 구하기"
             android:textColor="@color/haenggu_main"
+            android:textFontWeight="700"
             android:textSize="19dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="17dp"
             app:layout_constraintStart_toStartOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/viewPager" />
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
 
         <TextView
             android:id="@+id/tv_haenggu2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/notosanskr_bold"
+            android:fontFamily="@font/pretendard"
+            android:textFontWeight="700"
             android:includeFontPadding="false"
             android:text='"행사 같이가지 않을래?"'
-            android:textColor="#4d4d4d"
+            android:textColor="@color/gray07"
             android:textSize="12dp"
             android:layout_marginTop="3dp"
             app:layout_constraintStart_toStartOf="@+id/tv_haenggu"
@@ -56,24 +107,36 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/notosanskr_regular"
+            android:fontFamily="@font/pretendard"
+            android:textFontWeight="400"
             android:includeFontPadding="false"
             android:text="함께 할 행사 친구를 구해보세요!"
-            android:textColor="#4d4d4d"
+            android:textColor="@color/gray07"
             android:textSize="12dp"
+            android:layout_marginTop="3dp"
             app:layout_constraintStart_toStartOf="@+id/tv_haenggu"
-            app:layout_constraintTop_toBottomOf="@+id/tv_haenggu2" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_haenggu2"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:src="@drawable/ic_find_haeggu"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
 
         <TextView
             android:id="@+id/tv_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:fontFamily="@font/notosanskr_bold"
+            android:fontFamily="@font/pretendard"
+            android:textFontWeight="700"
             android:includeFontPadding="false"
             android:lineSpacingExtra="0sp"
             android:text="카테고리"
-            android:textColor="#383838"
+            android:textColor="@color/standard_black"
             android:textSize="20dp"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -92,15 +155,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
-                android:drawableTop="@drawable/category_01"
-                android:fontFamily="@font/notosanskr_medium"
-                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/ic_category_01"
+                android:fontFamily="@font/pretendard"
+                android:textFontWeight="400"
+                android:drawablePadding="6dp"
                 android:layout_gravity="center"
                 android:includeFontPadding="false"
                 android:lineSpacingExtra="0.5sp"
                 android:padding="12dp"
                 android:text="동아리 행사"
-                android:textColor="@color/black"
+                android:textColor="@color/standard_black"
                 android:textSize="12dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"/>
@@ -109,15 +173,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
-                android:drawableTop="@drawable/category_02"
-                android:fontFamily="@font/notosanskr_medium"
-                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/ic_category_02"
+                android:fontFamily="@font/pretendard"
+                android:textFontWeight="400"
+                android:drawablePadding="6dp"
                 android:layout_gravity="center"
                 android:includeFontPadding="false"
                 android:lineSpacingExtra="0.5sp"
                 android:padding="12dp"
                 android:text="박람회"
-                android:textColor="@color/black"
+                android:textColor="@color/standard_black"
                 android:textSize="12dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"/>
@@ -126,15 +191,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
-                android:drawableTop="@drawable/category_03"
-                android:fontFamily="@font/notosanskr_medium"
-                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/ic_category_03"
+                android:fontFamily="@font/pretendard"
+                android:textFontWeight="400"
+                android:drawablePadding="6dp"
                 android:layout_gravity="center"
                 android:includeFontPadding="false"
                 android:lineSpacingExtra="0.5sp"
                 android:padding="12dp"
                 android:text="컨퍼런스"
-                android:textColor="@color/black"
+                android:textColor="@color/standard_black"
                 android:textSize="12dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"/>
@@ -143,15 +209,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
-                android:drawableTop="@drawable/category_04"
-                android:fontFamily="@font/notosanskr_medium"
-                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/ic_category_04"
+                android:fontFamily="@font/pretendard"
+                android:textFontWeight="400"
+                android:drawablePadding="6dp"
                 android:layout_gravity="center"
                 android:includeFontPadding="false"
                 android:lineSpacingExtra="0.5sp"
                 android:padding="12dp"
                 android:text="연극/뮤지컬"
-                android:textColor="@color/black"
+                android:textColor="@color/standard_black"
                 android:textSize="12dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"/>
@@ -160,32 +227,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
-                android:drawableTop="@drawable/category_05"
-                android:fontFamily="@font/notosanskr_medium"
-                android:layout_gravity="center"
-                android:includeFontPadding="false"
-                android:lineSpacingExtra="0.5sp"
-                android:padding="12dp"
-                android:drawablePadding="5dp"
-                android:text="전시"
-                android:textColor="@color/black"
-                android:textSize="12dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/transparent"
-                android:drawableTop="@drawable/category_06"
-                android:fontFamily="@font/notosanskr_medium"
-                android:layout_gravity="center"
-                android:includeFontPadding="false"
-                android:lineSpacingExtra="0.5sp"
-                android:padding="12dp"
+                android:drawableTop="@drawable/ic_category_05"
+                android:fontFamily="@font/pretendard"
+                android:textFontWeight="400"
                 android:drawablePadding="6dp"
-                android:text="페스티벌"
-                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0.5sp"
+                android:padding="12dp"
+                android:text="전시"
+                android:textColor="@color/standard_black"
                 android:textSize="12dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"/>
@@ -194,14 +245,34 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
-                android:drawableTop="@drawable/category_07"
-                android:fontFamily="@font/notosanskr_medium"
+                android:drawableTop="@drawable/ic_category_06"
+                android:fontFamily="@font/pretendard"
+                android:textFontWeight="400"
+                android:drawablePadding="6dp"
+                android:layout_gravity="center"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0.5sp"
+                android:padding="12dp"
+                android:text="페스티벌"
+                android:textColor="@color/standard_black"
+                android:textSize="12dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/ic_category_07"
+                android:fontFamily="@font/pretendard"
+                android:textFontWeight="400"
+                android:drawablePadding="6dp"
                 android:layout_gravity="center"
                 android:includeFontPadding="false"
                 android:lineSpacingExtra="0.5sp"
                 android:padding="12dp"
                 android:text="콘서트"
-                android:textColor="@color/black"
+                android:textColor="@color/standard_black"
                 android:textSize="12dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"/>
@@ -210,15 +281,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@color/transparent"
-                android:drawableTop="@drawable/category_08"
-                android:fontFamily="@font/notosanskr_medium"
+                android:drawableTop="@drawable/ic_category_08"
+                android:fontFamily="@font/pretendard"
+                android:textFontWeight="400"
+                android:drawablePadding="6dp"
                 android:layout_gravity="center"
-                android:drawablePadding="7dp"
                 android:includeFontPadding="false"
                 android:lineSpacingExtra="0.5sp"
                 android:padding="12dp"
                 android:text="기타"
-                android:textColor="@color/black"
+                android:textColor="@color/standard_black"
                 android:textSize="12dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"/>
@@ -238,11 +310,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:fontFamily="@font/notosanskr_bold"
+            android:fontFamily="@font/pretendard"
+            android:textFontWeight="700"
             android:includeFontPadding="false"
             android:lineSpacingExtra="0sp"
             android:text="맞춤 행사"
-            android:textColor="#383838"
+            android:textColor="@color/standard_black"
             android:textSize="20dp"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -252,7 +325,8 @@
             android:id="@+id/fragment_home_tv_plus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/notosanskr_bold"
+            android:fontFamily="@font/pretendard"
+            android:textFontWeight="700"
             android:lineSpacingExtra="0.5sp"
             android:text="더보기"
             android:textColor="@color/haenggu_main"
@@ -290,10 +364,11 @@
             android:id="@+id/tv_region"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/notosanskr_bold"
+            android:fontFamily="@font/pretendard"
+            android:textFontWeight="700"
             android:includeFontPadding="false"
             android:text="지역별 행사"
-            android:textColor="#383838"
+            android:textColor="@color/standard_black"
             android:textSize="20dp"
             android:layout_marginTop="25dp"
             app:layout_constraintStart_toStartOf="@+id/tv_cutomized"
@@ -417,7 +492,8 @@
             android:id="@+id/tv_new"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/notosanskr_bold"
+            android:fontFamily="@font/pretendard"
+            android:textFontWeight="700"
             android:includeFontPadding="false"
             android:lineSpacingExtra="0sp"
             android:text="새로운 행사"
@@ -427,23 +503,13 @@
             app:layout_constraintStart_toStartOf="@+id/tv_region"
             app:layout_constraintTop_toBottomOf="@id/divide_line03" />
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/appbarlayout"
+        <include
+            layout="@layout/layout_category"
+            android:id="@+id/layout_event_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="22dp"
-            app:elevation="0dp"
-            android:theme="@style/TabTheme"
-            app:layout_constraintTop_toBottomOf="@id/tv_new">
-
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tablayout"
-                android:layout_width="match_parent"
-                android:layout_height="38dp"
-                app:tabTextAppearance="@style/TabTextStyle"
-                app:tabRippleColor="@color/white"
-                app:tabIndicatorFullWidth="false"/>
-        </com.google.android.material.appbar.AppBarLayout>
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_new"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

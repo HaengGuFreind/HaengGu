@@ -39,6 +39,7 @@
         <entry key="..\:/HaengGu/app/src/main/res/drawable/gray_stroke_button.xml" value="0.21" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/grid_border.xml" value="0.21" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/hcolor_button.xml" value="0.21" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_category_01.xml" value="0.229" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_chat_check.xml" value="0.133" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_chat_unchecked.xml" value="0.133" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_find_checked.xml" value="0.133" />
@@ -48,26 +49,32 @@
         <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_home_unchecked.xml" value="0.133" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_icon_star.xml" value="0.2305" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_profile_unchecked.xml" value="0.133" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/pink_box_50.xml" value="0.2135" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/selector_chat.xml" value="0.133" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/selector_find.xml" value="0.133" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/selector_home.xml" value="0.133" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/selector_profile.xml" value="0.133" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/solid_button.xml" value="0.1715" />
         <entry key="..\:/HaengGu/app/src/main/res/font/pretendard.xml" value="0.2838541666666667" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/activity_category.xml" value="0.25364583333333335" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/activity_chat.xml" value="0.2" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/activity_login.xml" value="0.18229166666666666" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_chat.xml" value="0.264" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_event_list.xml" value="0.72" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_find.xml" value="0.264" />
-        <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_login_login.xml" value="0.264" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_login_searchschool.xml" value="0.18229166666666666" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_login_splash.xml" value="0.18229166666666666" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_login_useript.xml" value="0.18229166666666666" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_mypage.xml" value="0.2441123188405797" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/item_category.xml" value="0.679144385026738" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/item_chatting_list.xml" value="0.536" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/item_customized_event.xml" value="0.536" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/item_find_haenggu.xml" value="0.72" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/layout_category.xml" value="0.176" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/layout_catogory.xml" value="0.25364583333333335" />
         <entry key="..\:/HaengGu/app/src/main/res/menu/main_bottomnavigation.xml" value="0.18229166666666666" />
         <entry key="..\:/HaengGu/app/src/main/res/menu/toolbar_menu.xml" value="0.18229166666666666" />
       </map>

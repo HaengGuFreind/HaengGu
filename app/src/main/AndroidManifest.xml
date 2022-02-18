@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
         <activity
+            android:name=".main.home.CategoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".main.chat.ChatActivity"
             android:exported="false" />
         <activity android:name=".main.MainActivity" />
