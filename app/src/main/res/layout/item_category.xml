@@ -32,7 +32,7 @@
         tools:text="2021 디자인살롱 서울 컨퍼런스" />
 
     <TextView
-        android:id="@+id/tv_explain"
+        android:id="@+id/tv_description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:maxLines="2"
@@ -58,8 +58,8 @@
         android:textFontWeight="400"
         android:includeFontPadding="false"
         android:textSize="13dp"
-        app:layout_constraintStart_toStartOf="@+id/tv_explain"
-        app:layout_constraintTop_toBottomOf="@+id/tv_explain"
+        app:layout_constraintStart_toStartOf="@+id/tv_description"
+        app:layout_constraintTop_toBottomOf="@+id/tv_description"
         tools:text="2021.12.9 ~ 2021.12.10" />
 
     <TextView

@@ -35,4 +35,7 @@ interface ApiRequest {
     @GET("profile/edit")
     suspend fun getEdit() : Response<Edit>
 
+    @GET("events")
+    fun getEventList(@QueryMap options:Map<String, String>): Call<ResponseEvent>
+
 }

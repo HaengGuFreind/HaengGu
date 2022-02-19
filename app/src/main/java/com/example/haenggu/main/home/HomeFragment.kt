@@ -26,8 +26,10 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        var adapter = EventViewPagerAdapger(context as FragmentActivity)
-        binding.layoutEventList.vpEvent.adapter = adapter
+        var adapter = EventViewPagerAdapger(context as FragmentActivity,"category")
+        binding.layoutEventList.vpEvent.apply {
+            binding.layoutEventList.vpEvent.adapter = adapter
+        }
         TabLayoutMediator(binding.layoutEventList.tablayout, binding.layoutEventList.vpEvent) { tab, position ->
             tab.text = tabName[position]
         }.attach()
