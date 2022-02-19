@@ -22,20 +22,6 @@ interface ApiRequest {
     @GET("profile")
     suspend fun getProfile() : Response<Profile>
 
-    @GET("boards")
-    suspend fun getBoards(
-        @QueryMap options: Map<String,String>
-    ) : Response<List<Boards>>
-
-    @GET("events")
-    suspend fun getEvents(
-        @QueryMap options: Map<String,String>
-    ) : Response<List<Events>>
-
-    @GET("profile/edit")
-    suspend fun getEdit() : Response<Edit>
-
     @GET("events")
     fun getEventList(@QueryMap options:Map<String, String>): Call<ResponseEvent>
-
 }
