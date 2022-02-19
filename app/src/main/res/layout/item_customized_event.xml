@@ -5,11 +5,12 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
+    <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/iv_customized_event"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@drawable/ic_launcher_background"
+        android:src="@drawable/ic_launcher_background"
+        app:riv_corner_radius="5dp"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,7 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="5dp"
         android:layout_marginTop="6dp"
-        android:fontFamily="@font/notosanskr_regular"
+        android:fontFamily="@font/pretendard"
+        android:textFontWeight="400"
         android:includeFontPadding="false"
         android:lineSpacingExtra="5sp"
         android:text="text"
@@ -34,7 +36,8 @@
         android:id="@+id/fragment_tv_dday"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/notosanskr_bold"
+        android:fontFamily="@font/pretendard"
+        android:textFontWeight="700"
         android:includeFontPadding="false"
         android:letterSpacing="0.02"
         android:lineSpacingExtra="0sp"
@@ -48,7 +51,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/notosanskr_regular"
+        android:fontFamily="@font/pretendard"
+        android:textFontWeight="400"
         android:includeFontPadding="false"
         android:letterSpacing="0.02"
         android:lineSpacingExtra="0sp"
