@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.haenggu.R
+import com.bumptech.glide.Glide
 import com.example.haenggu.data.remote.datasources.EventData
 import com.example.haenggu.databinding.ItemCategoryBinding
 
@@ -12,7 +12,6 @@ class EventListAdapter(val itemClick: (EventData, View) -> Unit) : RecyclerView.
     var datas = mutableListOf<EventData>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventViewHolder{
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_category,parent,false)
         val binding = ItemCategoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return EventViewHolder(binding, itemClick)
     }
@@ -31,11 +30,14 @@ class EventViewHolder(private val binding: ItemCategoryBinding, val itemClick: (
     fun bind(myData: EventData){
         itemView.setOnClickListener{itemClick(myData, itemView)}
         binding.tvEvent.text = myData.title
-        binding.tvDate.text = myData.started_date.toString()
         binding.tvDescription.text = myData.description
-        binding.tvTag1.text = myData.tag[0]
-        binding.tvTag2.text = myData.tag[1]
-        binding.tvTag3.text = myData.tag[2]
+        binding.tvDate.text = myData.started_date.substring(0,10) + " ~ " + myData.ended_date.substring(0,10)
+        if(myData.tag.isNotEmpty()){
+            binding.tvTag1.text = myData.tag[0]
+            binding.tvTag2.text = myData.tag[1]
+//            binding.tvTag3.text = myData.tag[2]
+        }
+        Glide.with(itemView).load(myData.image_url[0]).into(binding.ivEvent)
         //binding.tvLike.text = myData.like
     }
 }

@@ -27,10 +27,11 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         var adapter = EventViewPagerAdapger(context as FragmentActivity,"category")
-        binding.layoutEventList.vpEvent.apply {
-            binding.layoutEventList.vpEvent.adapter = adapter
+        binding.vpEvent.apply {
+            binding.vpEvent.adapter = adapter
         }
-        TabLayoutMediator(binding.layoutEventList.tablayout, binding.layoutEventList.vpEvent) { tab, position ->
+        binding.vpEvent.offscreenPageLimit = 3
+        TabLayoutMediator(binding.tablayout, binding.vpEvent) { tab, position ->
             tab.text = tabName[position]
         }.attach()
     }
