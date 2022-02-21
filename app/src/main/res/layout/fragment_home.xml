@@ -152,6 +152,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_category">
 
             <Button
+                android:id="@+id/fragment_home_btn_club"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
@@ -170,6 +171,7 @@
                 android:layout_rowWeight="1"/>
 
             <Button
+                android:id="@+id/fragment_home_btn_jobfair"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
@@ -188,6 +190,7 @@
                 android:layout_rowWeight="1"/>
 
             <Button
+                android:id="@+id/fragment_home_btn_conference"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
@@ -206,6 +209,7 @@
                 android:layout_rowWeight="1"/>
 
             <Button
+                android:id="@+id/fragment_home_btn_theater"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
@@ -224,6 +228,7 @@
                 android:layout_rowWeight="1"/>
 
             <Button
+                android:id="@+id/fragment_home_btn_exhibition"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
@@ -242,6 +247,7 @@
                 android:layout_rowWeight="1"/>
 
             <Button
+                android:id="@+id/fragment_home_btn_festival"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
@@ -260,6 +266,7 @@
                 android:layout_rowWeight="1"/>
 
             <Button
+                android:id="@+id/fragment_home_btn_concert"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
@@ -278,6 +285,7 @@
                 android:layout_rowWeight="1"/>
 
             <Button
+                android:id="@+id/fragment_home_btn_etc"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@color/transparent"
@@ -513,6 +521,8 @@
             app:guidelineUseRtl="true"
             app:tabMode="scrollable"
             app:tabIndicatorFullWidth="false"
+            app:tabSelectedTextColor="@color/haenggu_main"
+            app:tabTextColor="@color/gray04"
             app:tabRippleColor="@color/transparent"
             app:tabTextAppearance="@style/TabTextStyle"
             app:layout_constraintTop_toBottomOf="@+id/tv_new"/>
