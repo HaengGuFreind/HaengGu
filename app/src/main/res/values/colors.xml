@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="haenggu_main">#FF7171</color>
+    <color name="haenggu_sub1">#FF9C9C</color>
+    <color name="haenggu_sub2">#FFB8B8</color>
     <color name="haenggu_box">#08000000</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
