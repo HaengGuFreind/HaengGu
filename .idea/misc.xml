@@ -49,7 +49,10 @@
         <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_home_unchecked.xml" value="0.133" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_icon_star.xml" value="0.2305" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_profile_unchecked.xml" value="0.133" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/maincolor_box_30.xml" value="0.1685" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/pink_box_10.xml" value="0.1655" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/pink_box_50.xml" value="0.2135" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/pink_sub1_box_10.xml" value="0.1655" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/selector_chat.xml" value="0.133" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/selector_find.xml" value="0.133" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/selector_home.xml" value="0.133" />
@@ -69,7 +72,7 @@
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_login_splash.xml" value="0.18229166666666666" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_login_useript.xml" value="0.18229166666666666" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_mypage.xml" value="0.2441123188405797" />
-        <entry key="..\:/HaengGu/app/src/main/res/layout/item_category.xml" value="0.679144385026738" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/item_category.xml" value="0.136" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/item_chatting_list.xml" value="0.536" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/item_customized_event.xml" value="0.536" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/item_find_haenggu.xml" value="0.72" />

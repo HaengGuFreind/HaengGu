@@ -11,6 +11,7 @@
         android:layout_width="96dp"
         android:layout_height="112dp"
         android:src="@drawable/ic_launcher_background"
+        android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:riv_corner_radius="5dp" />
@@ -26,6 +27,8 @@
         android:textColor="@color/standard_black"
         android:textFontWeight="700"
         android:textSize="16dp"
+        android:maxLines="1"
+        android:ellipsize="end"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iv_event"
         app:layout_constraintTop_toTopOf="@+id/iv_event"
@@ -36,6 +39,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:maxLines="2"
+        android:ellipsize="end"
         android:fontFamily="@font/pretendard"
         android:lineSpacingExtra="1.4dp"
         android:textFontWeight="400"
@@ -129,10 +133,9 @@
 
     <ImageView
         android:id="@+id/iv_like"
-        android:layout_width="13.3dp"
-        android:layout_height="13.3dp"
-        android:background="@color/white"
-        android:src="@drawable/ic_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_sparkle_gray"
         android:layout_marginRight="3.3dp"
         app:layout_constraintBottom_toBottomOf="@+id/tv_like"
         app:layout_constraintEnd_toStartOf="@+id/tv_like"

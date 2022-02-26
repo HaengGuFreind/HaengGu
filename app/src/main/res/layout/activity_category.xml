@@ -6,4 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".main.home.CategoryActivity">
 
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:theme="@style/TabTheme"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="8dp"
+        android:clipToPadding="false"
+        app:tabMaxWidth="0dp"
+        app:tabIndicatorGravity="stretch"
+        app:tabIndicator="@drawable/maincolor_box_30"
+        app:tabIndicatorAnimationMode="elastic"
+        app:tabMode="scrollable"
+        app:tabIndicatorFullWidth="true"
+        app:tabTextColor="@color/standard_black"
+        app:tabSelectedTextColor="@color/white"
+        app:tabRippleColor="@color/transparent"
+        app:tabTextAppearance="@style/TabTextStyle"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp_event"
+        android:layout_width="match_parent"
+        android:layout_height="432dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tablayout" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
