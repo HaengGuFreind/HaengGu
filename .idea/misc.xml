@@ -41,6 +41,7 @@
         <entry key="..\:/HaengGu/app/src/main/res/drawable/hcolor_button.xml" value="0.21" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_category_01.xml" value="0.229" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_chat_check.xml" value="0.133" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_chat_checked.xml" value="0.189" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_chat_unchecked.xml" value="0.133" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_find_checked.xml" value="0.133" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_find_unchecked.xml" value="0.133" />
@@ -48,6 +49,7 @@
         <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_home_checked.xml" value="0.133" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_home_unchecked.xml" value="0.133" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_icon_star.xml" value="0.2305" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_profile_checked.xml" value="0.189" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_profile_unchecked.xml" value="0.133" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/maincolor_box_30.xml" value="0.1685" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/pink_box_10.xml" value="0.1655" />
@@ -66,7 +68,7 @@
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_chat.xml" value="0.264" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_event_list.xml" value="0.23227206946454415" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_find.xml" value="0.264" />
-        <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_login_login.xml" value="0.264" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_login_searchschool.xml" value="0.18229166666666666" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_login_splash.xml" value="0.18229166666666666" />
