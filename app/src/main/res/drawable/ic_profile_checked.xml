@@ -5,8 +5,8 @@
     android:viewportHeight="24">
   <path
       android:pathData="M3,20C3,20.5523 3.4477,21 4,21H20.5C21.0523,21 21.5,20.5523 21.5,20C21.5,19.0659 21.3133,17.6523 20.711,16.4323C20.0943,15.1833 18.9528,14 17.0714,14H7.4286C5.5472,14 4.4057,15.1833 3.789,16.4323C3.1867,17.6523 3,19.0659 3,20Z"
-      android:fillColor="#ffffff"/>
+      android:fillColor="@color/haenggu_main"/>
   <path
       android:pathData="M12,2C9.2386,2 7,4.2386 7,7C7,9.7614 9.2386,12 12,12C14.7614,12 17,9.7614 17,7C17,4.2386 14.7614,2 12,2Z"
-      android:fillColor="#ffffff"/>
+      android:fillColor="@color/haenggu_main"/>
 </vector>
