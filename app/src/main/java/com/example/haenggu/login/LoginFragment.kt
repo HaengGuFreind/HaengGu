@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import com.example.haenggu.databinding.FragmentLoginLoginBinding
 import com.example.haenggu.databinding.FragmentLoginSplashBinding
 import com.example.haenggu.main.MainActivity
+import com.example.haenggu.main.home.EventDetailActivity
 import kotlinx.android.synthetic.main.fragment_login_login.*
 
 class LoginFragment: Fragment() {
@@ -32,7 +33,7 @@ class LoginFragment: Fragment() {
             lActivity.clickKaKaoLogin()
         }
         fragment_login_nomember.setOnClickListener {
-            startActivity(Intent(activity, MainActivity::class.java))
+            startActivity(Intent(activity, EventDetailActivity::class.java))
         }
 
     }

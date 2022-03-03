@@ -302,6 +302,7 @@
                     android:drawableLeft="@drawable/ic_find_black"
                     android:drawablePadding="4dp"
                     android:gravity="center"
+                    android:layout_marginTop="12dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/divide_line03" />
 
