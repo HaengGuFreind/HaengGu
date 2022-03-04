@@ -33,7 +33,7 @@ class LoginFragment: Fragment() {
             lActivity.clickKaKaoLogin()
         }
         fragment_login_nomember.setOnClickListener {
-            startActivity(Intent(activity, EventDetailActivity::class.java))
+            startActivity(Intent(activity, MainActivity::class.java))
         }
 
     }

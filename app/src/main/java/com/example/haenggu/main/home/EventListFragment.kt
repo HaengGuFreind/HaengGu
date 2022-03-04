@@ -1,5 +1,6 @@
 package com.example.haenggu.main.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -48,8 +49,10 @@ class EventListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val eventViewPagerAdapger = EventListAdapter{ EventData, View ->
-
+        val eventViewPagerAdapger = EventListAdapter { EventData, View ->
+            val intent = Intent(activity, EventDetailActivity::class.java)
+            intent.putExtra("idx", EventData.event_id)
+            startActivity(intent)
         }
         binding.fragmentEventListRv.adapter = eventViewPagerAdapger
         val query = mutableMapOf<String, String>()
