@@ -1,19 +1,27 @@
 package com.example.haenggu.main.home
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.FragmentActivity
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
+import com.example.haenggu.R
 import com.example.haenggu.databinding.ActivityCategoryBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
 class CategoryActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCategoryBinding
-    val tabName = listOf("동아리행사", "박람회", "컨퍼런스", "연극/뮤지컬", "전시", "페스티벌", "콘서트", "기타")
+    private val tabName = listOf("동아리행사", "박람회", "컨퍼런스", "연극/뮤지컬", "전시", "페스티벌", "콘서트", "기타")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCategoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setSupportActionBar(binding.toolbarLayout)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.setDisplayShowHomeEnabled(true)
+        supportActionBar!!.setDisplayShowTitleEnabled(false)
 
         var adapter = EventViewPagerAdapger(this,"category")
         binding.vpEvent.apply {
@@ -23,5 +31,25 @@ class CategoryActivity : AppCompatActivity() {
         TabLayoutMediator(binding.tablayout, binding.vpEvent) { tab, position ->
             tab.text = tabName[position]
         }.attach()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.toolbar_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.menu_arrange -> {
+
+            }
+            R.id.menu_filter -> {
+
+                //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) //해보고 이상하면 지울것
+
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

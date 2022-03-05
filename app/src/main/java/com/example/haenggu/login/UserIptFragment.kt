@@ -450,7 +450,7 @@ class UserIptFragment : Fragment(){
             if (s != null){
                 binding.fragmentUseriptEdtBirth.setBackgroundResource(R.drawable.gray_stroke_button)
             }else{
-                binding.fragmentUseriptEdtBirth.setBackgroundResource(R.drawable.gray_button)
+                binding.fragmentUseriptEdtBirth.setBackgroundResource(R.drawable.gray1_button)
             }
         }
     }
