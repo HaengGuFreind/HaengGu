@@ -27,4 +27,5 @@ data class EventData (
     val region: String,
     val tag: List<String>,
     val image_url: List<String>,
+    val favorite: Int,
 )

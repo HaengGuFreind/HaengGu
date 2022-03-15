@@ -34,16 +34,16 @@ class EventDetailActivity : AppCompatActivity() {
             ) {
                 if(response.isSuccessful){
                     var data = response.body()
-                    Glide.with(this@EventDetailActivity).load(data!!.image_url[0]).into(binding.activityEvectDetailIv)
+                    if(data!!.image_url.isNotEmpty()) Glide.with(this@EventDetailActivity).load(data!!.image_url[0]).into(binding.activityEvectDetailIv)
                     binding.tvTag1.text = data.tag[0]
                     binding.tvTag2.text = data.tag[1]
-                    //binding.tvTag3.text = data.tag[2]
+                    binding.tvTag3.text = data.tag[2]
                     binding.activityEvectDetailTvTitle.text = data.title
                     binding.activityEvectDetailTvContent.text = data.description
                     binding.activityEvectDetailTvDate.text = data.reservation_ended_date
                     binding.activityEvectDetailTvStart.text = data.started_date
                     binding.activityEvectDetailTvEnd.text = data.ended_date
-                    //binding.activityEvectDetailTvTime.text = data.time
+                    binding.activityEvectDetailTvTime.text = data.time
                     binding.activityEvectDetailTvLocation.text = data.event_location
                 }
             }
