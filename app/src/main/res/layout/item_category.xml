@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="144dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_event"
+        android:layout_width="96dp"
+        android:layout_height="112dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="5dp" />
+
+    <TextView
+        android:id="@+id/tv_event"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/pretendard"
+        android:includeFontPadding="false"
+        android:textColor="@color/standard_black"
+        android:textFontWeight="700"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_event"
+        app:layout_constraintTop_toTopOf="@+id/iv_event"
+        tools:text="2021 디자인살롱 서울 컨퍼런스" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:fontFamily="@font/pretendard"
+        android:lineSpacingExtra="1.4dp"
+        android:textFontWeight="400"
+        android:textSize="14dp"
+        android:textColor="@color/standard_black"
+        android:includeFontPadding="false"
+        app:layout_constraintStart_toStartOf="@+id/tv_event"
+        app:layout_constraintTop_toBottomOf="@+id/tv_event"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"
+        tools:text="디자인 및 소비자 트렌드 인사이트를 얻을 수 있는 디자인살롱 서울 컨퍼런스..." />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/pretendard"
+        android:textColor="@color/gray06"
+        android:textFontWeight="400"
+        android:includeFontPadding="false"
+        android:textSize="13dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_description"
+        app:layout_constraintTop_toBottomOf="@+id/tv_description"
+        tools:text="2021.12.9 ~ 2021.12.10" />
+
+    <TextView
+        android:id="@+id/tv_tag1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pink_box_10"
+        android:fontFamily="@font/pretendard"
+        android:includeFontPadding="false"
+        android:orientation="horizontal"
+        android:paddingHorizontal="7dp"
+        android:paddingVertical="4dp"
+        android:text="서울"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_date" />
+
+    <TextView
+        android:id="@+id/tv_tag2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pink_box_10"
+        android:fontFamily="@font/pretendard"
+        android:includeFontPadding="false"
+        android:orientation="horizontal"
+        android:paddingHorizontal="7dp"
+        android:paddingVertical="4dp"
+        android:text="디자인"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textSize="11dp"
+        android:layout_marginLeft="4dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_tag1"
+        app:layout_constraintTop_toTopOf="@+id/tv_tag1" />
+
+    <TextView
+        android:id="@+id/tv_tag3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pink_box_10"
+        android:fontFamily="@font/pretendard"
+        android:includeFontPadding="false"
+        android:orientation="horizontal"
+        android:paddingHorizontal="7dp"
+        android:paddingVertical="4dp"
+        android:text="백신패스"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textSize="11dp"
+        android:layout_marginLeft="4dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_tag2"
+        app:layout_constraintTop_toTopOf="@+id/tv_tag2" />
+
+    <TextView
+        android:id="@+id/tv_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pretendard"
+        android:includeFontPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="4dp"
+        android:textColor="@color/gray06"
+        tools:text="19" />
+
+    <ImageView
+        android:id="@+id/iv_like"
+        android:layout_width="13.3dp"
+        android:layout_height="13.3dp"
+        android:background="@color/white"
+        android:src="@drawable/ic_star"
+        android:layout_marginRight="3.3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_like"
+        app:layout_constraintEnd_toStartOf="@+id/tv_like"
+        app:layout_constraintTop_toTopOf="@+id/tv_like" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

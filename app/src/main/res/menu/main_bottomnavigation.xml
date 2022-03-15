@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_home"
+        android:icon="@drawable/selector_home"
+        android:title="홈"/>
+    <item android:id="@+id/menu_find"
+        android:icon="@drawable/selector_find"
+        android:title="행구 찾기"/>
+    <item android:id="@+id/menu_chat"
+        android:icon="@drawable/selector_chat"
+        android:title="대화"/>
+    <item android:id="@+id/menu_profile"
+        android:icon="@drawable/selector_profile"
+        android:title="프로필"/>
+
+</menu>

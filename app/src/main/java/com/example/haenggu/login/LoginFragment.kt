@@ -1,12 +1,13 @@
 package com.example.haenggu.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.haenggu.databinding.FragmentLoginLoginBinding
-import com.example.haenggu.databinding.FragmentLoginSplashBinding
+import com.example.haenggu.main.MainActivity
 
 class LoginFragment: Fragment() {
 
@@ -28,6 +29,12 @@ class LoginFragment: Fragment() {
             val lActivity = activity as LoginActivity
             lActivity.clickKaKaoLogin()
         }
+
+        binding.fragmentLoginNomember.setOnClickListener {
+            val lActivity = activity as LoginActivity
+            lActivity.moveToMain()
+        }
+
     }
     override fun onDestroyView() {
         super.onDestroyView()

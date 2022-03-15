@@ -4,24 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:id="@+id/fragment_Searchschool_fg">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/fragment_searchschool_tbSchool"
         android:layout_width="match_parent"
-        android:layout_height="44dp"
+        android:layout_height="48dp"
         android:background="@color/white"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+        <Button
+            android:id="@+id/fragment_searchschool_btnbackstep"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_gravity="center|left"
-            android:id="@+id/fragment_searchschool_btnbackstep"></ImageView>
+            android:background="@drawable/ic_icon_backstep"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="12dp"></Button>
         <TextView
             android:layout_width="121dp"
             android:layout_height="wrap_content"
@@ -38,10 +42,9 @@
         android:id="@+id/fragment_searchschool_SearchBar"
         android:layout_width="match_parent"
         android:layout_height="44dp"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="102dp"
-        android:layout_marginEnd="15dp"
-        android:background="@drawable/search_background"
+        android:layout_marginEnd="16dp"
         android:layoutDirection="rtl"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,6 +52,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
+        app:searchIcon="@drawable/ic_search"
         app:queryHint="검색하기"></androidx.appcompat.widget.SearchView>
 
     <ListView

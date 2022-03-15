@@ -1,7 +1,8 @@
 package com.example.haenggu.login
 
 import android.content.Context
-import com.example.haenggu.data.remote.datasources.LoginUserIpt
+import com.example.haenggu.data.remote.datasources.SchoolItem
+import com.example.haenggu.data.remote.datasources.UserInfo
 
 interface LoginContract {
 
@@ -12,21 +13,31 @@ interface LoginContract {
     }
 
     interface LoginPresenter {
-        fun isLogin(context: Context):String // 토큰 유무 확인 및 검증
-        fun onLogin(context: Context) // 로그인 후 결과 처리
-        fun updateUserIpt(loginUserIpt: LoginUserIpt, context: Context)
+        fun hasToken(context: Context)// 토큰 유무 확인 및 검증
+        fun onLogin(context: Context)// 로그인 하기
+        fun updateUserIpt(userInfo: UserInfo, context: Context)
+        fun getSchoolInfo(school_name: String,context: Context)
+        fun getMajorList():Pair<Boolean,ArrayList<SchoolItem>>
     }
 
+    interface LoginInterator {
+        fun resultToken(string: String,context:Context)
+        fun resultKLogin(string: String,context:Context) //로그인 결과 처리
+        fun resultHLogin(net:Boolean, role:String) //로그인 결과 처리
+        fun resultSchool(net:Boolean, school_item: ArrayList<SchoolItem>)
+
+    }
     interface KakaoAPIModel {
         // 로그인하기
-        fun getLogin(context: Context, hasToken:String): Pair<String,String>
+        fun getLogin(context: Context)
         // 토큰 받기
-        fun hasToken():String
+        fun getToken(context: Context)
     }
 
     interface LoginRepo {
-        fun getHToken(ktoken:String,context: Context):String // 서버에 토큰 요청 후 저장
-        fun updateUserInfo(loginUserIpt: LoginUserIpt,context: Context)
+        fun getHToken(ktoken:String,context: Context) // 서버에 토큰 요청 후 저장
+        fun updateUserInfo(userInfo: UserInfo, context: Context)
+        fun getSchool(school_name: String, context: Context)
     }
 
 }
