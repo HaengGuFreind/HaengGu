@@ -24,4 +24,7 @@ interface ApiRequest {
 
     @GET("events")
     fun getEventList(@QueryMap options:Map<String, String>): Call<ResponseEvent>
+
+    @GET("events/{idx}")
+    fun getEvenDetail(@Path("idx") idx:String): Call<ResponseEventDetail>
 }

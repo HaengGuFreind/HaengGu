@@ -1,36 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".main.home.CategoryActivity">
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tablayout"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:theme="@style/TabTheme"
-        android:layout_marginTop="8dp"
-        android:paddingHorizontal="8dp"
-        android:clipToPadding="false"
-        app:tabMaxWidth="0dp"
-        app:tabIndicatorGravity="stretch"
-        app:tabIndicator="@drawable/maincolor_box_30"
-        app:tabIndicatorAnimationMode="elastic"
-        app:tabMode="scrollable"
-        app:tabIndicatorFullWidth="true"
-        app:tabTextColor="@color/standard_black"
-        app:tabSelectedTextColor="@color/white"
-        app:tabRippleColor="@color/transparent"
-        app:tabTextAppearance="@style/TabTextStyle"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_height="wrap_content">
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/vp_event"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingHorizontal="10dp"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="카테고리"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/pretendard"
+                android:textFontWeight="700"
+                android:textColor="@color/standard_black"
+                android:textSize="20dp"/>
+        </androidx.appcompat.widget.Toolbar>
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="432dp"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/tablayout" />
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarLayout">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:theme="@style/TabTheme"
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="8dp"
+                android:clipToPadding="false"
+                app:tabMaxWidth="0dp"
+                app:tabIndicatorGravity="stretch"
+                app:tabIndicator="@drawable/maincolor_box_30"
+                app:tabIndicatorAnimationMode="elastic"
+                app:tabMode="scrollable"
+                app:tabIndicatorFullWidth="true"
+                app:tabTextColor="@color/standard_black"
+                app:tabSelectedTextColor="@color/white"
+                app:tabRippleColor="@color/transparent"
+                app:tabTextAppearance="@style/TabTextStyle"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vp_event"
+                android:layout_width="match_parent"
+                android:layout_height="432dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/tablayout" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

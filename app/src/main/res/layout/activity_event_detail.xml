@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.home.EventDetailActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/divide_line01"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="360dp">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:scrimAnimationDuration="600">
+
+                <ImageView
+                    android:id="@+id/activity_evect_detail_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_collapseMode="parallax" />
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp">
+
+                <TextView
+                    android:id="@+id/tv_tag1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/pink200_box_10"
+                    android:fontFamily="@font/pretendard"
+                    android:includeFontPadding="false"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="7dp"
+                    android:paddingVertical="4dp"
+                    android:text="서울"
+                    android:textColor="@color/white"
+                    android:textFontWeight="500"
+                    android:textSize="11dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_tag2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pink200_box_10"
+                    android:fontFamily="@font/pretendard"
+                    android:includeFontPadding="false"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="7dp"
+                    android:paddingVertical="4dp"
+                    android:text="디자인"
+                    android:textColor="@color/white"
+                    android:textFontWeight="500"
+                    android:textSize="11dp"
+                    android:layout_marginLeft="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_tag1"
+                    app:layout_constraintTop_toTopOf="@+id/tv_tag1" />
+
+                <TextView
+                    android:id="@+id/tv_tag3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pink200_box_10"
+                    android:fontFamily="@font/pretendard"
+                    android:includeFontPadding="false"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="7dp"
+                    android:paddingVertical="4dp"
+                    android:text="백신패스"
+                    android:textColor="@color/white"
+                    android:textFontWeight="500"
+                    android:textSize="11dp"
+                    android:layout_marginLeft="4dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_tag2"
+                    app:layout_constraintTop_toTopOf="@+id/tv_tag2" />
+
+                <TextView
+                    android:id="@+id/activity_evect_detail_tv_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard"
+                    android:textFontWeight="700"
+                    android:textSize="18dp"
+                    android:textColor="@color/standard_black"
+                    android:layout_marginTop="12dp"
+                    android:includeFontPadding="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_tag1"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_tag1"
+                    android:text="체리필터 연말 단독 콘서트: Cherry Christmas" />
+
+                <TextView
+                    android:id="@+id/activity_evect_detail_tv_content"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="1년 7개월 만에 열리는 체리필터의 오프라인 단독 콘서트 체리필터와 함께 즐거운 크리스마스를 보내보자!"
+                    android:layout_marginTop="12dp"
+                    android:textSize="14dp"
+                    android:textColor="@color/gray06"
+                    android:fontFamily="@font/pretendard"
+                    android:textFontWeight="400"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/activity_evect_detail_tv_title"
+                    app:layout_constraintTop_toBottomOf="@+id/activity_evect_detail_tv_title" />
+
+                <View
+                    android:id="@+id/divide_line02"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/gray04"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintTop_toBottomOf="@+id/activity_evect_detail_tv_content"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/gray4_stroke_box_5"
+                app:layout_constraintTop_toBottomOf="@+id/divide_line02">
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard"
+                    android:text="행사일자"
+                    android:textColor="#7b7b7b"
+                    android:textFontWeight="500"
+                    android:textSize="14dp"
+                    android:includeFontPadding="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/activity_evect_detail_tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2021.12.23"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="14dp"
+                    android:textColor="@color/standard_black"
+                    android:fontFamily="@font/pretendard"
+                    android:textFontWeight="400"
+                    android:includeFontPadding="false"
+                    app:layout_constraintStart_toEndOf="@+id/tv_date"
+                    app:layout_constraintTop_toTopOf="@+id/tv_date" />
+
+                <TextView
+                    android:id="@+id/tv_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/pretendard"
+                    android:text="예매시작"
+                    android:textColor="#7b7b7b"
+                    android:textFontWeight="500"
+                    android:textSize="14dp"
+                    android:includeFontPadding="false"
+                    app:layout_constraintStart_toStartOf="@+id/tv_date"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_date" />
+
+                <TextView
+                    android:id="@+id/activity_evect_detail_tv_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard"
+                    android:includeFontPadding="false"
+                    android:text="2021.12.3 오후 8시 오픈"
+                    android:textColor="@color/standard_black"
+                    android:textFontWeight="400"
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toStartOf="@+id/activity_evect_detail_tv_date"
+                    app:layout_constraintTop_toTopOf="@+id/tv_start" />
+
+                <TextView
+                    android:id="@+id/tv_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/pretendard"
+                    android:includeFontPadding="false"
+                    android:text="예매종료"
+                    android:textColor="#7b7b7b"
+                    android:textFontWeight="500"
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toStartOf="@+id/tv_start"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_start" />
+
+                <TextView
+                    android:id="@+id/activity_evect_detail_tv_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard"
+                    android:includeFontPadding="false"
+                    android:text="티켓 소진시까지"
+                    android:textColor="@color/standard_black"
+                    android:textFontWeight="400"
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toStartOf="@+id/activity_evect_detail_tv_start"
+                    app:layout_constraintTop_toTopOf="@+id/tv_end" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard"
+                    android:includeFontPadding="false"
+                    android:text="관람시간"
+                    android:textColor="#7b7b7b"
+                    android:textFontWeight="500"
+                    android:textSize="14dp"
+                    android:layout_marginTop="6dp"
+                    app:layout_constraintStart_toStartOf="@+id/tv_end"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_end" />
+
+                <TextView
+                    android:id="@+id/activity_evect_detail_tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard"
+                    android:includeFontPadding="false"
+                    android:text="120분"
+                    android:textColor="@color/standard_black"
+                    android:textFontWeight="400"
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toStartOf="@+id/activity_evect_detail_tv_end"
+                    app:layout_constraintTop_toTopOf="@+id/tv_time" />
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/pretendard"
+                    android:includeFontPadding="false"
+                    android:text="장소"
+                    android:textColor="#7b7b7b"
+                    android:textFontWeight="500"
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toStartOf="@+id/tv_time"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_time" />
+
+                <TextView
+                    android:id="@+id/activity_evect_detail_tv_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard"
+                    android:includeFontPadding="false"
+                    android:text="롤링홀 (서울 마포구 서교동 402-22)"
+                    android:textColor="@color/standard_black"
+                    android:textFontWeight="400"
+                    android:textSize="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/activity_evect_detail_tv_time"
+                    app:layout_constraintTop_toTopOf="@+id/tv_location" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/divide_line03"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/gray04"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout02"/>
+
+                <TextView
+                    android:id="@+id/tv_find"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard"
+                    android:includeFontPadding="false"
+                    android:text="관련 동행글"
+                    android:textColor="@color/standard_black"
+                    android:textFontWeight="700"
+                    android:drawableLeft="@drawable/ic_find_black"
+                    android:drawablePadding="4dp"
+                    android:gravity="center"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divide_line03" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_more_checked"
+                    app:layout_constraintTop_toTopOf="@+id/tv_find"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_find"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:layout_editor_absoluteX="16dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <View
+        android:id="@+id/divide_line01"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray04"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/activity_evect_detail_btn"/>
+
+    <ImageView
+        android:id="@+id/activity_evect_detail_btn_bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_bookmark_filled"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/divide_line04"
+        app:layout_constraintTop_toBottomOf="@id/divide_line01"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <View
+        android:id="@+id/divide_line04"
+        android:layout_width="0.5dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/gray04"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/activity_evect_detail_btn"
+        app:layout_constraintTop_toBottomOf="@id/divide_line01" />
+
+    <Button
+        android:id="@+id/activity_evect_detail_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pink500_box_6"
+        android:fontFamily="@font/pretendard_medium"
+        android:paddingHorizontal="80dp"
+        android:paddingVertical="13dp"
+        android:text="예매 상세 정보"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="normal"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
