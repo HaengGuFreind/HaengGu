@@ -4,63 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bottom_sheet_filter"
     android:background="@drawable/bottom_sheet"
-    app:behavior_hideable="true"
-    app:behavior_draggable="true"
-    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".main.home.EventFilterFragment">
+    android:layout_height="match_parent"
+    tools:context=".main.home.EventFilterActivity">
 
-        <ImageView
-            android:id="@+id/iv_refresh"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="12dp"
-            android:paddingHorizontal="4dp"
-            android:paddingVertical="2dp"
-            android:src="@drawable/ic_refresh"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_sheet"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingHorizontal="10dp"
+        tools:ignore="MissingConstraints">
 
         <TextView
-            android:id="@+id/tv_filer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/pretendard"
             android:text="필터검색"
-            android:textColor="@color/standard_black"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/pretendard"
             android:textFontWeight="700"
+            android:textColor="@color/standard_black"
             android:textSize="20dp"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_refresh"
-            app:layout_constraintEnd_toStartOf="@+id/iv_close"
-            app:layout_constraintStart_toEndOf="@+id/iv_refresh"
-            app:layout_constraintTop_toTopOf="@+id/iv_refresh" />
-
+            android:layout_gravity="center"/>
 
         <ImageView
             android:id="@+id/iv_close"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="11dp"
             android:padding="5dp"
             android:src="@drawable/ic_close"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_refresh"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/iv_refresh" />
-
-        <View
-            android:id="@+id/divide_line01"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/gray04"
-            app:layout_constraintTop_toBottomOf="@id/tv_filer"
-            android:layout_marginTop="14dp"/>
+            android:layout_gravity="end"/>
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/divide_line01">
+        app:layout_constraintTop_toBottomOf="@+id/toolbarLayout">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
@@ -71,13 +55,13 @@
                 android:id="@+id/tv_event"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
                 android:fontFamily="@font/pretendard"
                 android:text="행사카테고리"
                 android:textColor="@color/standard_black"
                 android:textFontWeight="700"
                 android:textSize="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
                 app:layout_constraintStart_toStartOf="@+id/constraintLayout"
                 app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
 
@@ -91,8 +75,8 @@
                 android:paddingHorizontal="12dp"
                 android:paddingVertical="8dp"
                 android:text="동아리행사"
-                android:textSize="14dp"
                 android:textColor="@color/selector_checkbox_text"
+                android:textSize="14dp"
                 app:layout_constraintStart_toStartOf="@+id/tv_event"
                 app:layout_constraintTop_toBottomOf="@+id/tv_event" />
 
@@ -100,6 +84,7 @@
                 android:id="@+id/cb_jobfair"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
                 android:background="@drawable/selector_checkbox"
                 android:button="@null"
                 android:paddingHorizontal="12dp"
@@ -107,7 +92,6 @@
                 android:text="박람회"
                 android:textColor="@color/selector_checkbox_text"
                 android:textSize="14dp"
-                android:layout_marginStart="4dp"
                 app:layout_constraintStart_toEndOf="@+id/cb_club"
                 app:layout_constraintTop_toTopOf="@+id/cb_club" />
 
@@ -115,6 +99,7 @@
                 android:id="@+id/cb_conference"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
                 android:background="@drawable/selector_checkbox"
                 android:button="@null"
                 android:paddingHorizontal="12dp"
@@ -122,7 +107,6 @@
                 android:text="컨퍼런스"
                 android:textColor="@color/selector_checkbox_text"
                 android:textSize="14dp"
-                android:layout_marginStart="4dp"
                 app:layout_constraintStart_toEndOf="@+id/cb_jobfair"
                 app:layout_constraintTop_toTopOf="@+id/cb_jobfair" />
 
@@ -130,6 +114,7 @@
                 android:id="@+id/cb_exhibition"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
                 android:background="@drawable/selector_checkbox"
                 android:button="@null"
                 android:paddingHorizontal="12dp"
@@ -137,7 +122,6 @@
                 android:text="전시"
                 android:textColor="@color/selector_checkbox_text"
                 android:textSize="14dp"
-                android:layout_marginStart="4dp"
                 app:layout_constraintStart_toEndOf="@+id/cb_conference"
                 app:layout_constraintTop_toTopOf="@+id/cb_conference" />
 
@@ -145,6 +129,7 @@
                 android:id="@+id/cb_festival"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/selector_checkbox"
                 android:button="@null"
                 android:paddingHorizontal="12dp"
@@ -152,7 +137,6 @@
                 android:text="페스티벌"
                 android:textColor="@color/selector_checkbox_text"
                 android:textSize="14dp"
-                android:layout_marginTop="16dp"
                 app:layout_constraintStart_toStartOf="@+id/cb_club"
                 app:layout_constraintTop_toBottomOf="@+id/cb_club" />
 
@@ -160,6 +144,7 @@
                 android:id="@+id/cb_concert"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
                 android:background="@drawable/selector_checkbox"
                 android:button="@null"
                 android:paddingHorizontal="12dp"
@@ -167,7 +152,6 @@
                 android:text="콘서트"
                 android:textColor="@color/selector_checkbox_text"
                 android:textSize="14dp"
-                android:layout_marginStart="4dp"
                 app:layout_constraintStart_toEndOf="@+id/cb_festival"
                 app:layout_constraintTop_toTopOf="@+id/cb_festival" />
 
@@ -175,6 +159,7 @@
                 android:id="@+id/cb_theater"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
                 android:background="@drawable/selector_checkbox"
                 android:button="@null"
                 android:paddingHorizontal="12dp"
@@ -182,7 +167,6 @@
                 android:text="연극/뮤지컬"
                 android:textColor="@color/selector_checkbox_text"
                 android:textSize="14dp"
-                android:layout_marginStart="4dp"
                 app:layout_constraintStart_toEndOf="@+id/cb_concert"
                 app:layout_constraintTop_toTopOf="@+id/cb_concert" />
 
@@ -190,6 +174,7 @@
                 android:id="@+id/cb_etc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
                 android:background="@drawable/selector_checkbox"
                 android:button="@null"
                 android:paddingHorizontal="12dp"
@@ -197,7 +182,6 @@
                 android:text="기타"
                 android:textColor="@color/selector_checkbox_text"
                 android:textSize="14dp"
-                android:layout_marginStart="4dp"
                 app:layout_constraintStart_toEndOf="@+id/cb_theater"
                 app:layout_constraintTop_toTopOf="@+id/cb_theater" />
 
@@ -205,9 +189,9 @@
                 android:id="@+id/divide_line02"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
+                android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="20dp"
                 android:background="@color/gray04"
-                android:layout_marginHorizontal="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cb_festival" />
@@ -230,12 +214,12 @@
                 android:id="@+id/cb_seoul"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
                 android:background="@drawable/selector_checkbox"
                 android:button="@null"
                 android:paddingHorizontal="12dp"
                 android:paddingVertical="8dp"
                 android:text="서울"
-                android:layout_marginTop="12dp"
                 android:textColor="@color/selector_checkbox_text"
                 android:textSize="14dp"
                 app:layout_constraintStart_toStartOf="@+id/tv_region"
@@ -245,6 +229,7 @@
                 android:id="@+id/cb_gyeonggi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
                 android:background="@drawable/selector_checkbox"
                 android:button="@null"
                 android:paddingHorizontal="12dp"
@@ -252,7 +237,6 @@
                 android:text="경기"
                 android:textColor="@color/selector_checkbox_text"
                 android:textSize="14dp"
-                android:layout_marginStart="4dp"
                 app:layout_constraintStart_toEndOf="@+id/cb_seoul"
                 app:layout_constraintTop_toTopOf="@+id/cb_seoul" />
 
@@ -260,6 +244,7 @@
                 android:id="@+id/cb_chungcheong"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
                 android:background="@drawable/selector_checkbox"
                 android:button="@null"
                 android:paddingHorizontal="12dp"
@@ -267,7 +252,6 @@
                 android:text="충정"
                 android:textColor="@color/selector_checkbox_text"
                 android:textSize="14dp"
-                android:layout_marginStart="4dp"
                 app:layout_constraintStart_toEndOf="@+id/cb_gyeonggi"
                 app:layout_constraintTop_toTopOf="@+id/cb_gyeonggi" />
 
@@ -275,6 +259,7 @@
                 android:id="@+id/cb_gangwon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
                 android:background="@drawable/selector_checkbox"
                 android:button="@null"
                 android:paddingHorizontal="12dp"
@@ -282,7 +267,6 @@
                 android:text="전시"
                 android:textColor="@color/selector_checkbox_text"
                 android:textSize="14dp"
-                android:layout_marginStart="4dp"
                 app:layout_constraintStart_toEndOf="@+id/cb_chungcheong"
                 app:layout_constraintTop_toTopOf="@+id/cb_chungcheong" />
 
@@ -290,6 +274,7 @@
                 android:id="@+id/cb_jeonla"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
                 android:background="@drawable/selector_checkbox"
                 android:button="@null"
                 android:paddingHorizontal="12dp"
@@ -297,7 +282,6 @@
                 android:text="전라"
                 android:textColor="@color/selector_checkbox_text"
                 android:textSize="14dp"
-                android:layout_marginStart="4dp"
                 app:layout_constraintStart_toEndOf="@+id/cb_gangwon"
                 app:layout_constraintTop_toTopOf="@+id/cb_gangwon" />
 
@@ -305,6 +289,7 @@
                 android:id="@+id/cb_gyeongsang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/selector_checkbox"
                 android:button="@null"
                 android:paddingHorizontal="12dp"
@@ -312,7 +297,6 @@
                 android:text="경상"
                 android:textColor="@color/selector_checkbox_text"
                 android:textSize="14dp"
-                android:layout_marginTop="8dp"
                 app:layout_constraintStart_toStartOf="@+id/cb_seoul"
                 app:layout_constraintTop_toBottomOf="@+id/cb_seoul" />
 
@@ -320,6 +304,7 @@
                 android:id="@+id/cb_jeju"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
                 android:background="@drawable/selector_checkbox"
                 android:button="@null"
                 android:paddingHorizontal="12dp"
@@ -327,7 +312,6 @@
                 android:text="제주"
                 android:textColor="@color/selector_checkbox_text"
                 android:textSize="14dp"
-                android:layout_marginStart="4dp"
                 app:layout_constraintStart_toEndOf="@+id/cb_gyeongsang"
                 app:layout_constraintTop_toTopOf="@+id/cb_gyeongsang" />
 
@@ -336,8 +320,8 @@
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginHorizontal="16dp"
-                android:background="@color/gray04"
                 android:layout_marginTop="20dp"
+                android:background="@color/gray04"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cb_gyeongsang" />
@@ -436,13 +420,13 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
+                android:layout_marginTop="52dp"
                 android:background="@color/haenggu_main"
                 android:fontFamily="@font/pretendard"
                 android:text="완료"
                 android:textColor="@color/white"
                 android:textFontWeight="500"
                 android:textSize="18dp"
-                android:layout_marginTop="52dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/sp_tag3" />

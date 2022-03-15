@@ -1,5 +1,6 @@
 package com.example.haenggu.main.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.Menu
@@ -47,8 +48,7 @@ class CategoryActivity : AppCompatActivity() {
 
             }
             R.id.menu_filter -> {
-                val bottomSheet = EventFilterFragment()
-                bottomSheet.show(supportFragmentManager,"EventFilter")
+                startActivity(Intent(this, EventFilterActivity::class.java))
 
             }
         }
