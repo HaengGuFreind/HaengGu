@@ -1,17 +1,20 @@
 package com.example.haenggu.main.home
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.haenggu.R
 import com.example.haenggu.databinding.ActivityCategoryBinding
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.tabs.TabLayoutMediator
 
 class CategoryActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCategoryBinding
     private val tabName = listOf("동아리행사", "박람회", "컨퍼런스", "연극/뮤지컬", "전시", "페스티벌", "콘서트", "기타")
+    private lateinit var sheetBehavior: BottomSheetBehavior<View>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,8 +48,8 @@ class CategoryActivity : AppCompatActivity() {
 
             }
             R.id.menu_filter -> {
-
-                //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) //해보고 이상하면 지울것
+                val bottomSheet = EventFilterFragment()
+                bottomSheet.show(supportFragmentManager,"EventFilter")
 
             }
         }
