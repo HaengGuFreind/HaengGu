@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="haenggu_main">#FF7171</color>
+    <color name="pink50">#FFE7E7</color>
+    <color name="pink100">#FFC6C6</color>
+    <color name="pink200">#FFA7A7</color>
+    <color name="pink300">#FF9595</color>
+    <color name="pink400">#FF8585</color>
+    <color name="pink600">#F25555</color>
+    <color name="pink700">#D93E3E</color>
+    <color name="pink800">#AD2929</color>
+    <color name="pink900">#8A2121</color>
     <color name="haenggu_box">#08000000</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
@@ -8,7 +17,6 @@
     <color name="black">#FF000000</color>
     <color name="standard_black">#383838</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="unselect">#ffb8b8</color>
     <color name="gray01">#f0f0f0</color>
     <color name="gray02">#e6e6e6</color>
     <color name="gray03">#dadada</color>
@@ -17,4 +25,13 @@
     <color name="gray06">#838383</color>
     <color name="gray07">#616161</color>
     <color name="transparent">#00ff0000</color>
+    <color name="green100">#E2FFCC</color>
+    <color name="green200">#D2FFB2</color>
+    <color name="green300">#C0FF92</color>
+    <color name="green400">#AFFA79</color>
+    <color name="green500">#97E65D</color>
+    <color name="green600">#7CD73A</color>
+    <color name="green700">#5AB11B</color>
+    <color name="green800">#468D12</color>
+    <color name="green900">#33670D</color>
 </resources>

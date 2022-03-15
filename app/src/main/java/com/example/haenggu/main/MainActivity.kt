@@ -1,39 +1,56 @@
 package com.example.haenggu.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.viewpager.widget.ViewPager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.example.haenggu.R
+import com.example.haenggu.databinding.ActivityMainBinding
+import com.example.haenggu.main.chat.ChatFragment
+import com.example.haenggu.main.find.FindFragment
+import com.example.haenggu.main.home.HomeFragment
+import com.example.haenggu.main.mypage.MypageFragment
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+    private val home by lazy { HomeFragment() }
+    private val find by lazy { FindFragment() }
+    private val chat by lazy { ChatFragment() }
+    private val mypage by lazy { MypageFragment() }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-//        activity_main_vp.adapter = MainPagerAdapter(supportFragmentManager)
-//        activity_main_vp.offscreenPageLimit = 2
-//        activity_main_vp.addOnPageChangeListener(object : ViewPager.OnPageChangeListener{
-//            override fun onPageScrollStateChanged(state: Int) {}
-//
-//            override fun onPageScrolled(
-//                position: Int,
-//                positionOffset: Float,
-//                positionOffsetPixels: Int
-//            ) {}
-//
-//            override fun onPageSelected(position: Int) {
-//                // 네비게이션 메뉴 아이템 체크
-//                activity_main_bn.menu.getItem(position).isChecked = true
-//            }
-//        })
-//        activity_main_bn.setOnItemSelectedListener {
-//            when(it.itemId){
-//                R.id.menu_home -> activity_main_vp.currentItem = 0
-//                R.id.menu_find -> activity_main_vp.currentItem = 1
-//                R.id.menu_chat -> activity_main_vp.currentItem = 2
-//                else -> activity_main_vp.currentItem = 3
-//            }
-//            true
-//        }
+        binding.appBarLayout.outlineProvider = null
+        binding.activityMainBn.run {
+            setOnItemSelectedListener {
+                when(it.itemId){
+                    R.id.menu_home -> {
+                        changeFragment(home)
+                    }
+                    R.id.menu_find -> {
+                        changeFragment(find)
+                    }
+                    R.id.menu_chat -> {
+                        changeFragment(chat)
+                    }
+                    else -> {
+                        changeFragment(mypage)
+                    }
+                }
+                true
+            }
+            selectedItemId = R.id.menu_home
+        }
     }
+    private fun changeFragment(fragment: Fragment) {
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.activity_main_frame, fragment)
+            .commit() }
+
 }

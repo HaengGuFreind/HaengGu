@@ -86,10 +86,10 @@ class UserIptFragment : Fragment(), View.OnClickListener{
         binding.fragmentUseriptEtNickname.setOnEditorActionListener (object : TextView.OnEditorActionListener
         { override fun onEditorAction(v: TextView?, actionId: Int, event: KeyEvent?):
                 Boolean { if (actionId == EditorInfo.IME_ACTION_DONE){
-            binding.fragmentUseriptEtNickname.setBackgroundResource(R.drawable.gray_button)
+            binding.fragmentUseriptEtNickname.setBackgroundResource(R.drawable.gray1_box_6)
             binding.fragmentUseriptEtNickname.isCursorVisible = false
             binding.fragmentUseriptEtNickname.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0)
-                    return true }
+            return true }
             return false } })
 
 
@@ -109,7 +109,7 @@ class UserIptFragment : Fragment(), View.OnClickListener{
             binding.fragmentUseriptBtnMail.setTextColor(Color.parseColor("#FFFFFF"))
 //            val typeface = Typeface.createFromAsset(requireContext().assets, "font/pretendard_medium.otf")
 //            binding.fragmentUseriptBtnFemail.typeface = typeface
-           gender = "mail"
+            gender = "mail"
         }
 
         //스피너 동작 처리
@@ -167,7 +167,7 @@ class UserIptFragment : Fragment(), View.OnClickListener{
                 toast("학교를 먼저 선택해주세요.")
             }else{
                 parentFragmentManager.beginTransaction().replace(R.id.frameLayout_login,MajorSearchFragment()).addToBackStack(null).commit()
-        }}
+            }}
 
 
 // 카테고리
@@ -205,7 +205,7 @@ class UserIptFragment : Fragment(), View.OnClickListener{
                 if (s != null) {
                     binding.fragmentUseriptEdtBirth.setBackgroundResource(R.drawable.gray_stroke_button)
                 } else {
-                    binding.fragmentUseriptEdtBirth.setBackgroundResource(R.drawable.gray_button)
+                    binding.fragmentUseriptEdtBirth.setBackgroundResource(R.drawable.gray1_box_6)
                 }
             }
         }
@@ -363,76 +363,76 @@ class UserIptFragment : Fragment(), View.OnClickListener{
                     binding.fragmentUseriptBtnEvent3.setTextColor(Color.parseColor("#383838"))
 
                 }  else {
-                        events.add(v?.id.toString())
-                        binding.fragmentUseriptBtnEvent3.setBackgroundResource(R.drawable.pink_solid_button)
-                        binding.fragmentUseriptBtnEvent3.setTextColor(Color.WHITE)
-                    }
+                    events.add(v?.id.toString())
+                    binding.fragmentUseriptBtnEvent3.setBackgroundResource(R.drawable.pink_solid_button)
+                    binding.fragmentUseriptBtnEvent3.setTextColor(Color.WHITE)
                 }
-                binding.fragmentUseriptBtnEvent4.id
+            }
+            binding.fragmentUseriptBtnEvent4.id
             ->{
-                    if (events.contains(v?.id.toString())) {
-                        events.remove(v?.id.toString())
-                        binding.fragmentUseriptBtnEvent4.setBackgroundResource(R.drawable.solid_button)
-                        binding.fragmentUseriptBtnEvent4.setTextColor(Color.parseColor("#383838"))
+                if (events.contains(v?.id.toString())) {
+                    events.remove(v?.id.toString())
+                    binding.fragmentUseriptBtnEvent4.setBackgroundResource(R.drawable.solid_button)
+                    binding.fragmentUseriptBtnEvent4.setTextColor(Color.parseColor("#383838"))
 
-                    } else {
-                        events.add(v?.id.toString())
-                        binding.fragmentUseriptBtnEvent4.setBackgroundResource(R.drawable.pink_solid_button)
-                        binding.fragmentUseriptBtnEvent4.setTextColor(Color.WHITE)
-                    }
+                } else {
+                    events.add(v?.id.toString())
+                    binding.fragmentUseriptBtnEvent4.setBackgroundResource(R.drawable.pink_solid_button)
+                    binding.fragmentUseriptBtnEvent4.setTextColor(Color.WHITE)
                 }
-                binding.fragmentUseriptBtnEvent5.id
+            }
+            binding.fragmentUseriptBtnEvent5.id
             ->{
-                    if (events.contains(v?.id.toString())) {
-                        events.remove(v?.id.toString())
-                        binding.fragmentUseriptBtnEvent5.setBackgroundResource(R.drawable.solid_button)
-                        binding.fragmentUseriptBtnEvent5.setTextColor(Color.parseColor("#383838"))
+                if (events.contains(v?.id.toString())) {
+                    events.remove(v?.id.toString())
+                    binding.fragmentUseriptBtnEvent5.setBackgroundResource(R.drawable.solid_button)
+                    binding.fragmentUseriptBtnEvent5.setTextColor(Color.parseColor("#383838"))
 
-                    }  else {
-                        events.add(v?.id.toString())
-                        binding.fragmentUseriptBtnEvent5.setBackgroundResource(R.drawable.pink_solid_button)
-                        binding.fragmentUseriptBtnEvent5.setTextColor(Color.WHITE)
-                    }
+                }  else {
+                    events.add(v?.id.toString())
+                    binding.fragmentUseriptBtnEvent5.setBackgroundResource(R.drawable.pink_solid_button)
+                    binding.fragmentUseriptBtnEvent5.setTextColor(Color.WHITE)
                 }
-                binding.fragmentUseriptBtnEvent6.id
+            }
+            binding.fragmentUseriptBtnEvent6.id
             ->{
-                    if (events.contains(v?.id.toString())) {
-                        events.remove(v?.id.toString())
-                        binding.fragmentUseriptBtnEvent6.setBackgroundResource(R.drawable.solid_button)
-                        binding.fragmentUseriptBtnEvent6.setTextColor(Color.parseColor("#383838"))
+                if (events.contains(v?.id.toString())) {
+                    events.remove(v?.id.toString())
+                    binding.fragmentUseriptBtnEvent6.setBackgroundResource(R.drawable.solid_button)
+                    binding.fragmentUseriptBtnEvent6.setTextColor(Color.parseColor("#383838"))
 
-                    } else {
-                        events.add(v?.id.toString())
-                        binding.fragmentUseriptBtnEvent6.setBackgroundResource(R.drawable.pink_solid_button)
-                        binding.fragmentUseriptBtnEvent6.setTextColor(Color.WHITE)
-                    }
+                } else {
+                    events.add(v?.id.toString())
+                    binding.fragmentUseriptBtnEvent6.setBackgroundResource(R.drawable.pink_solid_button)
+                    binding.fragmentUseriptBtnEvent6.setTextColor(Color.WHITE)
                 }
-                binding.fragmentUseriptBtnEvent7.id
+            }
+            binding.fragmentUseriptBtnEvent7.id
             ->{
-                    if (events.contains(v?.id.toString())) {
-                        events.remove(v?.id.toString())
-                        binding.fragmentUseriptBtnEvent7.setBackgroundResource(R.drawable.solid_button)
-                        binding.fragmentUseriptBtnEvent7.setTextColor(Color.parseColor("#383838"))
+                if (events.contains(v?.id.toString())) {
+                    events.remove(v?.id.toString())
+                    binding.fragmentUseriptBtnEvent7.setBackgroundResource(R.drawable.solid_button)
+                    binding.fragmentUseriptBtnEvent7.setTextColor(Color.parseColor("#383838"))
 
-                    } else {
-                        events.add(v?.id.toString())
-                        binding.fragmentUseriptBtnEvent7.setBackgroundResource(R.drawable.pink_solid_button)
-                        binding.fragmentUseriptBtnEvent7.setTextColor(Color.WHITE)
-                    }
+                } else {
+                    events.add(v?.id.toString())
+                    binding.fragmentUseriptBtnEvent7.setBackgroundResource(R.drawable.pink_solid_button)
+                    binding.fragmentUseriptBtnEvent7.setTextColor(Color.WHITE)
                 }
-                binding.fragmentUseriptBtnEvent8.id
+            }
+            binding.fragmentUseriptBtnEvent8.id
             ->{
-                    if (events.contains(v?.id.toString())) {
-                        events.remove(v?.id.toString())
-                        binding.fragmentUseriptBtnEvent8.setBackgroundResource(R.drawable.solid_button)
-                        binding.fragmentUseriptBtnEvent8.setTextColor(Color.parseColor("#383838"))
+                if (events.contains(v?.id.toString())) {
+                    events.remove(v?.id.toString())
+                    binding.fragmentUseriptBtnEvent8.setBackgroundResource(R.drawable.solid_button)
+                    binding.fragmentUseriptBtnEvent8.setTextColor(Color.parseColor("#383838"))
 
-                    }  else {
-                        events.add(v?.id.toString())
-                        binding.fragmentUseriptBtnEvent8.setBackgroundResource(R.drawable.pink_solid_button)
-                        binding.fragmentUseriptBtnEvent8.setTextColor(Color.WHITE)
-                    }
+                }  else {
+                    events.add(v?.id.toString())
+                    binding.fragmentUseriptBtnEvent8.setBackgroundResource(R.drawable.pink_solid_button)
+                    binding.fragmentUseriptBtnEvent8.setTextColor(Color.WHITE)
                 }
+            }
             binding.fragmentUseriptBtnRegion1.id
             ->{
                 if (regions.contains(v?.id.toString())) {

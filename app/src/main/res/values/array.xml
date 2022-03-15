@@ -27,4 +27,9 @@
         <item> ENFJ </item>
         <item> ENTJ </item>
     </string-array>
+
+    <string-array name="tags">
+        <item>백신패스</item>
+        <item>방역패스</item>
+    </string-array>
 </resources>

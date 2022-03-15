@@ -1,6 +1,7 @@
 package com.example.haenggu.login
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
@@ -10,6 +11,7 @@ import com.example.haenggu.R
 import com.example.haenggu.data.remote.datasources.SchoolItem
 import com.example.haenggu.data.remote.datasources.UserInfo
 import com.example.haenggu.databinding.ActivityLoginBinding
+import com.example.haenggu.main.MainActivity
 
 class LoginActivity : AppCompatActivity(), LoginContract.LoginView {
     private var presenter: LoginContract.LoginPresenter ?= null
@@ -22,7 +24,7 @@ class LoginActivity : AppCompatActivity(), LoginContract.LoginView {
         setContentView(view)
 
         presenter = LoginPresenter(this)
-        
+
         setFrag(0)
         Handler().postDelayed({
             presenter?.hasToken(applicationContext)
@@ -78,7 +80,7 @@ class LoginActivity : AppCompatActivity(), LoginContract.LoginView {
 
 
     override fun moveToMain() {
-        //        startActivity(Intent(this,MainActivity::class.java))//메인 페이지로 이동
+        startActivity(Intent(this, MainActivity::class.java))//메인 페이지로 이동
         finish()
     }
 

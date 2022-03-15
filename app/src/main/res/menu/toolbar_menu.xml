@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <item android:id="@+id/menu_arrange"
+        android:icon="@drawable/ic_arrange"
+        android:title="홈"
+        app:showAsAction="always"/>
+    <item android:id="@+id/menu_filter"
+        android:icon="@drawable/ic_filter"
+        android:title="행구 찾기"
+        app:showAsAction="always"/>
 </menu>
