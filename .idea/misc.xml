@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DesignSurface">
@@ -36,4 +37,137 @@
   <component name="ProjectType">
     <option name="id" value="Android" />
   </component>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/cusor_drawable_pink.xml" value="0.5161458333333333" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/fragment_search_drawablesearch.xml" value="0.36666666666666664" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/gray2_button.xml" value="0.5161458333333333" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/gray_button.xml" value="0.5177083333333333" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/gray_stroke_button.xml" value="0.5161458333333333" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/gray_stroke_button2.xml" value="0.5161458333333333" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/grid_border.xml" value="0.5161458333333333" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/ic_chat_checked.xml" value="0.23148148148148148" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/ic_fragment_login_login.xml" value="0.23148148148148148" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/ic_fragment_search_iconsearch.xml" value="0.23148148148148148" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/ic_fragment_splash.xml" value="0.23148148148148148" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/ic_home_checked.xml" value="0.23148148148148148" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/ic_home_unchecked.xml" value="0.23148148148148148" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/ic_icon_backstep.xml" value="0.23148148148148148" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/ic_icon_star.xml" value="0.23148148148148148" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/pink_button.xml" value="0.5161458333333333" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/pink_solid_button.xml" value="0.5161458333333333" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/search_background.xml" value="0.5401041666666667" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/solid_button.xml" value="0.5177083333333333" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/spinner_background.xml" value="0.4244791666666667" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/activity_category.xml" value="0.296875" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/activity_chat.xml" value="0.296875" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/activity_login.xml" value="0.248234106962664" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/activity_main.xml" value="0.32708333333333334" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/fragment_chat.xml" value="0.2871376811594203" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/fragment_login_login.xml" value="0.22" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/fragment_login_major.xml" value="0.35" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/fragment_login_searchschool.xml" value="0.3463541666666667" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/fragment_login_splash.xml" value="0.22" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/fragment_login_useript.xml" value="0.29270315091210614" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/fragment_mypage.xml" value="0.2871376811594203" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/item_category.xml" value="0.296875" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/item_customized_event.xml" value="0.296875" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/item_find_haenggu.xml" value="0.296875" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/layout_category.xml" value="0.296875" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/spinner_background.xml" value="0.19576185671039353" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/spinner_item.xml" value="0.19576185671039353" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/spinner_textcolor.xml" value="0.4420289855072464" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/spinner_textcolor2.xml" value="0.4420289855072464" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/temp.xml" value="1.149671052631579" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/menu/toolbar_menu.xml" value="0.32708333333333334" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3067708333333333" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.5161458333333333" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.34375" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/drawable/ic_haengGu_background.xml" value="0.34322916666666664" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/drawable/ic_launcher_background.xml" value="0.34375" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/drawable/shape_activitymain_reound.xml" value="0.5527777777777778" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/activity_companion.xml" value="0.1590678824721378" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/activity_event.xml" value="0.16666666666666666" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/activity_eventinfo.xml" value="0.3854166666666667" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/activity_input_userinfo.xml" value="0.32760416666666664" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/activity_login.xml" value="0.3333333333333333" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/activity_main.xml" value="0.32760416666666664" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/activity_splash.xml" value="0.5541666666666667" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/activity_userinfo.xml" value="0.3854166666666667" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/fragment_category.xml" value="0.3854166666666667" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/fragment_inpuserinfo.xml" value="0.31979166666666664" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/fragment_iptuserinfo.xml" value="0.4466666666666667" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/fragment_login.xml" value="0.31979166666666664" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/fragment_login_login.xml" value="0.5494791666666666" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/fragment_login_searchshool.xml" value="0.32760416666666664" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/fragment_login_splash.xml" value="0.5494791666666666" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/fragment_login_useript.xml" value="0.5494791666666666" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/fragment_main_vpevent1.xml" value="0.2672239108409321" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/fragment_main_vpevent2.xml" value="0.2672239108409321" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/fragment_main_vpevent3.xml" value="0.2672239108409321" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/fragment_main_vpevent4.xml" value="0.2672239108409321" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/fragment_main_vpevent5.xml" value="0.2672239108409321" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/fragment_main_vpevent6.xml" value="0.2672239108409321" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/layout/list_mainactivity_advertisementimg.xml" value="0.2672239108409321" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.32205128205128203" />
+        <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/mipmap-anydpi-v26/ic_haengGu.xml" value="0.34322916666666664" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/check.xml" value="0.2115" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/gray_box.xml" value="0.145" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/gray_box_25.xml" value="0.1905" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/gray_button.xml" value="0.21" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/gray_stroke_button.xml" value="0.21" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/grid_border.xml" value="0.21" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/hcolor_button.xml" value="0.21" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_category_01.xml" value="0.229" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_chat_check.xml" value="0.133" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_chat_unchecked.xml" value="0.133" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_find_checked.xml" value="0.133" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_find_unchecked.xml" value="0.133" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_home.xml" value="0.227" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_home_checked.xml" value="0.133" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_home_unchecked.xml" value="0.133" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_icon_star.xml" value="0.2305" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_profile_unchecked.xml" value="0.133" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/pink_box_50.xml" value="0.2135" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/selector_chat.xml" value="0.133" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/selector_find.xml" value="0.133" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/selector_home.xml" value="0.133" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/selector_profile.xml" value="0.133" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/solid_button.xml" value="0.1715" />
+        <entry key="..\:/HaengGu/app/src/main/res/font/pretendard.xml" value="0.2838541666666667" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/activity_category.xml" value="0.25364583333333335" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/activity_chat.xml" value="0.2" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/activity_login.xml" value="0.18229166666666666" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_chat.xml" value="0.264" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_event_list.xml" value="0.23227206946454415" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_find.xml" value="0.264" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_login_login.xml" value="0.264" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_login_searchschool.xml" value="0.18229166666666666" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_login_splash.xml" value="0.18229166666666666" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_login_useript.xml" value="0.18229166666666666" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_mypage.xml" value="0.2441123188405797" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/item_category.xml" value="0.679144385026738" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/item_chatting_list.xml" value="0.536" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/item_customized_event.xml" value="0.536" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/item_find_haenggu.xml" value="0.72" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/layout_category.xml" value="0.176" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/layout_catogory.xml" value="0.25364583333333335" />
+        <entry key="..\:/HaengGu/app/src/main/res/menu/main_bottomnavigation.xml" value="0.18229166666666666" />
+        <entry key="..\:/HaengGu/app/src/main/res/menu/toolbar_menu.xml" value="0.18229166666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+>>>>>>> Stashed changes
 </project>

@@ -2,30 +2,31 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_login_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/fragment_login_login"
     android:background="@drawable/ic_fragment_login_login">
 
     <ImageButton
         android:id="@+id/fragment_login_btnKakaoLogin"
-        android:layout_width="302dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="134dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="20dp"
         android:scaleType="center"
         android:src="@drawable/fragment_login_btnkakaologin"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_login_nomember"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
         tools:ignore="SpeakableTextPresentCheck"></ImageButton>
 
     <Button
         android:id="@+id/fragment_login_nomember"
-        android:layout_width="259dp"
+        android:layout_width="0dp"
         android:layout_height="25dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginEnd="76dp"
         android:layout_marginBottom="89dp"
         android:background="#00FFFFFF"
         android:fontFamily="@font/notosanskr_regular"
@@ -39,8 +40,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,23 +1,25 @@
 package com.example.haenggu.login
 
+import android.graphics.Color
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.text.Spannable
+import android.text.SpannableStringBuilder
+import android.text.style.ForegroundColorSpan
+import android.util.Log
+import android.view.*
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.haenggu.R
 import com.example.haenggu.databinding.FragmentLoginSearchschoolBinding
-import android.widget.SearchView
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
-
-import java.util.*
+import androidx.appcompat.widget.SearchView
 
 class SchoolSearchFragment : Fragment() {
 
     private var _binding: FragmentLoginSearchschoolBinding? = null
     private val binding get() = _binding!!
+
     var schoolName: String = ""
 
     override fun onCreateView(
@@ -32,21 +34,25 @@ class SchoolSearchFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.fragmentSearchschoolTbSchool.setOnMenuItemClickListener {
-            when (it.itemId){
-                R.id.fragment_searchschool_btnbackstep -> {
-                    var fragment_useript = SchoolSearchFragment()
-                    var bundle = Bundle()
-                    bundle.putString("schoolname",schoolName)
-                    fragment_useript.arguments = bundle //fragment의 arguments에 데이터를 담은 bundle을 넘겨줌
+        binding.fragmentSearchschoolBtnbackstep.setOnClickListener {
+            Log.d("검색", "2")
+            val lActivity = activity as LoginActivity
+            lActivity.getsinfo(schoolName)
+            Log.d("검색", "3")
+            var fragment_useript = UserIptFragment()
+            var bundle = Bundle()
+            bundle.putString("schoolname", schoolName)
+            fragment_useript.arguments = bundle //fragment의 arguments에 데이터를 담은 bundle을 넘겨줌
 
-                    activity?.supportFragmentManager!!.beginTransaction()
-                        .replace(R.id.fragment_Searchschool_fg, fragment_useript)
-                        .commit()
-                    true
-                }
-                else -> {false}
-            }
+            parentFragmentManager
+                .beginTransaction()
+                .replace(R.id.frameLayout_login, fragment_useript)
+                .commit()
+
+//            activity?.supportFragmentManager!!
+//                .beginTransaction()
+//                .replace(R.id.frameLayout_login, fragment_useript)
+//                .commit()
         }
 
         var school = arrayOf("가톨릭대학교","건국대학교","경기대학교","경희대학교","고려대학교","광운대학교","국민대학교","동국대학교", "명지대학교","삼육대학교"
@@ -62,13 +68,13 @@ class SchoolSearchFragment : Fragment() {
                 ,"협성대학교","덕성여자대학교","동덕여자대학교","서울여자대학교","성신여자대학교","숙명여자대학교","이화여자대학교", "광주여자대학교"
         )
 
-        val adapter = ArrayAdapter<String>(requireContext(), android.R.layout.simple_list_item_1, school)
+        val adapter = ArrayAdapter<String>(requireContext(), android.R.layout.simple_list_item_1,school)
         //리스트뷰 초기에 안보이게 설정
         binding.fragmentSearchschoolListView.visibility = View.INVISIBLE
         //SearchBar와 ListView 연동
         binding.fragmentSearchschoolListView.adapter = adapter
-        binding.fragmentSearchschoolSearchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
-            androidx.appcompat.widget.SearchView.OnQueryTextListener {
+
+        binding.fragmentSearchschoolSearchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
                 binding.fragmentSearchschoolSearchBar.clearFocus()
                 if(school.contains(query)){
@@ -76,7 +82,10 @@ class SchoolSearchFragment : Fragment() {
                     if (query != null) {
                         schoolName = query
                     }
+                }else{
+                    Toast.makeText(requireContext(),"일치하는 학교가 없습니다.",Toast.LENGTH_SHORT)
                 }
+                binding.fragmentSearchschoolListView.visibility = View.INVISIBLE
                 // 데이터에 없는 학교일 경우 직접입력 가능?
                 return false
             }
@@ -89,9 +98,12 @@ class SchoolSearchFragment : Fragment() {
 
         })
 
+        binding.fragmentSearchschoolListView.onItemClickListener = AdapterView.OnItemClickListener{parent, view, position, id ->
+            var selection = parent.getItemAtPosition(position).toString()
+            binding.fragmentSearchschoolSearchBar.setQuery(selection,true)
+        }
+
     }
-
-
 
     override fun onDestroyView() {
         super.onDestroyView()

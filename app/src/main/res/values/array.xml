@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="grade">
+        <item> 학년선택 </item>
         <item> 1학년 </item>
         <item> 2학년 </item>
         <item> 3학년 </item>
@@ -8,6 +9,7 @@
     </string-array>
 
     <string-array name="mbti">
+        <item> MBTI </item>
         <item> ISTJ </item>
         <item> ISFJ </item>
         <item> ISTP </item>
