@@ -2,48 +2,50 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/bottom_sheet_filter"
-    android:background="@drawable/bottom_sheet"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/transparent"
     tools:context=".main.home.EventFilterActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bottom_sheet"
         android:minHeight="?attr/actionBarSize"
+        android:paddingHorizontal="10dp"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:paddingHorizontal="10dp"
         tools:ignore="MissingConstraints">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="필터검색"
-            android:includeFontPadding="false"
+            android:layout_gravity="center"
             android:fontFamily="@font/pretendard"
-            android:textFontWeight="700"
+            android:includeFontPadding="false"
+            android:text="필터검색"
             android:textColor="@color/standard_black"
-            android:textSize="20dp"
-            android:layout_gravity="center"/>
+            android:textFontWeight="700"
+            android:textSize="20dp" />
 
         <ImageView
             android:id="@+id/iv_close"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="end"
             android:layout_marginEnd="11dp"
             android:padding="5dp"
-            android:src="@drawable/ic_close"
-            android:layout_gravity="end"/>
+            android:src="@drawable/ic_close" />
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingTop="24dp"
+        android:paddingBottom="52dp"
+        app:layout_constraintBottom_toTopOf="@+id/activity_evect_detail_btn_complete"
         app:layout_constraintTop_toBottomOf="@+id/toolbarLayout">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -56,9 +58,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
                 android:fontFamily="@font/pretendard"
-                android:text="행사카테고리"
+                android:text="행사 카테고리"
                 android:textColor="@color/standard_black"
                 android:textFontWeight="700"
                 android:textSize="16dp"
@@ -74,7 +75,7 @@
                 android:button="@null"
                 android:paddingHorizontal="12dp"
                 android:paddingVertical="8dp"
-                android:text="동아리행사"
+                android:text="동아리 행사"
                 android:textColor="@color/selector_checkbox_text"
                 android:textSize="14dp"
                 app:layout_constraintStart_toStartOf="@+id/tv_event"
@@ -129,7 +130,7 @@
                 android:id="@+id/cb_festival"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/selector_checkbox"
                 android:button="@null"
                 android:paddingHorizontal="12dp"
@@ -264,7 +265,7 @@
                 android:button="@null"
                 android:paddingHorizontal="12dp"
                 android:paddingVertical="8dp"
-                android:text="전시"
+                android:text="강원"
                 android:textColor="@color/selector_checkbox_text"
                 android:textSize="14dp"
                 app:layout_constraintStart_toEndOf="@+id/cb_chungcheong"
@@ -417,22 +418,19 @@
                 app:layout_constraintStart_toEndOf="@+id/tv_tag3"
                 app:layout_constraintTop_toTopOf="@+id/tv_tag3" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginTop="52dp"
-                android:background="@color/haenggu_main"
-                android:fontFamily="@font/pretendard"
-                android:text="완료"
-                android:textColor="@color/white"
-                android:textFontWeight="500"
-                android:textSize="18dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/sp_tag3" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 
+    <Button
+        android:id="@+id/activity_evect_detail_btn_complete"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/haenggu_main"
+        android:fontFamily="@font/pretendard"
+        android:text="완료"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

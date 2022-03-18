@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,32 +7,29 @@
     android:background="@color/white"
     tools:context=".main.home.CategoryActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:paddingHorizontal="10dp"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbarLayout"
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:paddingHorizontal="10dp"
-            tools:ignore="MissingConstraints">
+            android:fontFamily="@font/pretendard"
+            android:includeFontPadding="false"
+            android:text="카테고리"
+            android:textColor="@color/standard_black"
+            android:textFontWeight="700"
+            android:textSize="20dp" />
+    </androidx.appcompat.widget.Toolbar>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="카테고리"
-                android:includeFontPadding="false"
-                android:fontFamily="@font/pretendard"
-                android:textFontWeight="700"
-                android:textColor="@color/standard_black"
-                android:textSize="20dp"/>
-        </androidx.appcompat.widget.Toolbar>
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -48,21 +45,21 @@
                 android:id="@+id/tablayout"
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
-                android:theme="@style/TabTheme"
                 android:layout_marginTop="8dp"
-                android:paddingHorizontal="8dp"
                 android:clipToPadding="false"
-                app:tabMaxWidth="0dp"
-                app:tabIndicatorGravity="stretch"
+                android:paddingHorizontal="8dp"
+                android:theme="@style/TabTheme"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout"
                 app:tabIndicator="@drawable/maincolor_box_30"
                 app:tabIndicatorAnimationMode="elastic"
-                app:tabMode="scrollable"
                 app:tabIndicatorFullWidth="true"
-                app:tabTextColor="@color/standard_black"
-                app:tabSelectedTextColor="@color/white"
+                app:tabIndicatorGravity="stretch"
+                app:tabMaxWidth="0dp"
+                app:tabMode="scrollable"
                 app:tabRippleColor="@color/transparent"
+                app:tabSelectedTextColor="@color/white"
                 app:tabTextAppearance="@style/TabTextStyle"
-                app:layout_constraintTop_toTopOf="@+id/constraintLayout"/>
+                app:tabTextColor="@color/standard_black" />
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/vp_event"
@@ -72,5 +69,4 @@
                 app:layout_constraintTop_toBottomOf="@id/tablayout" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
