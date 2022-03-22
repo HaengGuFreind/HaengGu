@@ -1,17 +1,13 @@
 package com.example.haenggu.data.remote.datasources
 
 data class ResponseEvent (
-    val resources : Resource
+    val resources : EventResource
 )
 
-data class Resource (
-    val links: List<LinkData>,
-    val content: List<EventData>
-)
-
-data class LinkData (
-    val rel: String,
-    val href: String
+data class EventResource (
+    val links: LinkData,
+    val content: List<EventData>,
+    val page: PageData
 )
 
 data class EventData (
