@@ -108,11 +108,8 @@ class KaKaoAPI(var interator: LoginContract.LoginInterator?) : LoginContract.Kak
                         if (user.kakaoAccount?.genderNeedsAgreement == true) {
                             user.kakaoAccount?.gender?.toString().let { scopes.add(it!!) }
                         }
-                        if (user.kakaoAccount?.profileNicknameNeedsAgreement == true){
-                            user.kakaoAccount?.profileNicknameNeedsAgreement?.toString().let { scopes.add(it!!) }
-                        }
 
-                        if (scopes.count() == 3) {
+                        if (scopes.count() == 2) {
                             // 회원가입 및 로그인 성공
                             Log.d("getLogin", token.accessToken)
                             Log.d("getLogin", "Success_NoToken")
