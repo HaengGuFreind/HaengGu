@@ -10,7 +10,6 @@ import com.example.haenggu.main.chat.ChatFragment
 import com.example.haenggu.main.find.FindFragment
 import com.example.haenggu.main.home.HomeFragment
 import com.example.haenggu.main.mypage.MypageFragment
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 

@@ -17,4 +17,22 @@ class SharedManager(context: Context) {
         var htoken = prefs["htoken", ""]
         return htoken
     }
+
+    fun saveEmail(email: String) {
+        prefs["email"] = email
+    }
+
+    fun getEmail(): String {
+        var email = prefs["email", ""]
+        return email
+    }
+
+    fun saveGender(gender: String) {
+        prefs["gender"] = gender
+    }
+
+    fun getGender(): String {
+        var gender = prefs["gender", ""]
+        return gender
+    }
 }

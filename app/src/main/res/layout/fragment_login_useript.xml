@@ -19,15 +19,16 @@
             android:id="@+id/fragment_useript_btnStore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|right"
+            android:layout_gravity="right"
             android:background="#00ff0000"
-            android:fontFamily="@font/notosanskr_bold"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/pretendard_bold"
             android:includeFontPadding="false"
             android:minWidth="0dp"
             android:minHeight="0dp"
             android:text="완료"
             android:textColor="#949494"
-            android:textSize="15sp"
+            android:textSize="16sp"
             tools:ignore="TouchTargetSizeCheck"
             tools:layout_editor_absoluteX="369dp"
             tools:layout_editor_absoluteY="11dp"></Button>
@@ -35,8 +36,10 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="60dp"
         android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -56,22 +59,23 @@
                 android:id="@+id/textView"
                 android:layout_width="332dp"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/notosanskr_bold"
+                android:fontFamily="@font/pretendard_bold"
                 android:includeFontPadding="false"
                 android:minWidth="0dp"
                 android:minHeight="0dp"
                 android:text="회원가입"
-                android:textColor="@color/black"
+                android:textColor="@color/standard_black"
                 android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/fragment_useript_textView1"
                 android:layout_width="313dp"
                 android:layout_height="41dp"
-                android:layout_marginTop="11dp"
+                android:layout_marginTop="12dp"
                 android:bufferType="spannable"
-                android:fontFamily="@font/notosanskr_regular"
+                android:fontFamily="@font/pretendard_medium"
                 android:includeFontPadding="false"
+                android:textColor="@color/standard_black"
                 android:text="관심사에 맞는 행사 추천과 구인 글 작성을 위해 몇 가지\n간단한 정보를 입력해 주세요. "
                 android:textSize="14sp" />
 
@@ -79,104 +83,133 @@
                 android:id="@+id/textView3"
                 android:layout_width="49dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="11dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="36dp"
                 android:drawableEnd="@drawable/ic_icon_star"
                 android:drawablePadding="3dp"
-                android:fontFamily="@font/notosanskr_bold"
+                android:fontFamily="@font/pretendard_bold"
                 android:includeFontPadding="false"
                 android:text="닉네임"
-                android:textColor="@color/black"
+                android:textColor="@color/standard_black"
                 android:textSize="14sp" />
 
             <EditText
                 android:id="@+id/fragment_useript_etNickname"
-                android:layout_width="330dp"
+                android:layout_width="match_parent"
                 android:layout_height="43dp"
                 android:layout_marginTop="12dp"
-                android:background="@drawable/gray1_button"
+                android:layout_marginLeft="1dp"
+                android:background="@drawable/gray1_box_6"
                 android:ems="10"
-                android:fontFamily="@font/notosanskr_regular"
+                android:fontFamily="@font/pretendard_medium"
                 android:hint="한글 최대 8자, 영문 10자"
                 android:includeFontPadding="false"
-                android:inputType="textPersonName"
-                android:paddingLeft="15dp"
-                android:paddingTop="13dp"
-                android:paddingBottom="15dp"
-                android:textColor="#949494"
+                android:inputType="textNoSuggestions"
+                android:paddingLeft="16dp"
+                android:textColorHint="@color/gray05"
+                android:textColor="@color/standard_black"
                 android:textSize="14sp"
-                tools:ignore="TouchTargetSizeCheck" />
+                android:textCursorDrawable="@drawable/cusor_drawable_pink"
+                tools:ignore="TouchTargetSizeCheck"
+                android:imeOptions="actionDone"/>
             <!--보고 1.width 관련-->
+
+            <TextView
+                android:id="@+id/fragment_useript_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="14dp"
+                android:text="최대 8글자만 입력 가능합니다."
+                android:textColor="@color/haenggu_main"
+                android:fontFamily="@font/pretendard_medium"
+                android:textSize="12sp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="4dp"
+                android:includeFontPadding="false"
+                ></TextView>
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="39dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="11dp"
-                android:layout_marginTop="19dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="20dp"
                 android:drawableRight="@drawable/ic_icon_star"
                 android:drawablePadding="3dp"
-                android:fontFamily="@font/notosanskr_bold"
+                android:fontFamily="@font/pretendard_bold"
                 android:includeFontPadding="false"
                 android:text="성별"
-                android:textColor="@color/black"
+                android:textColor="@color/standard_black"
                 android:textSize="14sp" />
 
             <LinearLayout
-                android:layout_width="330dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
+                android:layout_marginLeft="1dp"
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/fragment_useript_btnMan"
-                    android:layout_width="157.37dp"
+                    android:id="@+id/fragment_useript_btnMail"
+                    android:layout_width="match_parent"
                     android:layout_height="43dp"
                     android:layout_weight="1"
-                    android:background="@drawable/gray1_button"
-                    android:fontFamily="@font/notosanskr_regular"
+                    android:background="@drawable/gray2_button"
+                    android:fontFamily="@font/pretendard_regular"
                     android:gravity="center"
                     android:includeFontPadding="false"
                     android:text="남성"
-                    android:textColor="@color/black"
+                    android:textColor="@color/standard_black"
                     android:textSize="14.31sp"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:enabled="false"
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <Button
-                    android:id="@+id/fragment_useript_btnWoman"
-                    android:layout_width="157.37dp"
+                    android:id="@+id/fragment_useript_btnFemail"
+                    android:layout_width="match_parent"
                     android:layout_height="43dp"
                     android:layout_marginLeft="15.26dp"
                     android:layout_weight="1"
-                    android:background="@drawable/gray1_button"
-                    android:fontFamily="@font/notosanskr_regular"
+                    android:background="@drawable/gray2_button"
+                    android:fontFamily="@font/pretendard_regular"
                     android:gravity="center"
                     android:includeFontPadding="false"
                     android:text="여성"
-                    android:textColor="@color/black"
+                    android:textColor="@color/standard_black"
                     android:textSize="14.31sp"
+                    android:enabled="false"
+                    style="?android:attr/borderlessButtonStyle"
                     tools:ignore="TouchTargetSizeCheck" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/textView5"
-                android:layout_width="315dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="11dp"
-                android:layout_marginTop="19dp"
-                android:fontFamily="@font/notosanskr_bold"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/pretendard_bold"
                 android:includeFontPadding="false"
                 android:text="출생연도"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textColor="@color/standard_black"
+                android:textSize="14sp"
+                android:drawableRight="@drawable/ic_icon_star"
+                android:drawablePadding="3dp"/>
 
             <EditText
                 android:id="@+id/fragment_useript_edtBirth"
-                android:layout_width="330dp"
+                android:layout_width="match_parent"
                 android:layout_height="43dp"
                 android:layout_marginTop="12dp"
-                android:background="@drawable/gray1_button"
+                android:layout_marginLeft="1dp"
+                android:textColor="@color/standard_black"
+                android:fontFamily="@font/pretendard_medium"
+                android:background="@drawable/gray1_box_6"
                 android:ems="4"
+                android:textSize="14sp"
+                android:hint="출생연도 입력"
+                android:paddingLeft="16dp"
+                android:textColorHint="@color/gray05"
                 android:includeFontPadding="false"
                 android:inputType="number"
                 tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
@@ -185,117 +218,126 @@
                 android:id="@+id/textView6"
                 android:layout_width="55dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="11dp"
-                android:layout_marginTop="19dp"
-                android:fontFamily="@font/notosanskr_bold"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/pretendard_bold"
                 android:includeFontPadding="false"
                 android:text="학교정보"
-                android:textColor="@color/black"
+                android:textColor="@color/standard_black"
                 android:textSize="14sp" />
 
             <Button
                 android:id="@+id/fragment_useript_btnSchool"
-                android:layout_width="330dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
                 android:layout_height="43dp"
+                android:layout_marginLeft="1dp"
                 android:layout_marginTop="12dp"
-                android:background="@drawable/gray1_button"
+                android:background="@drawable/gray1_box_6"
                 android:drawableEnd="@drawable/ic_icon_search"
-                android:fontFamily="@font/notosanskr_regular"
+                android:fontFamily="@font/pretendard_medium"
                 android:gravity="center|left"
                 android:includeFontPadding="false"
                 android:paddingLeft="15dp"
-                android:paddingRight="13dp"
+                android:paddingRight="18dp"
                 android:text="학교 검색"
-                android:textColor="#949494"
+                android:textColor="@color/gray05"
                 tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
             <Button
                 android:id="@+id/fragment_useript_btnSMajor"
-                android:layout_width="330dp"
+                android:layout_width="match_parent"
                 android:layout_height="43dp"
-                android:layout_marginTop="12dp"
-                android:background="@drawable/gray1_button"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="1dp"
+                android:background="@drawable/gray1_box_6"
                 android:drawableEnd="@drawable/ic_icon_search"
-                android:fontFamily="@font/notosanskr_regular"
+                android:fontFamily="@font/pretendard_medium"
                 android:gravity="center|left"
                 android:includeFontPadding="false"
                 android:paddingLeft="15dp"
-                android:paddingRight="13dp"
+                android:paddingRight="18dp"
                 android:text="학과 검색"
-                android:textColor="#949494"
-                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+                android:textColor="@color/gray05"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck"
+                style="?android:attr/borderlessButtonStyle"/>
 
             <Spinner
                 android:id="@+id/fragment_useript_spnGrade"
-                android:layout_width="330dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="1dp"
                 android:layout_height="43dp"
-                android:layout_marginTop="12dp"
-                android:background="@drawable/gray1_button"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/spinner_background"
                 android:dropDownWidth="330dp"
-                android:fontFamily="@font/notosanskr_regular"
+                android:fontFamily="@font/pretendard_medium"
                 android:gravity="center|left"
                 android:includeFontPadding="false"
                 android:paddingLeft="15dp"
                 android:spinnerMode="dropdown"
-                android:text="학년 선택"
-                android:textColor="#949494"
+                android:textColor="@color/gray05"
                 tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
             <TextView
                 android:id="@+id/textView7"
-                android:layout_width="55dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="11dp"
-                android:layout_marginTop="19dp"
-                android:fontFamily="@font/notosanskr_bold"
+                android:layout_width="40dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/pretendard_bold"
                 android:includeFontPadding="false"
                 android:text="MBTI"
-                android:textColor="@color/black"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:textColor="@color/standard_black"
                 android:textSize="14sp" />
 
             <Spinner
                 android:id="@+id/fragment_useript_spnMBTI"
-                android:layout_width="330dp"
+                android:layout_width="match_parent"
                 android:layout_height="43dp"
                 android:layout_marginTop="12dp"
-                android:background="@drawable/gray1_button"
+                android:layout_marginLeft="1dp"
+                android:background="@drawable/spinner_background"
                 android:dropDownWidth="330dp"
-                android:fontFamily="@font/notosanskr_regular"
+                android:fontFamily="@font/pretendard_medium"
                 android:gravity="center|left"
                 android:includeFontPadding="false"
                 android:paddingLeft="15dp"
                 android:spinnerMode="dropdown"
                 android:text="선택"
-                android:textColor="#949494"
+                android:textColor="@color/gray05"
                 tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="55dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="11dp"
-                android:layout_marginTop="19dp"
-                android:fontFamily="@font/notosanskr_bold"
+                android:layout_height="16dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/pretendard_bold"
                 android:includeFontPadding="false"
                 android:text="관심 행사"
-                android:textColor="@color/black"
+                android:textColor="@color/standard_black"
                 android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/textView9"
-                android:layout_width="330dp"
+                android:layout_width="match_parent"
                 android:layout_height="16dp"
-                android:layout_marginTop="11dp"
-                android:fontFamily="@font/notosanskr_regular"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/pretendard_regular"
                 android:includeFontPadding="false"
                 android:text="선택한 카테고리와 지역에 따라 맞춤 행사 기능이 제공됩니다."
-                android:textColor="#797979"
-                android:textSize="12.5sp" />
+                android:textColor="@color/gray06"
+                android:textSize="12sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="1dp"
                 android:orientation="horizontal">
 
                 <Button
@@ -303,13 +345,14 @@
                     android:layout_width="90dp"
                     android:layout_height="32dp"
                     android:background="@drawable/solid_button"
-                    android:fontFamily="@font/notosanskr_regular"
+                    android:fontFamily="@font/pretendard_regular"
                     android:includeFontPadding="false"
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:text="동아리 행사"
-                    android:textColor="@color/haenggu_main"
+                    android:textColor="@color/standard_black"
                     android:textSize="14sp"
+                    style="?android:attr/borderlessButtonStyle"
                     tools:ignore="TouchTargetSizeCheck"></Button>
 
                 <Button
@@ -318,13 +361,14 @@
                     android:layout_height="32dp"
                     android:layout_marginLeft="7dp"
                     android:background="@drawable/solid_button"
-                    android:fontFamily="@font/notosanskr_regular"
+                    android:fontFamily="@font/pretendard_regular"
                     android:includeFontPadding="false"
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:text="박람회"
-                    android:textColor="@color/haenggu_main"
+                    android:textColor="@color/standard_black"
                     android:textSize="14sp"
+                    style="?android:attr/borderlessButtonStyle"
                     tools:ignore="TouchTargetSizeCheck"></Button>
 
                 <Button
@@ -333,13 +377,14 @@
                     android:layout_height="32dp"
                     android:layout_marginLeft="7dp"
                     android:background="@drawable/solid_button"
-                    android:fontFamily="@font/notosanskr_regular"
+                    android:fontFamily="@font/pretendard_regular"
                     android:includeFontPadding="false"
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:text="컨퍼런스"
-                    android:textColor="@color/haenggu_main"
+                    android:textColor="@color/standard_black"
                     android:textSize="14sp"
+                    style="?android:attr/borderlessButtonStyle"
                     tools:ignore="TouchTargetSizeCheck"></Button>
 
                 <Button
@@ -348,21 +393,23 @@
                     android:layout_height="32dp"
                     android:layout_marginLeft="7dp"
                     android:background="@drawable/solid_button"
-                    android:fontFamily="@font/notosanskr_regular"
+                    android:fontFamily="@font/pretendard_regular"
                     android:includeFontPadding="false"
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:text="전시"
-                    android:textColor="@color/haenggu_main"
+                    android:textColor="@color/standard_black"
                     android:textSize="14sp"
+                    style="?android:attr/borderlessButtonStyle"
                     tools:ignore="TouchTargetSizeCheck"></Button>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="7dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="8dp"
                 android:orientation="horizontal">
 
                 <Button
@@ -370,13 +417,14 @@
                     android:layout_width="74dp"
                     android:layout_height="32dp"
                     android:background="@drawable/solid_button"
-                    android:fontFamily="@font/notosanskr_regular"
+                    android:fontFamily="@font/pretendard_regular"
                     android:includeFontPadding="false"
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:text="페스티벌"
-                    android:textColor="@color/haenggu_main"
+                    android:textColor="@color/standard_black"
                     android:textSize="14sp"
+                    style="?android:attr/borderlessButtonStyle"
                     tools:ignore="TouchTargetSizeCheck"></Button>
 
                 <Button
@@ -385,13 +433,14 @@
                     android:layout_height="32dp"
                     android:layout_marginLeft="7dp"
                     android:background="@drawable/solid_button"
-                    android:fontFamily="@font/notosanskr_regular"
+                    android:fontFamily="@font/pretendard_regular"
                     android:includeFontPadding="false"
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:text="콘서트"
-                    android:textColor="@color/haenggu_main"
+                    android:textColor="@color/standard_black"
                     android:textSize="14sp"
+                    style="?android:attr/borderlessButtonStyle"
                     tools:ignore="TouchTargetSizeCheck"></Button>
 
                 <Button
@@ -400,13 +449,14 @@
                     android:layout_height="32dp"
                     android:layout_marginLeft="7dp"
                     android:background="@drawable/solid_button"
-                    android:fontFamily="@font/notosanskr_regular"
+                    android:fontFamily="@font/pretendard_regular"
                     android:includeFontPadding="false"
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:text="연극/뮤지컬"
-                    android:textColor="@color/haenggu_main"
+                    android:textColor="@color/standard_black"
                     android:textSize="14sp"
+                    style="?android:attr/borderlessButtonStyle"
                     tools:ignore="TouchTargetSizeCheck"></Button>
 
                 <Button
@@ -415,13 +465,14 @@
                     android:layout_height="32dp"
                     android:layout_marginLeft="7dp"
                     android:background="@drawable/solid_button"
-                    android:fontFamily="@font/notosanskr_regular"
+                    android:fontFamily="@font/pretendard_regular"
                     android:includeFontPadding="false"
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:text="기타"
-                    android:textColor="@color/haenggu_main"
+                    android:textColor="@color/standard_black"
                     android:textSize="14sp"
+                    style="?android:attr/borderlessButtonStyle"
                     tools:ignore="TouchTargetSizeCheck"></Button>
 
             </LinearLayout>
@@ -429,19 +480,20 @@
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="55dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="11dp"
-                android:layout_marginTop="19dp"
-                android:fontFamily="@font/notosanskr_bold"
+                android:layout_height="16dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/pretendard_bold"
                 android:includeFontPadding="false"
                 android:text="관심 지역"
-                android:textColor="@color/black"
+                android:textColor="@color/standard_black"
                 android:textSize="14sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="12dp"
                 android:orientation="horizontal">
 
                 <Button
@@ -449,13 +501,14 @@
                     android:layout_width="48dp"
                     android:layout_height="32dp"
                     android:background="@drawable/solid_button"
-                    android:fontFamily="@font/notosanskr_regular"
+                    android:fontFamily="@font/pretendard_regular"
                     android:includeFontPadding="false"
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:text="서울"
-                    android:textColor="@color/haenggu_main"
+                    android:textColor="@color/standard_black"
                     android:textSize="14sp"
+                    style="?android:attr/borderlessButtonStyle"
                     tools:ignore="TouchTargetSizeCheck"></Button>
 
                 <Button
@@ -464,13 +517,14 @@
                     android:layout_height="32dp"
                     android:layout_marginLeft="7dp"
                     android:background="@drawable/solid_button"
-                    android:fontFamily="@font/notosanskr_regular"
+                    android:fontFamily="@font/pretendard_regular"
                     android:includeFontPadding="false"
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:text="경기"
-                    android:textColor="@color/haenggu_main"
+                    android:textColor="@color/standard_black"
                     android:textSize="14sp"
+                    style="?android:attr/borderlessButtonStyle"
                     tools:ignore="TouchTargetSizeCheck"></Button>
 
                 <Button
@@ -479,13 +533,14 @@
                     android:layout_height="32dp"
                     android:layout_marginLeft="7dp"
                     android:background="@drawable/solid_button"
-                    android:fontFamily="@font/notosanskr_regular"
+                    android:fontFamily="@font/pretendard_regular"
                     android:includeFontPadding="false"
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:text="충청"
-                    android:textColor="@color/haenggu_main"
+                    android:textColor="@color/standard_black"
                     android:textSize="14sp"
+                    style="?android:attr/borderlessButtonStyle"
                     tools:ignore="TouchTargetSizeCheck"></Button>
 
                 <Button
@@ -494,13 +549,14 @@
                     android:layout_height="32dp"
                     android:layout_marginLeft="7dp"
                     android:background="@drawable/solid_button"
-                    android:fontFamily="@font/notosanskr_regular"
+                    android:fontFamily="@font/pretendard_regular"
                     android:includeFontPadding="false"
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:text="강원"
-                    android:textColor="@color/haenggu_main"
+                    android:textColor="@color/standard_black"
                     android:textSize="14sp"
+                    style="?android:attr/borderlessButtonStyle"
                     tools:ignore="TouchTargetSizeCheck"></Button>
 
                 <Button
@@ -508,22 +564,24 @@
                     android:layout_width="48dp"
                     android:layout_height="32dp"
                     android:background="@drawable/solid_button"
-                    android:fontFamily="@font/notosanskr_regular"
+                    android:fontFamily="@font/pretendard_regular"
                     android:includeFontPadding="false"
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:text="전라"
-                    android:textColor="@color/haenggu_main"
+                    android:textColor="@color/standard_black"
                     android:textSize="14sp"
+                    style="?android:attr/borderlessButtonStyle"
                     tools:ignore="TouchTargetSizeCheck"></Button>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="7dp"
-                android:layout_marginBottom="26dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="49dp"
+                android:layout_marginLeft="1dp"
                 android:orientation="horizontal">
 
                 <Button
@@ -531,13 +589,14 @@
                     android:layout_width="48dp"
                     android:layout_height="32dp"
                     android:background="@drawable/solid_button"
-                    android:fontFamily="@font/notosanskr_regular"
+                    android:fontFamily="@font/pretendard_regular"
                     android:includeFontPadding="false"
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:text="경상"
-                    android:textColor="@color/haenggu_main"
+                    android:textColor="@color/standard_black"
                     android:textSize="14sp"
+                    style="?android:attr/borderlessButtonStyle"
                     tools:ignore="TouchTargetSizeCheck"></Button>
 
                 <Button
@@ -546,13 +605,14 @@
                     android:layout_height="32dp"
                     android:layout_marginLeft="7dp"
                     android:background="@drawable/solid_button"
-                    android:fontFamily="@font/notosanskr_regular"
+                    android:fontFamily="@font/pretendard_regular"
                     android:includeFontPadding="false"
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:text="제주"
-                    android:textColor="@color/haenggu_main"
+                    android:textColor="@color/standard_black"
                     android:textSize="14sp"
+                    style="?android:attr/borderlessButtonStyle"
                     tools:ignore="TouchTargetSizeCheck"></Button>
             </LinearLayout>
 

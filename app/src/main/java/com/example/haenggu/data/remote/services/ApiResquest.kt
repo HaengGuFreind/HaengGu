@@ -1,23 +1,52 @@
 package com.example.haenggu.data.remote.services
 
 import com.example.haenggu.data.remote.datasources.*
-import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.*
 
 interface ApiRequest {
 
-    @GET("/user")
-    suspend fun requestHtoken(): Response<String>
+    @GET("oauth/login/kakao")
+    fun getHToken(
+        @Header ("Authorization") htoken:String
+    ):Call<Login>
 
-    //먼저 수정
-    @FormUrlEncoded
-    @POST("하위주소")
+    @PATCH("users")
     fun updateUseript(
-        @Header("htoken") htoken: String,
-        @Body loginUserIpt: LoginUserIpt
-    ): Call<JSONObject>
+        @Header ("Authorization") htoken:String,
+        @Body userinfo: UserInfo
+    ):Call<RRUserInfo>
+
+//
+//    @FormUrlEncoded
+//    @PATCH("users")
+//    fun updateUseript(
+//        @Header ("Authorization") htoken:String,
+//        @Header("Content-Type") type:String,
+//        @FieldMap userinfo: HashMap<String,Any>
+//    ):Call<RRUserInfo>
+
+//    @FormUrlEncoded
+//    @PATCH("users")
+//    fun updateUseript(
+//        @Header ("Authorization") htoken:String,
+//        @Header("Content-Type") type:String,
+//        @Field ("birthday")birthday: String ,
+//        @Field ("category_tag")categoryTag: List<String>,
+//        @Field ("dept_id")deptId: String,
+//        @Field ("email")email: String,
+//        @Field ("gender")gender: String,
+//        @Field ("grade")grade: Int,
+//        @Field ("mbti")mbti: String,
+//        @Field ("region_tag")regionTag: List<String>,
+//        @Field ("username")username: String,
+//    ):Call<RRUserInfo>
+
+    @GET("users/majors")
+    fun getSchool(
+        @Query ("school-name")school_name: String
+    ):Call<School>
 
     @GET("profile")
     suspend fun getProfile() : Response<Profile>
