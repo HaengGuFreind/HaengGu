@@ -18,6 +18,31 @@ interface ApiRequest {
         @Body userinfo: UserInfo
     ):Call<RRUserInfo>
 
+//
+//    @FormUrlEncoded
+//    @PATCH("users")
+//    fun updateUseript(
+//        @Header ("Authorization") htoken:String,
+//        @Header("Content-Type") type:String,
+//        @FieldMap userinfo: HashMap<String,Any>
+//    ):Call<RRUserInfo>
+
+//    @FormUrlEncoded
+//    @PATCH("users")
+//    fun updateUseript(
+//        @Header ("Authorization") htoken:String,
+//        @Header("Content-Type") type:String,
+//        @Field ("birthday")birthday: String ,
+//        @Field ("category_tag")categoryTag: List<String>,
+//        @Field ("dept_id")deptId: String,
+//        @Field ("email")email: String,
+//        @Field ("gender")gender: String,
+//        @Field ("grade")grade: Int,
+//        @Field ("mbti")mbti: String,
+//        @Field ("region_tag")regionTag: List<String>,
+//        @Field ("username")username: String,
+//    ):Call<RRUserInfo>
+
     @GET("users/majors")
     fun getSchool(
         @Query ("school-name")school_name: String

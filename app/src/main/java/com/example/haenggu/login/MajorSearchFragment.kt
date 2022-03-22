@@ -9,12 +9,14 @@ import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import com.example.haenggu.R
+import com.example.haenggu.data.remote.datasources.SchoolItem
 import com.example.haenggu.databinding.FragmentLoginMajorBinding
 
-class MajorSearchFragment() : Fragment() {
+class MajorSearchFragment(schoolname:String) : Fragment() {
 
     private var _binding: FragmentLoginMajorBinding? = null
     private val binding get() = _binding!!
+    val schoolName = schoolname
     var majorname: String = ""
     var majorlist= ArrayList<String>()
     override fun onCreateView(
@@ -30,10 +32,10 @@ class MajorSearchFragment() : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val lActivity = activity as LoginActivity
         var pair = lActivity.getmlist()
+        var mlist = ArrayList<SchoolItem>()
         if(pair?.first == true) {
-            var mlist = pair.second
-            Log.d("우르롹끼3",mlist.toString())
-            Log.d("우르롹끼2",mlist[1].deptName.toString())
+            mlist = pair.second
+
 
             for (i: Int in 0 until mlist.size)
                 majorlist.add(i,mlist[i].deptName)
@@ -47,7 +49,12 @@ class MajorSearchFragment() : Fragment() {
 
             var fragment_useript = UserIptFragment()
             var bundle = Bundle()
-            bundle.putString("major",majorname)
+            bundle.putString("schoolname", schoolName)
+            if (majorname  != ""){
+                var dept_id = mlist[majorlist.indexOf(majorname)].deptId
+                bundle.putString("dept_id",dept_id)
+            }
+            bundle.putString("majorname",majorname)
             fragment_useript.arguments = bundle //fragment의 arguments에 데이터를 담은 bundle을 넘겨줌
 
 //            activity?.supportFragmentManager!!

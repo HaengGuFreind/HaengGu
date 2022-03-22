@@ -29,7 +29,7 @@
         <TextView
             android:layout_width="121dp"
             android:layout_height="wrap_content"
-            android:text="학과검색"
+            android:text="학교검색"
             android:layout_marginLeft="72dp"
             android:layout_gravity="left|center"
             android:textColor="#383838"

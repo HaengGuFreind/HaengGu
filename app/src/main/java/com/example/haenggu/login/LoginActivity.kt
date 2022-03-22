@@ -47,11 +47,11 @@ class LoginActivity : AppCompatActivity(), LoginContract.LoginView {
                 transaction.replace(R.id.frameLayout_login,LoginFragment()).commit()
             }
             2->{
-                transaction.replace(R.id.frameLayout_login,UserIptFragment()).commit()
+                transaction.replace(R.id.frameLayout_login,UserIptFragment()).addToBackStack(null).commit()
             }
-//            3->{
-//                transaction.replace(R.id.frameLayout_login,SchoolSearchFragment()).addToBackStack(null).commit()
-//            }
+            3->{
+                transaction.replace(R.id.frameLayout_login,SchoolSearchFragment()).addToBackStack(null).commit()
+            }
         }
     }
 
@@ -67,8 +67,6 @@ class LoginActivity : AppCompatActivity(), LoginContract.LoginView {
 
     fun getUserIpt(userInfo: UserInfo){
         presenter?.updateUserIpt(userInfo,applicationContext)
-        finish()
-//        moveToMain()
     }
 
     fun getsinfo(school_name: String){

@@ -33,6 +33,7 @@ class SchoolSearchFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val lActivity = activity as LoginActivity
 
         binding.fragmentSearchschoolBtnbackstep.setOnClickListener {
             Log.d("검색", "2")
@@ -47,6 +48,7 @@ class SchoolSearchFragment : Fragment() {
             parentFragmentManager
                 .beginTransaction()
                 .replace(R.id.frameLayout_login, fragment_useript)
+                .addToBackStack(null)
                 .commit()
 
 //            activity?.supportFragmentManager!!

@@ -21,10 +21,10 @@ interface LoginContract {
     }
 
     interface LoginInterator {
-        fun resultToken(string: String,context:Context)
         fun resultKLogin(string: String,context:Context) //로그인 결과 처리
         fun resultHLogin(net:Boolean, role:String) //로그인 결과 처리
         fun resultSchool(net:Boolean, school_item: ArrayList<SchoolItem>)
+        fun resultSign(net:Boolean)
 
     }
     interface KakaoAPIModel {

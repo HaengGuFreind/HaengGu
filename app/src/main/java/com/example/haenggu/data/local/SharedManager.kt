@@ -27,15 +27,6 @@ class SharedManager(context: Context) {
         return email
     }
 
-    fun saveBirth(birth: String) {
-        prefs["birth"] = birth
-    }
-
-    fun getBirth(): String {
-        var birth = prefs["birth", ""]
-        return birth
-    }
-
     fun saveGender(gender: String) {
         prefs["gender"] = gender
     }
