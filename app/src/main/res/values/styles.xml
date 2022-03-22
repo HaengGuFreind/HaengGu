@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
     <style name="Widget.BottomNavigationView"
         parent="Widget.Design.BottomNavigationView">
         <item name="fontFamily">@font/notosanskr_medium</item>

@@ -17,17 +17,18 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".main.home.EventFilterActivity"
-            android:exported="false" />
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".main.home.EventDetailActivity"
-            android:exported="false" />
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".main.home.CategoryActivity"
-            android:exported="false" />
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".main.chat.ChatActivity"
-            android:exported="false" />
-        <activity android:name=".main.MainActivity" />
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".main.MainActivity"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".login.LoginActivity"
             android:exported="true">
