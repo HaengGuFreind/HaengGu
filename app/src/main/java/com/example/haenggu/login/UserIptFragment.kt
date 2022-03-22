@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
 import android.text.Editable
+import android.text.InputFilter
 import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import com.example.haenggu.R
@@ -22,6 +23,8 @@ import android.view.inputmethod.EditorInfo
 import android.widget.*
 import com.example.haenggu.data.local.SharedManager
 import com.example.haenggu.data.remote.datasources.SchoolItem
+import java.lang.NumberFormatException
+import java.util.regex.Pattern
 
 
 class UserIptFragment : Fragment(), View.OnClickListener{
@@ -51,6 +54,7 @@ class UserIptFragment : Fragment(), View.OnClickListener{
         if (arguments != null){
             binding.fragmentUseriptBtnSchool.text = arguments?.getString("schoolname")
             binding.fragmentUseriptBtnSMajor.text = arguments?.getString("majorname")
+            dept_id = arguments?.getString("dept_id").toString()
             arguments?.getString("majorname")?.let { Log.d("요이이이", it) }
         }
         return view
@@ -60,7 +64,7 @@ class UserIptFragment : Fragment(), View.OnClickListener{
         super.onViewCreated(view, savedInstanceState)
         val lActivity = activity as LoginActivity
 
-
+        Log.d("Htoken_useript",sharedManager.getHToken())
         // 회원가입 밑 소개글
         val ssb = SpannableStringBuilder(binding.fragmentUseriptTextView1.text)
         ssb.apply {
@@ -93,23 +97,39 @@ class UserIptFragment : Fragment(), View.OnClickListener{
             return false } })
 
 
+        binding.fragmentUseriptEtNickname.filters = arrayOf(InputFilter { source, _, _, _, _, _ ->
+            val ps: Pattern =
+                Pattern.compile("^[a-zA-Zㄱ-힣]+$")
+            if (source == "" || ps.matcher(source).matches()) {
+                return@InputFilter source
+            }
+    //        lActivity.toast( "한글,영문만 입력 가능합니다.")
+            ""
+        }, InputFilter.LengthFilter(8))
 
 
         //성별
         // 성별도 카톡에서 받는거로 추가
+        Log.d("gh","ii")
 
+        try{
+            val typeface = Typeface.createFromAsset(requireContext().assets, "font/pretendard_medium.otf")
+            binding.fragmentUseriptBtnFemail.typeface = typeface
+        }catch (e: Exception) {
+            Log.d("exception occurred.","font")
+        }
+
+        Log.d("성별이 이상한걸242",sharedManager.getGender())
         if(sharedManager.getGender() == "femail"){
+            Log.d("성별이 이상한걸",sharedManager.getGender().toString())
             binding.fragmentUseriptBtnFemail.setBackgroundResource(R.drawable.pink_button)
             binding.fragmentUseriptBtnFemail.setTextColor(Color.parseColor("#FFFFFF"))
-//            val typeface = Typeface.createFromAsset(requireContext().assets, "font/pretendard_medium.otf")
-//            binding.fragmentUseriptBtnFemail.typeface = typeface
-            gender = "femail"
+            gender = "FEMAIL"
         }else{
+            Log.d("성별이 이상한걸",sharedManager.getGender().toString())
             binding.fragmentUseriptBtnMail.setBackgroundResource(R.drawable.pink_button)
             binding.fragmentUseriptBtnMail.setTextColor(Color.parseColor("#FFFFFF"))
-//            val typeface = Typeface.createFromAsset(requireContext().assets, "font/pretendard_medium.otf")
-//            binding.fragmentUseriptBtnFemail.typeface = typeface
-            gender = "mail"
+            gender = "MAIL"
         }
 
         //스피너 동작 처리
@@ -120,45 +140,59 @@ class UserIptFragment : Fragment(), View.OnClickListener{
 
         binding.fragmentUseriptBtnStore.setOnClickListener {
 
-            var nickname = binding.fragmentUseriptEtNickname.text.toString()
-            var major = binding.fragmentUseriptBtnSMajor.text.toString()
-            var userbirthday = binding.fragmentUseriptEdtBirth.text.toString()
+//            var nickname = binding.fragmentUseriptEtNickname.text.toString()
+//            var major = binding.fragmentUseriptBtnSMajor.text.toString()
+//            var userbirthday = binding.fragmentUseriptEdtBirth.text.toString()
 
-            if (isValidNickname_Eng(nickname) == false && isValidNickname_Korea(nickname) == false) {
-                toast("닉네임을 확인해 주세요.")
-            } else if (userbirthday == null){
-                toast("출생연도를 입력해 주세요.")
-            } else if (binding.fragmentUseriptBtnSchool.text == "" && binding.fragmentUseriptBtnSchool.text == null ){
-                toast("학교를 선택해 주세요.")
-            }else if (major == ""){
-                toast("전공을 선택해 주세요.")
-            }else if(usergrade == 0){
-                toast("학년을 선택해 주세요.")
-            }else if(usermbti == ""){
-                toast("MBTI를 선택해 주세요.")
-            }else {
+//            if (isValidNickname_Eng(nickname) == false && isValidNickname_Korea(nickname) == false) {
+//                toast("닉네임을 확인해 주세요.")
+//            } else if (userbirthday == null){
+//                toast("출생연도를 입력해 주세요.")
+//            } else if (binding.fragmentUseriptBtnSchool.text == "" && binding.fragmentUseriptBtnSchool.text == null ){
+//                toast("학교를 선택해 주세요.")
+//            }else if (major == ""){
+//                toast("전공을 선택해 주세요.")
+//            }else if(usergrade == 0){
+//                toast("학년을 선택해 주세요.")
+//            }else if(usermbti == ""){
+//                toast("MBTI를 선택해 주세요.")
+//            }else {
                 var userInfo =  UserInfo(
-                    birthday = userbirthday,
-                    gender = gender,
-                    email = sharedManager.getEmail(),
-                    categoryTag = events,
-                    grade = usergrade,
-                    regionTag = regions,
-                    username = nickname,
-                    deptId = dept_id,
-                    schoolName = major
+                    birthday = "0000-01-01",
+                    gender = "MALE",
+                    email = "gracious7272@gmail.com",
+                    categoryTag = listOf("CLUB"),
+                    grade = 4,
+                    regionTag = listOf("BUSAN"),
+                    username = "아이이",
+                    deptId = "cc9d0c59-58ca-4c1f-9a49-28e6559a5dd8",
+                    mbti = "ENTJ"
                 )
+//                var userInfo =  UserInfo(
+//                    birthday = userbirthday,
+//                    gender = gender,
+//                    email = sharedManager.getEmail(),
+//                    categoryTag = events,
+//                    grade = usergrade,
+//                    regionTag = regions,
+//                    username = nickname,
+//                    deptId = dept_id,
+//                    mbti = usermbti
+//                )
+                //urn:uuid:
 
+                Log.d("이제보내보자","ff")
+                Log.d("ddd",userInfo.toString())
                 // LoginActivity에 JSON 보내서 Presenter에서 처리하게 하기
                 lActivity.getUserIpt(userInfo)
-            }
+//            }
 
         }
 
 
 
         binding.fragmentUseriptBtnSchool.setOnClickListener {
-            parentFragmentManager.beginTransaction().replace(R.id.frameLayout_login,SchoolSearchFragment()).addToBackStack(null).commit()
+            childFragmentManager.beginTransaction().replace(R.id.frameLayout_login,SchoolSearchFragment()).addToBackStack(null).commit()
         }
 
         binding.fragmentUseriptBtnSMajor.setOnClickListener {
@@ -166,7 +200,8 @@ class UserIptFragment : Fragment(), View.OnClickListener{
             {
                 toast("학교를 먼저 선택해주세요.")
             }else{
-                parentFragmentManager.beginTransaction().replace(R.id.frameLayout_login,MajorSearchFragment()).addToBackStack(null).commit()
+                var schoolname=binding.fragmentUseriptBtnSchool.text.toString()
+                parentFragmentManager.beginTransaction().replace(R.id.frameLayout_login,MajorSearchFragment(schoolname)).addToBackStack(null).commit()
             }}
 
 
@@ -272,18 +307,20 @@ class UserIptFragment : Fragment(), View.OnClickListener{
 
     fun isValidNickname_Korea(nickname: String?): Boolean {
         val trimmedNickname = nickname?.trim().toString()
-        val exp = Regex("^[가-힣ㄱ-ㅎ]{8,}\$")
+        val exp = Regex("^[가-힣ㄱ-ㅎ]{1,8}\$")
         return !trimmedNickname.isNullOrEmpty() && exp.matches(trimmedNickname)
     }
 
     fun isValidNickname_Eng(nickname: String?): Boolean {
         val trimmedNickname = nickname?.trim().toString()
-        val exp = Regex("^[a-zA-Z]{10,}\$")
+        val exp = Regex("^[a-zA-Z]{1,10}\$")
         return !trimmedNickname.isNullOrEmpty() && exp.matches(trimmedNickname)
     }
 
     // 닉네임
     fun EditText.setupClearButtonWithAction() {
+
+        var count = 0
 
         addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(editable: Editable?) {
@@ -291,15 +328,22 @@ class UserIptFragment : Fragment(), View.OnClickListener{
                 val warningIcon = if (editable?.isNotEmpty() == true) R.drawable.ic_edittext_warning else 0
                 var userinput = binding.fragmentUseriptEtNickname.text.toString().length
 
-                if (userinput <= 8) {
-                    binding.fragmentUseriptEtNickname.setBackgroundResource(R.drawable.gray_stroke_button2)
-                    binding.fragmentUseriptTv2.visibility = View.INVISIBLE
-                    setCompoundDrawablesWithIntrinsicBounds(0, 0, clearIcon, 0)
-                } else if (userinput > 8) {
-                    binding.fragmentUseriptEtNickname.setBackgroundResource(R.drawable.gray_stroke_button)
-                    binding.fragmentUseriptTv2.visibility = View.VISIBLE
-                    setCompoundDrawablesWithIntrinsicBounds(0, 0, warningIcon, 0)
-                }
+                    if (userinput <= 7) {
+                        binding.fragmentUseriptEtNickname.setBackgroundResource(R.drawable.gray_stroke_button2)
+                        binding.fragmentUseriptTv2.visibility = View.INVISIBLE
+                        setCompoundDrawablesWithIntrinsicBounds(0, 0, clearIcon, 0)
+                        count = 0
+                    } else if (userinput == 8 || count == 0) {
+                        binding.fragmentUseriptEtNickname.setBackgroundResource(R.drawable.gray_stroke_button)
+                        binding.fragmentUseriptTv2.visibility = View.VISIBLE
+                        setCompoundDrawablesWithIntrinsicBounds(0, 0, warningIcon, 0)
+                        count =+ 1
+                    } else if (userinput == 8 || count >= 1) {
+                        binding.fragmentUseriptEtNickname.setBackgroundResource(R.drawable.gray_stroke_button)
+                        binding.fragmentUseriptTv2.visibility = View.VISIBLE
+                        setCompoundDrawablesWithIntrinsicBounds(0, 0, warningIcon, 0)
+                        count =+ 1
+                    }
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) =

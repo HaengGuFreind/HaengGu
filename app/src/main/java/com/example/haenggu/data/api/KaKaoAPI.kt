@@ -22,33 +22,33 @@ class KaKaoAPI(var interator: LoginContract.LoginInterator?) : LoginContract.Kak
     override fun getToken(context: Context) {  // 로그인 전 [토큰 존재 여부 확인하기]
         Log.d("herer","kakao")
 
-        if (AuthApiClient.instance.hasToken()) {
-            UserApiClient.instance.accessTokenInfo { token, error ->
-                if (error != null) {
-                    Log.d("hasToken", error.message.toString())
-                    if (error is KakaoSdkError && error.isInvalidTokenError() == true) {
-                        //로그인 필요
-                        Log.d("hasToken1", "로그인 필요")
-                    } else {
-                        //기타 에러
-                        Log.d("hasToken2", "기타에러")
-                    }
-                } else {
-                    // 토큰 유효성 체크 성공 (필요시 토큰이 갱신된다.)\
-                    //액세스 토큰이 유효한 상태이므로 사용자 로그인 불필요
-                    //해당 액세스 토큰으로 카카오 API 호출 가능
-                    Log.d("hasToken3", "성공")
-                    interator?.resultToken(token.toString(),context)
-
-                }
-
-            }
-            Log.d("hasToken4", "욜라리")
-            interator?.resultToken("NoToken",context)
-        } else {
-            // 로그인 필요
-            interator?.resultToken("NoToken",context)
-        }
+//        if (AuthApiClient.instance.hasToken()) {
+//            UserApiClient.instance.accessTokenInfo { token, error ->
+//                if (error != null) {
+//                    Log.d("hasToken", error.message.toString())
+//                    if (error is KakaoSdkError && error.isInvalidTokenError() == true) {
+//                        //로그인 필요
+//                        Log.d("hasToken1", "로그인 필요")
+//                    } else {
+//                        //기타 에러
+//                        Log.d("hasToken2", "기타에러")
+//                    }
+//                } else {
+//                    // 토큰 유효성 체크 성공 (필요시 토큰이 갱신된다.)\
+//                    //액세스 토큰이 유효한 상태이므로 사용자 로그인 불필요
+//                    //해당 액세스 토큰으로 카카오 API 호출 가능
+//                    Log.d("hasToken3", "성공")
+//                    interator?.resultToken(token.toString(),context)
+//
+//                }
+//
+//            }
+//            Log.d("hasToken4", "욜라리")
+//            interator?.resultToken("NoToken",context)
+//        } else {
+//            // 로그인 필요
+//            interator?.resultToken("NoToken",context)
+//        }
     }
 
     //[카카오 로그인 구현]
@@ -87,7 +87,7 @@ class KaKaoAPI(var interator: LoginContract.LoginInterator?) : LoginContract.Kak
 //
 //                }
                 //}
-                    interator?.resultKLogin("fail",context)
+                interator?.resultKLogin("fail",context)
             } else if (token != null) {
                 //로그인 성공
 
@@ -108,8 +108,11 @@ class KaKaoAPI(var interator: LoginContract.LoginInterator?) : LoginContract.Kak
                         if (user.kakaoAccount?.genderNeedsAgreement == true) {
                             user.kakaoAccount?.gender?.toString().let { scopes.add(it!!) }
                         }
+                        if (user.kakaoAccount?.profileNicknameNeedsAgreement == true){
+                            user.kakaoAccount?.profileNicknameNeedsAgreement?.toString().let { scopes.add(it!!) }
+                        }
 
-                        if (scopes.count() == 2) {
+                        if (scopes.count() == 3) {
                             // 회원가입 및 로그인 성공
                             Log.d("getLogin", token.accessToken)
                             Log.d("getLogin", "Success_NoToken")

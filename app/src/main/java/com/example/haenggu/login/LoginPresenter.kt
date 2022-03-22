@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.Log
 import android.widget.Toast
 import com.example.haenggu.data.api.KaKaoAPI
+import com.example.haenggu.data.local.SharedManager
 import com.example.haenggu.data.remote.datasources.SchoolItem
 import com.example.haenggu.data.remote.datasources.UserInfo
 import com.example.haenggu.data.repository.LoginRepository
@@ -16,25 +17,20 @@ class LoginPresenter (view:LoginContract.LoginView):LoginContract.LoginPresenter
     var net3:Boolean = false
 
     override fun hasToken(context: Context){
-        // 토큰 확인
+        // 후순위로 이관
         Log.d("hastoken","토큰없음")
-        api_model.getToken(context)
+        val sharedManager: SharedManager by lazy { SharedManager(context) }
+        if (sharedManager.getHToken() != null){
+            // 물어보기!!!!!!!!!!!
+            view.setFrag(1)
+        }else{
+            Log.d("hastoken","토큰없음")
+            view.setFrag(1)
+        }
     }
 
     override fun onLogin(context: Context) {
         api_model.getLogin(context)
-    }
-
-    override fun resultToken(hasToken:String,context: Context) {
-        if (hasToken  == "NoToken"){ // 로그인 필요
-            Log.d("hastoken","토큰없음")
-            view.setFrag(1)
-        }else{
-            Log.d("hastoken","토큰있음")
-            repos_model.getHToken(hasToken,context)
-            view.setFrag(1)
-            //view.moveToMain()
-        }
     }
 
     override fun resultKLogin(hasKToken: String, context: Context) {
@@ -54,8 +50,7 @@ class LoginPresenter (view:LoginContract.LoginView):LoginContract.LoginPresenter
                 view.setFrag(2)
             } else {
                 // 메인으로 이동
-                view.setFrag(1)
-                //view.moveToMain()
+                view.moveToMain()
             }
         } else {
             Log.d("onLogin", "fail")
@@ -77,7 +72,15 @@ class LoginPresenter (view:LoginContract.LoginView):LoginContract.LoginPresenter
     override fun updateUserIpt(userInfo: UserInfo, context: Context) {
         //서버에 사용 정보 POST
         repos_model.updateUserInfo(userInfo,context)
-        view.moveToMain()
+    }
+
+    override fun resultSign(net: Boolean) {
+        if(true){
+            view.moveToMain()
+        }else{
+            view.setFrag(2)
+            view.toast("회원 정보 입력에 실패했습니다. 다시 시도해주세요.")
+        }
     }
 
     override fun getSchoolInfo(school_name: String, context: Context) {
