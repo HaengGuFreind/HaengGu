@@ -1,27 +1,39 @@
 package com.example.haenggu.login
 
-import android.graphics.Color
+import android.content.Context
 import android.os.Bundle
-import android.text.Spannable
-import android.text.SpannableStringBuilder
-import android.text.style.ForegroundColorSpan
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.*
+import android.view.inputmethod.EditorInfo
+import android.view.inputmethod.InputMethodManager
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.Toast
+import android.widget.TextView
+import androidx.activity.OnBackPressedCallback
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import com.example.haenggu.R
 import com.example.haenggu.databinding.FragmentLoginSearchschoolBinding
-import androidx.appcompat.widget.SearchView
 
 class SchoolSearchFragment : Fragment() {
 
+    private lateinit var callback: OnBackPressedCallback
     private var _binding: FragmentLoginSearchschoolBinding? = null
     private val binding get() = _binding!!
 
     var schoolName: String = ""
-
+    private val activityViewModel: SharedViewModel by activityViewModels {
+        object : ViewModelProvider.Factory {
+            override fun <T : ViewModel?> create(modelClass: Class<T>): T =
+                SharedViewModel() as T
+        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,30 +43,27 @@ class SchoolSearchFragment : Fragment() {
         return view
     }
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        callback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                val lActivity = activity as LoginActivity
+                activityViewModel.updateSchool(schoolName)
+                lActivity.setFrag(5)
+
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(this, callback)
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val lActivity = activity as LoginActivity
 
         binding.fragmentSearchschoolBtnbackstep.setOnClickListener {
-            Log.d("검색", "2")
-            val lActivity = activity as LoginActivity
-            lActivity.getsinfo(schoolName)
-            Log.d("검색", "3")
-            var fragment_useript = UserIptFragment()
-            var bundle = Bundle()
-            bundle.putString("schoolname", schoolName)
-            fragment_useript.arguments = bundle //fragment의 arguments에 데이터를 담은 bundle을 넘겨줌
-
-            parentFragmentManager
-                .beginTransaction()
-                .replace(R.id.frameLayout_login, fragment_useript)
-                .addToBackStack(null)
-                .commit()
-
-//            activity?.supportFragmentManager!!
-//                .beginTransaction()
-//                .replace(R.id.frameLayout_login, fragment_useript)
-//                .commit()
+            schoolName = binding.fragmentSearchschoolEtsearch.text.toString()
+            activityViewModel.updateSchool(schoolName)
+            lActivity.setFrag(5)
         }
 
         var school = arrayOf("가톨릭대학교","건국대학교","경기대학교","경희대학교","고려대학교","광운대학교","국민대학교","동국대학교", "명지대학교","삼육대학교"
@@ -76,35 +85,52 @@ class SchoolSearchFragment : Fragment() {
         //SearchBar와 ListView 연동
         binding.fragmentSearchschoolListView.adapter = adapter
 
-        binding.fragmentSearchschoolSearchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                binding.fragmentSearchschoolSearchBar.clearFocus()
-                if(school.contains(query)){
-                    adapter.filter.filter(query)
-                    if (query != null) {
-                        schoolName = query
-                    }
-                }else{
-                    Toast.makeText(requireContext(),"일치하는 학교가 없습니다.",Toast.LENGTH_SHORT)
+        binding.fragmentSearchschoolEtsearch.addTextChangedListener (object : TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            // 문자열 변경 직후
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                adapter.filter.filter(s)
+
+            }
+
+            // 문자열 변경 완료 ( 화면에 반영)
+            override fun afterTextChanged(s: Editable?) {
+                if (s.isNullOrEmpty()) {
+                    binding.fragmentSearchschoolListView.visibility = View.INVISIBLE
+                } else {
+                    binding.fragmentSearchschoolListView.visibility = View.VISIBLE
                 }
-                binding.fragmentSearchschoolListView.visibility = View.INVISIBLE
-                // 데이터에 없는 학교일 경우 직접입력 가능?
-                return false
             }
+        })
 
-            override fun onQueryTextChange(newText: String?): Boolean {
-                adapter.filter.filter(newText)
-                binding.fragmentSearchschoolListView.visibility = View.VISIBLE
-                return false
-            }
-
+        binding.fragmentSearchschoolEtsearch.setOnEditorActionListener(object : TextView.OnEditorActionListener{
+            override fun onEditorAction(v: TextView?, actionId: Int, event: KeyEvent?): Boolean {
+                if (actionId == EditorInfo.IME_ACTION_SEARCH){
+                    //fragment 키보드 내리기
+                        val mInputMethodManager =
+                        context!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                    mInputMethodManager.hideSoftInputFromWindow( binding.fragmentSearchschoolEtsearch.getWindowToken(), 0)
+                    return true }
+                return false }
         })
 
         binding.fragmentSearchschoolListView.onItemClickListener = AdapterView.OnItemClickListener{parent, view, position, id ->
             var selection = parent.getItemAtPosition(position).toString()
-            binding.fragmentSearchschoolSearchBar.setQuery(selection,true)
+            binding.fragmentSearchschoolEtsearch.setText(selection)
+            //fragment 키보드 내리기
+            val mInputMethodManager =
+                context!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            mInputMethodManager.hideSoftInputFromWindow( binding.fragmentSearchschoolEtsearch.getWindowToken(), 0)
         }
 
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        callback.remove()
     }
 
     override fun onDestroyView() {
