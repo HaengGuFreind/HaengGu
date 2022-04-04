@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.haenggu.R
+import com.example.haenggu.data.local.SharedManager
 import com.example.haenggu.data.remote.datasources.ResponseBoard
 import com.example.haenggu.data.remote.services.RetrofitInstance
 import com.example.haenggu.databinding.FragmentFindBinding
+import com.example.haenggu.main.MainActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -17,6 +19,7 @@ class FindFragment : Fragment() {
 
     private var _binding : FragmentFindBinding? = null
     private val binding get() = _binding!!
+    val sharedManager: SharedManager by lazy { SharedManager(context as MainActivity) }
     private val service = RetrofitInstance.api
 
     override fun onCreateView(
@@ -30,12 +33,12 @@ class FindFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        
         intiView()
     }
 
     private fun intiView() {
-        service.getBoards().enqueue(object : Callback<ResponseBoard>{
+        service.getBoards(sharedManager.getHToken()).enqueue(object : Callback<ResponseBoard>{
             override fun onResponse(call: Call<ResponseBoard>, response: Response<ResponseBoard>) {
                 if(response.isSuccessful){
                     var data = response.body()
