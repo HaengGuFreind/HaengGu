@@ -1,10 +1,12 @@
 package com.example.haenggu.main
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.example.haenggu.R
+import com.example.haenggu.data.local.SharedManager
 import com.example.haenggu.databinding.ActivityMainBinding
 import com.example.haenggu.main.chat.ChatFragment
 import com.example.haenggu.main.find.FindFragment
@@ -18,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     private val find by lazy { FindFragment() }
     private val chat by lazy { ChatFragment() }
     private val mypage by lazy { MypageFragment() }
-
+    private val sharedManager: SharedManager by lazy { SharedManager(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,12 +36,18 @@ class MainActivity : AppCompatActivity() {
                     }
                     R.id.menu_find -> {
                         changeFragment(find)
+//                        if(sharedManager.getHToken() != null) changeFragment(find)
+//                        else Toast.makeText(this@MainActivity, "로그인 후 사용가능합니다.", Toast.LENGTH_SHORT).show()
                     }
                     R.id.menu_chat -> {
                         changeFragment(chat)
+//                        if(sharedManager.getHToken() != null) changeFragment(chat)
+//                        else Toast.makeText(this@MainActivity, "로그인 후 사용가능합니다.", Toast.LENGTH_SHORT).show()
                     }
                     else -> {
                         changeFragment(mypage)
+//                        if(sharedManager.getHToken() != null) changeFragment(mypage)
+//                        else Toast.makeText(this@MainActivity, "로그인 후 사용가능합니다.", Toast.LENGTH_SHORT).show()
                     }
                 }
                 true
