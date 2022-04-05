@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="288dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="44dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/pretendard_regular"
+                android:textSize="14sp"
+                android:text="대화 알림"
+                android:textColor="#DE000000"></TextView>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"></View>
+
+            <Switch
+                android:id="@+id/fragment_settings_swb"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:layout_marginRight="10dp"></Switch>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/fragment_settings_btlogout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="@font/pretendard_regular"
+            android:gravity="left"
+            android:paddingLeft="10dp"
+            android:text="로그아웃"
+            android:textColor="#DE000000"
+            android:textSize="14sp"></Button>
+
+        <Button
+            android:id="@+id/fragment_settings_btwithdrawal"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="@font/pretendard_regular"
+            android:gravity="left"
+            android:paddingLeft="10dp"
+            android:text="회원탈퇴"
+            android:textColor="#DE000000"
+            android:textSize="14sp"></Button>
+
+        <Button
+            android:id="@+id/fragment_settings_btemal1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="@font/pretendard_regular"
+            android:gravity="left"
+            android:paddingLeft="10dp"
+            android:text="행사 등록 문의"
+            android:textColor="#DE000000"
+            android:textSize="14sp"></Button>
+
+        <Button
+            android:id="@+id/fragment_settings_btemal2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="@font/pretendard_regular"
+            android:gravity="left"
+            android:paddingLeft="10dp"
+            android:text="1:1 문의"
+            android:textColor="#DE000000"
+            android:textSize="14sp"></Button>
+
+        <Button
+            android:id="@+id/fragment_settings_btopensource"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="@font/pretendard_regular"
+            android:gravity="left"
+            android:paddingLeft="10dp"
+            android:text="오픈 소스 라이브러리"
+            android:textColor="#DE000000"
+            android:textSize="14sp"></Button>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

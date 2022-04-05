@@ -3,6 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/gray1_box_6.xml" value="0.4822916666666667" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/gray_box.xml" value="0.4822916666666667" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/gray_box_6.xml" value="0.4822916666666667" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/gray_stroke_button.xml" value="0.40260416666666665" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/gray_stroke_button2.xml" value="0.40260416666666665" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/pink500_box_6.xml" value="0.40260416666666665" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/pink500_stroke_button.xml" value="0.40260416666666665" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/pink_box_10.xml" value="0.40260416666666665" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/pink_button.xml" value="0.40260416666666665" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/pink_solid_button.xml" value="0.40260416666666665" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/drawable/search_background.xml" value="0.40260416666666665" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/fragment_event_list.xml" value="0.2237638748738648" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/fragment_home.xml" value="0.21014492753623187" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/fragment_login_searchschool.xml" value="0.42570281124497994" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/fragment_login_useript.xml" value="0.3333333333333333" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/fragment_mypage.xml" value="0.36666666666666664" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/fragment_mypage_edit.xml" value="0.38229166666666664" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/fragment_mypage_settings.xml" value="0.4750905797101449" />
+        <entry key="..\:/0222_haenggu/HaengGu/app/src/main/res/layout/item_searchschool.xml" value="0.25176589303733604" />
         <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.34375" />
         <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/drawable/ic_haengGu_background.xml" value="0.34322916666666664" />
         <entry key="..\:/AndroidStudioProjects/haenggu/app/src/main/res/drawable/ic_launcher_background.xml" value="0.34375" />
