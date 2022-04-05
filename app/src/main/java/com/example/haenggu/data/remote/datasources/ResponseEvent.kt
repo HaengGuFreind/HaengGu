@@ -5,7 +5,7 @@ data class ResponseEvent (
 )
 
 data class EventResource (
-    val links: LinkData,
+    val links: List<LinkData>,
     val content: List<EventData>,
     val page: PageData
 )

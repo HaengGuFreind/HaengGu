@@ -57,6 +57,6 @@ interface ApiRequest {
     @GET("events/{idx}")
     fun getEvenDetail(@Path("idx") idx:String): Call<ResponseEventDetail>
 
-    @GET("Borads")
-    fun getBoards() : Call<ResponseBoard>
+    @GET("borads")
+    fun getBoards(@Header ("Authorization") jwt: String) : Call<ResponseBoard>
 }

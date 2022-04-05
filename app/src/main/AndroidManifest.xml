@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.haenggu">
-
     <!-- 인터넷 사용 권한 -->
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -16,19 +15,23 @@
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".main.find.FindDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".main.home.EventFilterActivity"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".main.home.EventDetailActivity"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".main.home.CategoryActivity"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".main.chat.ChatActivity"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".main.MainActivity"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".main.MainActivity"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".login.LoginActivity"
             android:exported="true">
