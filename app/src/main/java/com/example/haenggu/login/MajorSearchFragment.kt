@@ -12,13 +12,14 @@ import com.example.haenggu.R
 import com.example.haenggu.data.remote.datasources.SchoolItem
 import com.example.haenggu.databinding.FragmentLoginMajorBinding
 
-class MajorSearchFragment(schoolname:String) : Fragment() {
+class MajorSearchFragment() : Fragment() {
 
     private var _binding: FragmentLoginMajorBinding? = null
     private val binding get() = _binding!!
-    val schoolName = schoolname
     var majorname: String = ""
     var majorlist= ArrayList<String>()
+    var count = 0
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -33,6 +34,7 @@ class MajorSearchFragment(schoolname:String) : Fragment() {
         val lActivity = activity as LoginActivity
         var pair = lActivity.getmlist()
         var mlist = ArrayList<SchoolItem>()
+//        val schoolName = lActivity.get_school()
         if(pair?.first == true) {
             mlist = pair.second
 
@@ -41,31 +43,34 @@ class MajorSearchFragment(schoolname:String) : Fragment() {
                 majorlist.add(i,mlist[i].deptName)
             Log.d("우르롹끼",majorlist.toString())
         }else{
-            Toast.makeText(requireContext(),"학교를 다시 선택해주세요",Toast.LENGTH_SHORT).show()
+            if (count == 0){
+                count = count + 1
+            }else{
+            Toast.makeText(requireContext(),"학교를 먼저 선택해주세요",Toast.LENGTH_SHORT).show()
+            }
         }
 
         binding.fragmentMajorBtnbackstep.setOnClickListener{
-            Log.d("검색","2")
-
-            var fragment_useript = UserIptFragment()
-            var bundle = Bundle()
-            bundle.putString("schoolname", schoolName)
-            if (majorname  != ""){
-                var dept_id = mlist[majorlist.indexOf(majorname)].deptId
-                bundle.putString("dept_id",dept_id)
-            }
-            bundle.putString("majorname",majorname)
-            fragment_useript.arguments = bundle //fragment의 arguments에 데이터를 담은 bundle을 넘겨줌
+            lActivity.setFrag(5)
+//            var fragment_useript = UserIptFragment()
+//            var bundle = Bundle()
+//            bundle.putString("schoolname", schoolName)
+//            if (majorname  != ""){
+//                var dept_id = mlist[majorlist.indexOf(majorname)].deptId
+//                bundle.putString("dept_id",dept_id)
+//            }
+//            bundle.putString("majorname",majorname)
+//            fragment_useript.arguments = bundle //fragment의 arguments에 데이터를 담은 bundle을 넘겨줌
 
 //            activity?.supportFragmentManager!!
 //                .beginTransaction()
 //                .replace(R.id.frameLayout_login, fragment_useript)
 //                .commit()
-
-            parentFragmentManager
-                .beginTransaction()
-                .replace(R.id.frameLayout_login, fragment_useript)
-                .commit()
+//
+//            parentFragmentManager
+//                .beginTransaction()
+//                .replace(R.id.frameLayout_login, fragment_useript)
+//                .commit()
         }
 
         // 서버에서 받아오는걸로 변경

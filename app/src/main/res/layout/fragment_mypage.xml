@@ -1,14 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".main.mypage.MypageFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:id="@+id/fragment_mypage_ll1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/fragment_mypage_ivselfy"
+            android:layout_width="60dp"
+            android:layout_height="60dp"></ImageView>
+
+        <TextView
+            android:id="@+id/fragment_mypage_tvnick"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_gravity="center|left"
+            android:fontFamily="@font/pretendard_bold"
+            android:text="북극여우"
+            android:textColor="@color/standard_black"
+            android:textSize="18sp"></TextView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/fragment_mypage_btsetting"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center|right"
+            android:gravity="right"></Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_mypage_ll2"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_mypage_ll1">
+
+        <TextView
+            android:id="@+id/fragment_mypage_tvtag1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/gray_box_6"
+            android:fontFamily="@font/pretendard_regular"
+            android:text="여성"
+            android:textColor="@color/standard_black"
+            android:textSize="12sp"
+            android:paddingTop="2dp"
+            android:paddingEnd="6dp"
+            android:paddingStart="6dp"
+            android:paddingBottom="2dp"></TextView>
+
+        <TextView
+            android:id="@+id/fragment_mypage_tvtag2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/gray_box_6"
+            android:fontFamily="@font/pretendard_regular"
+            android:text="24살"
+            android:textColor="@color/standard_black"
+            android:textSize="12sp"
+            android:paddingTop="2dp"
+            android:paddingEnd="6dp"
+            android:paddingStart="6dp"
+            android:paddingBottom="2dp"></TextView>
+
+        <TextView
+            android:id="@+id/fragment_mypage_tvtag3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/gray_box_6"
+            android:fontFamily="@font/pretendard_regular"
+            android:text="서울여자대학교"
+            android:textColor="@color/standard_black"
+            android:textSize="12sp"
+            android:paddingTop="2dp"
+            android:paddingEnd="6dp"
+            android:paddingStart="6dp"
+            android:paddingBottom="2dp"></TextView>
+
+        <TextView
+            android:id="@+id/fragment_mypage_tvtag4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/gray_box_6"
+            android:fontFamily="@font/pretendard_regular"
+            android:text="수학과"
+            android:textColor="@color/standard_black"
+            android:textSize="12sp"
+            android:paddingTop="2dp"
+            android:paddingEnd="6dp"
+            android:paddingStart="6dp"
+            android:paddingBottom="2dp"></TextView>
+
+        <TextView
+            android:id="@+id/fragment_mypage_tvtag5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/gray_box_6"
+            android:fontFamily="@font/pretendard_regular"
+            android:text="4학년"
+            android:textColor="@color/standard_black"
+            android:textSize="12sp"
+            android:paddingTop="2dp"
+            android:paddingEnd="6dp"
+            android:paddingStart="6dp"
+            android:paddingBottom="2dp"></TextView>
+
+        <TextView
+            android:id="@+id/fragment_mypage_tvtag6"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/gray_box_6"
+            android:fontFamily="@font/pretendard_regular"
+            android:text="INFJ"
+            android:textColor="@color/standard_black"
+            android:textSize="12sp"
+            android:paddingTop="2dp"
+            android:paddingEnd="6dp"
+            android:paddingStart="6dp"
+            android:paddingBottom="2dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/fragment_mypage_vline1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5px"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/gray04"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_mypage_ll2"></View>
+
+    <TextView
+        android:id="@+id/fragment_mypage_tvintro"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="24dp"
+        android:lineSpacingMultiplier="1.2"
+        android:fontFamily="@font/pretendard"
+        android:textColor="@color/standard_black"
+        android:textSize="14sp"
+        tools:text="ENFJ 여자입니다! 콘서트 다니는 게 취미입니다. 공연 전에 카페 투어 다니는 거 좋아해요!"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_mypage_vline1"/>
+
+    <Button
+        android:id="@+id/fragment_mypage_btre"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/pretendard_medium"
+        android:textSize="16sp"
+        android:text="프로필 수정"
+        android:textAlignment="center"
+        android:textColor="@color/pink500"
+        android:gravity="center_horizontal"
+        android:paddingTop="10.8dp"
+        android:background="@drawable/pink500_stroke_button"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_mypage_tvintro"
+        ></Button>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

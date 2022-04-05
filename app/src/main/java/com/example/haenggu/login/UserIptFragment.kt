@@ -20,10 +20,16 @@ import java.util.*
 import kotlin.collections.ArrayList
 import android.view.*
 import android.view.inputmethod.EditorInfo
+import android.view.inputmethod.InputMethodManager
 import android.widget.*
+import androidx.annotation.NonNull
+import androidx.annotation.Nullable
+import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.example.haenggu.data.local.SharedManager
-import com.example.haenggu.data.remote.datasources.SchoolItem
-import java.lang.NumberFormatException
 import java.util.regex.Pattern
 
 
@@ -41,9 +47,15 @@ class UserIptFragment : Fragment(), View.OnClickListener{
     private val listOfGrade = ArrayList<SpinnerModel>()
     private val listOfMBTI = ArrayList<SpinnerModel>()
 
-    private var dept_id: String = ""
     var events =  ArrayList<String>()
     var regions= ArrayList<String>()
+
+    private val activityViewModel: SharedViewModel by activityViewModels {
+        object : ViewModelProvider.Factory {
+            override fun <T : ViewModel?> create(modelClass: Class<T>): T =
+                SharedViewModel() as T
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -51,12 +63,6 @@ class UserIptFragment : Fragment(), View.OnClickListener{
     ): View? {
         _binding = FragmentLoginUseriptBinding.inflate(inflater, container, false)
         val view = binding.root
-        if (arguments != null){
-            binding.fragmentUseriptBtnSchool.text = arguments?.getString("schoolname")
-            binding.fragmentUseriptBtnSMajor.text = arguments?.getString("majorname")
-            dept_id = arguments?.getString("dept_id").toString()
-            arguments?.getString("majorname")?.let { Log.d("요이이이", it) }
-        }
         return view
     }
 
@@ -93,6 +99,10 @@ class UserIptFragment : Fragment(), View.OnClickListener{
             binding.fragmentUseriptEtNickname.setBackgroundResource(R.drawable.gray1_box_6)
             binding.fragmentUseriptEtNickname.isCursorVisible = false
             binding.fragmentUseriptEtNickname.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0)
+            //fragment 키보드 내리기
+            val mInputMethodManager =
+                context!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            mInputMethodManager.hideSoftInputFromWindow( binding.fragmentUseriptEtNickname.getWindowToken(), 0)
             return true }
             return false } })
 
@@ -120,16 +130,15 @@ class UserIptFragment : Fragment(), View.OnClickListener{
         }
 
         Log.d("성별이 이상한걸242",sharedManager.getGender())
-        if(sharedManager.getGender() == "femail"){
+        if(sharedManager.getGender() == "female"){
             Log.d("성별이 이상한걸",sharedManager.getGender().toString())
             binding.fragmentUseriptBtnFemail.setBackgroundResource(R.drawable.pink_button)
             binding.fragmentUseriptBtnFemail.setTextColor(Color.parseColor("#FFFFFF"))
-            gender = "FEMAIL"
-        }else{
+            gender = "FEMALE"
             Log.d("성별이 이상한걸",sharedManager.getGender().toString())
             binding.fragmentUseriptBtnMail.setBackgroundResource(R.drawable.pink_button)
             binding.fragmentUseriptBtnMail.setTextColor(Color.parseColor("#FFFFFF"))
-            gender = "MAIL"
+            gender = "MALE"
         }
 
         //스피너 동작 처리
@@ -190,9 +199,8 @@ class UserIptFragment : Fragment(), View.OnClickListener{
         }
 
 
-
         binding.fragmentUseriptBtnSchool.setOnClickListener {
-            childFragmentManager.beginTransaction().replace(R.id.frameLayout_login,SchoolSearchFragment()).addToBackStack(null).commit()
+            lActivity.setFrag(3)
         }
 
         binding.fragmentUseriptBtnSMajor.setOnClickListener {
@@ -200,10 +208,22 @@ class UserIptFragment : Fragment(), View.OnClickListener{
             {
                 toast("학교를 먼저 선택해주세요.")
             }else{
-                var schoolname=binding.fragmentUseriptBtnSchool.text.toString()
-                parentFragmentManager.beginTransaction().replace(R.id.frameLayout_login,MajorSearchFragment(schoolname)).addToBackStack(null).commit()
-            }}
+                lActivity.setFrag(4)
+            }
+        }
+        activityViewModel.updateschoolname.observe(viewLifecycleOwner, Observer {
+            if(it != "") {
+                binding.fragmentUseriptBtnSchool.setTextColor(Color.parseColor("#383838"))
+                binding.fragmentUseriptBtnSchool.text = it
+            }
+        })
 
+        activityViewModel.updatemajorname.observe(viewLifecycleOwner, Observer {
+            if(it != "") {
+                binding.fragmentUseriptBtnSchool.setTextColor(Color.parseColor("#383838"))
+                binding.fragmentUseriptBtnSchool.text = it
+            }
+        })
 
 // 카테고리
 //        setOnClickListener()
@@ -305,17 +325,17 @@ class UserIptFragment : Fragment(), View.OnClickListener{
 
 //스피너 끝
 
-    fun isValidNickname_Korea(nickname: String?): Boolean {
-        val trimmedNickname = nickname?.trim().toString()
-        val exp = Regex("^[가-힣ㄱ-ㅎ]{1,8}\$")
-        return !trimmedNickname.isNullOrEmpty() && exp.matches(trimmedNickname)
-    }
-
-    fun isValidNickname_Eng(nickname: String?): Boolean {
-        val trimmedNickname = nickname?.trim().toString()
-        val exp = Regex("^[a-zA-Z]{1,10}\$")
-        return !trimmedNickname.isNullOrEmpty() && exp.matches(trimmedNickname)
-    }
+//    fun isValidNickname_Korea(nickname: String?): Boolean {
+//        val trimmedNickname = nickname?.trim().toString()
+//        val exp = Regex("^[가-힣ㄱ-ㅎ]{1,8}\$")
+//        return !trimmedNickname.isNullOrEmpty() && exp.matches(trimmedNickname)
+//    }
+//
+//    fun isValidNickname_Eng(nickname: String?): Boolean {
+//        val trimmedNickname = nickname?.trim().toString()
+//        val exp = Regex("^[a-zA-Z]{1,10}\$")
+//        return !trimmedNickname.isNullOrEmpty() && exp.matches(trimmedNickname)
+//    }
 
     // 닉네임
     fun EditText.setupClearButtonWithAction() {
@@ -328,21 +348,31 @@ class UserIptFragment : Fragment(), View.OnClickListener{
                 val warningIcon = if (editable?.isNotEmpty() == true) R.drawable.ic_edittext_warning else 0
                 var userinput = binding.fragmentUseriptEtNickname.text.toString().length
 
-                    if (userinput <= 7) {
+                    if (userinput <= 7 ) {
                         binding.fragmentUseriptEtNickname.setBackgroundResource(R.drawable.gray_stroke_button2)
                         binding.fragmentUseriptTv2.visibility = View.INVISIBLE
                         setCompoundDrawablesWithIntrinsicBounds(0, 0, clearIcon, 0)
                         count = 0
-                    } else if (userinput == 8 || count == 0) {
+                        Log.d("키보드","1번")
+                        Log.d("키보드",userinput.toString())
+
+                    } else if (userinput == 8 && count >= 0 && 4 > count) {
+                        binding.fragmentUseriptEtNickname.setBackgroundResource(R.drawable.gray_stroke_button2)
+                        binding.fragmentUseriptTv2.visibility = View.INVISIBLE
+                        setCompoundDrawablesWithIntrinsicBounds(0, 0, clearIcon, 0)
+                        count = count+ 1
+                        Log.d("키보드","2번")
+                        Log.d("키보드",count.toString())
+                        Log.d("키보드",userinput.toString())
+                    } else if (userinput == 8 && count >= 4) {
                         binding.fragmentUseriptEtNickname.setBackgroundResource(R.drawable.gray_stroke_button)
                         binding.fragmentUseriptTv2.visibility = View.VISIBLE
                         setCompoundDrawablesWithIntrinsicBounds(0, 0, warningIcon, 0)
-                        count =+ 1
-                    } else if (userinput == 8 || count >= 1) {
-                        binding.fragmentUseriptEtNickname.setBackgroundResource(R.drawable.gray_stroke_button)
-                        binding.fragmentUseriptTv2.visibility = View.VISIBLE
-                        setCompoundDrawablesWithIntrinsicBounds(0, 0, warningIcon, 0)
-                        count =+ 1
+                        Log.d("키보드","3번")
+                        Log.d("키보드",count.toString())
+                        Log.d("키보드",userinput.toString())
+
+
                     }
             }
 
@@ -358,6 +388,10 @@ class UserIptFragment : Fragment(), View.OnClickListener{
                 if (event.rawX >= (this.right - this.compoundPaddingRight)) {
                     this.setText("")
                     return@OnTouchListener true
+                }else{
+                    binding.fragmentUseriptEtNickname.setBackgroundResource(R.drawable.gray_stroke_button2)
+                    binding.fragmentUseriptTv2.visibility = View.INVISIBLE
+                    setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_edittext_clear, 0)
                 }
             }
             return@OnTouchListener false
