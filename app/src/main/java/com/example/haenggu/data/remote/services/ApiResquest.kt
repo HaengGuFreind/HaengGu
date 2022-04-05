@@ -59,4 +59,7 @@ interface ApiRequest {
 
     @GET("borads")
     fun getBoards(@Header ("Authorization") jwt: String) : Call<ResponseBoard>
+
+    @GET("borads/{idx}")
+    fun getBoardDetail(@Header ("Authorization") jwt: String, @Path("idx") idx:String) : Call<ResponseBoardDetail>
 }
