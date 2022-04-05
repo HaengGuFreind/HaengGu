@@ -393,7 +393,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/notosanskr_regular"
+                android:fontFamily="@font/pretendard"
+                android:textFontWeight="400"
                 android:textSize="14.4dp"
                 android:textColor="#0d0d0d"
                 android:lineSpacingExtra="2.9sp"
@@ -405,7 +406,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/notosanskr_regular"
+                android:fontFamily="@font/pretendard"
+                android:textFontWeight="400"
                 android:textSize="14.4dp"
                 android:textColor="#0d0d0d"
                 android:lineSpacingExtra="2.9sp"
@@ -417,7 +419,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/notosanskr_regular"
+                android:fontFamily="@font/pretendard"
+                android:textFontWeight="400"
                 android:textSize="14.4dp"
                 android:textColor="#0d0d0d"
                 android:lineSpacingExtra="2.9sp"
@@ -429,7 +432,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/notosanskr_regular"
+                android:fontFamily="@font/pretendard"
+                android:textFontWeight="400"
                 android:textSize="14.4dp"
                 android:textColor="#0d0d0d"
                 android:lineSpacingExtra="2.9sp"
@@ -441,7 +445,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/notosanskr_regular"
+                android:fontFamily="@font/pretendard"
+                android:textFontWeight="400"
                 android:textSize="14.4dp"
                 android:textColor="#0d0d0d"
                 android:lineSpacingExtra="2.9sp"
@@ -453,7 +458,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/notosanskr_regular"
+                android:fontFamily="@font/pretendard"
+                android:textFontWeight="400"
                 android:textSize="14.4dp"
                 android:textColor="#0d0d0d"
                 android:lineSpacingExtra="2.9sp"
@@ -465,7 +471,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/notosanskr_regular"
+                android:fontFamily="@font/pretendard"
+                android:textFontWeight="400"
                 android:textSize="14.4dp"
                 android:textColor="#0d0d0d"
                 android:lineSpacingExtra="2.9sp"
@@ -477,7 +484,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/notosanskr_regular"
+                android:fontFamily="@font/pretendard"
+                android:textFontWeight="400"
                 android:textSize="14.4dp"
                 android:textColor="#0d0d0d"
                 android:lineSpacingExtra="2.9sp"
