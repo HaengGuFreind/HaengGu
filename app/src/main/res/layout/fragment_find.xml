@@ -7,6 +7,7 @@
     tools:context=".main.find.FindFragment">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_find_rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"

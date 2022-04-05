@@ -1,12 +1,13 @@
 package com.example.haenggu.main.find
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.haenggu.R
 import com.example.haenggu.data.local.SharedManager
+import com.example.haenggu.data.remote.datasources.BoardData
 import com.example.haenggu.data.remote.datasources.ResponseBoard
 import com.example.haenggu.data.remote.services.RetrofitInstance
 import com.example.haenggu.databinding.FragmentFindBinding
@@ -21,6 +22,7 @@ class FindFragment : Fragment() {
     private val binding get() = _binding!!
     val sharedManager: SharedManager by lazy { SharedManager(context as MainActivity) }
     private val service = RetrofitInstance.api
+    var data = mutableListOf<BoardData>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,11 +40,21 @@ class FindFragment : Fragment() {
     }
 
     private fun intiView() {
+
+        val findListAdapger = FindListAdapter { BoardData, View ->
+            val intent = Intent(activity, FindDetailActivity::class.java)
+            intent.putExtra("idx", BoardData.id)
+            startActivity(intent)
+        }
+        binding.fragmentFindRv.adapter = findListAdapger
+
         service.getBoards(sharedManager.getHToken()).enqueue(object : Callback<ResponseBoard>{
             override fun onResponse(call: Call<ResponseBoard>, response: Response<ResponseBoard>) {
                 if(response.isSuccessful){
-                    var data = response.body()
-
+                    data.clear()
+                    data.addAll(response.body()!!.resources.content)
+                    findListAdapger.datas = data
+                    findListAdapger.notifyDataSetChanged()
                 }
             }
 
