@@ -31,7 +31,7 @@
             android:layout_gravity="left|center"
             android:textColor="#383838"
             android:includeFontPadding="false"
-            android:fontFamily="@font/notosanskr_bold"
+            android:fontFamily="@font/pretendard_bold"
             android:textSize="20sp"></TextView>
     </androidx.appcompat.widget.Toolbar>
 
