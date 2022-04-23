@@ -1,5 +1,7 @@
 package com.example.haenggu.main.find
 
+import android.content.ContentValues
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -29,7 +31,9 @@ class FindListAdapter(val itemClick: (BoardData, View) -> Unit) : RecyclerView.A
 
 class FindViewHolder(private val binding: ItemFindHaengguBinding, val itemClick: (BoardData, View) -> Unit) : RecyclerView.ViewHolder(binding.root) {
     fun bind(mydata: BoardData){
+        itemView.setOnClickListener{itemClick(mydata, itemView)}
         binding.fragmentFindTvEventname.text = mydata.title
+        Log.d("어댑터", mydata.title)
         binding.fragmentFindTvName.text = mydata.title
         binding.fragmentFindTvPeriod.text = mydata.schedule
         binding.fragmentFindTvName.text = mydata.user.username

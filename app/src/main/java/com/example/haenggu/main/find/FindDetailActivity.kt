@@ -25,7 +25,6 @@ class FindDetailActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbarLayout)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setDisplayShowHomeEnabled(true)
-        supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_refresh)
         supportActionBar!!.setDisplayShowTitleEnabled(false)
 
         idx = intent.getStringExtra("idx").toString()
@@ -34,7 +33,7 @@ class FindDetailActivity : AppCompatActivity() {
 
     fun initView(){
         val sharedManager: SharedManager by lazy { SharedManager(this) }
-        service.getBoardDetail(sharedManager.getHToken(), idx).enqueue(object :
+        service.getBoardDetail("Bearer " + sharedManager.getHToken(), idx).enqueue(object :
             Callback<ResponseBoardDetail>{
             override fun onResponse(
                 call: Call<ResponseBoardDetail>,

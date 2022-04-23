@@ -101,7 +101,7 @@ class LoginActivity : AppCompatActivity(), LoginContract.LoginView {
 
     // 카카오 로그인 버튼 클릭시
     fun clickKaKaoLogin(){
-        presenter?.onLogin(applicationContext)
+        presenter?.onLogin(this)
     }
 
     fun getUserIpt(userInfo: UserInfo){

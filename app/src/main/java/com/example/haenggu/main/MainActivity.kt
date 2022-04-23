@@ -35,19 +35,16 @@ class MainActivity : AppCompatActivity() {
                         changeFragment(home)
                     }
                     R.id.menu_find -> {
-                        changeFragment(find)
-//                        if(sharedManager.getHToken() != null) changeFragment(find)
-//                        else Toast.makeText(this@MainActivity, "로그인 후 사용가능합니다.", Toast.LENGTH_SHORT).show()
+                        if(sharedManager.getHToken() != "") changeFragment(find)
+                        else Toast.makeText(this@MainActivity, "로그인 후 사용가능합니다.", Toast.LENGTH_SHORT).show()
                     }
                     R.id.menu_chat -> {
-                        changeFragment(chat)
-//                        if(sharedManager.getHToken() != null) changeFragment(chat)
-//                        else Toast.makeText(this@MainActivity, "로그인 후 사용가능합니다.", Toast.LENGTH_SHORT).show()
+                        if(sharedManager.getHToken() != "") changeFragment(chat)
+                        else Toast.makeText(this@MainActivity, "로그인 후 사용가능합니다.", Toast.LENGTH_SHORT).show()
                     }
                     else -> {
-                        changeFragment(mypage)
-//                        if(sharedManager.getHToken() != null) changeFragment(mypage)
-//                        else Toast.makeText(this@MainActivity, "로그인 후 사용가능합니다.", Toast.LENGTH_SHORT).show()
+                        if(sharedManager.getHToken() != "") changeFragment(mypage)
+                        else Toast.makeText(this@MainActivity, "로그인 후 사용가능합니다.", Toast.LENGTH_SHORT).show()
                     }
                 }
                 true
