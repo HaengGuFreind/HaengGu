@@ -6,7 +6,7 @@ data class ResponseBoard (
 )
 
 data class BoardResource (
-    val links: LinkData,
+    val links: List<LinkData>,
     val content: List<BoardData>,
     val page: PageData
 )

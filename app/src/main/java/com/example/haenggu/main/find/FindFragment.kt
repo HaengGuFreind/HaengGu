@@ -2,6 +2,7 @@ package com.example.haenggu.main.find
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -48,9 +49,11 @@ class FindFragment : Fragment() {
         }
         binding.fragmentFindRv.adapter = findListAdapger
 
-        service.getBoards(sharedManager.getHToken()).enqueue(object : Callback<ResponseBoard>{
+        service.getBoards("Bearer " + sharedManager.getHToken()).enqueue(object : Callback<ResponseBoard>{
             override fun onResponse(call: Call<ResponseBoard>, response: Response<ResponseBoard>) {
+                Log.d("응답", response.toString())
                 if(response.isSuccessful){
+                    Log.d("어댑터", response.body()!!.resources.content.toString())
                     data.clear()
                     data.addAll(response.body()!!.resources.content)
                     findListAdapger.datas = data
@@ -59,6 +62,7 @@ class FindFragment : Fragment() {
             }
 
             override fun onFailure(call: Call<ResponseBoard>, t: Throwable) {
+                Log.d("실패", t.toString())
             }
 
         })
