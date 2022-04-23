@@ -10,7 +10,7 @@ So we planned and developed this app to help college students in that situation.
 
 <!-- ## UI
 1. Splash <br />
-<img src = "" width="30%" height="70%"><br />
+<img src = "" width="30%" height="70%"><br />-->
 <!-- 2. Main <br/>
 2-2. Search
 4. Find Events
