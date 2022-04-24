@@ -1,5 +1,6 @@
 package com.example.haenggu.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +9,7 @@ import androidx.fragment.app.FragmentTransaction
 import com.example.haenggu.R
 import com.example.haenggu.data.local.SharedManager
 import com.example.haenggu.databinding.ActivityMainBinding
+import com.example.haenggu.login.LoginActivity
 import com.example.haenggu.main.chat.ChatFragment
 import com.example.haenggu.main.find.FindFragment
 import com.example.haenggu.main.home.HomeFragment
@@ -36,15 +38,33 @@ class MainActivity : AppCompatActivity() {
                     }
                     R.id.menu_find -> {
                         if(sharedManager.getHToken() != "") changeFragment(find)
-                        else Toast.makeText(this@MainActivity, "로그인 후 사용가능합니다.", Toast.LENGTH_SHORT).show()
+                        else {
+                            val customDialog = CustomDialog(this@MainActivity)
+                            customDialog.setOnOKClickedListener {
+                                startActivity(Intent(this@MainActivity, LoginActivity::class.java))
+                            }
+                            customDialog.start()
+                        }
                     }
                     R.id.menu_chat -> {
                         if(sharedManager.getHToken() != "") changeFragment(chat)
-                        else Toast.makeText(this@MainActivity, "로그인 후 사용가능합니다.", Toast.LENGTH_SHORT).show()
+                        else {
+                            val customDialog = CustomDialog(this@MainActivity)
+                            customDialog.setOnOKClickedListener {
+                                startActivity(Intent(this@MainActivity, LoginActivity::class.java))
+                            }
+                            customDialog.start()
+                        }
                     }
                     else -> {
                         if(sharedManager.getHToken() != "") changeFragment(mypage)
-                        else Toast.makeText(this@MainActivity, "로그인 후 사용가능합니다.", Toast.LENGTH_SHORT).show()
+                        else {
+                            val customDialog = CustomDialog(this@MainActivity)
+                            customDialog.setOnOKClickedListener {
+                                startActivity(Intent(this@MainActivity, LoginActivity::class.java))
+                            }
+                            customDialog.start()
+                        }
                     }
                 }
                 true
