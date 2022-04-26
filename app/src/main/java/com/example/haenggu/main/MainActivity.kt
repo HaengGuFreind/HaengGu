@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
                             customDialog.setOnOKClickedListener {
                                 startActivity(Intent(this@MainActivity, LoginActivity::class.java))
                             }
-                            customDialog.start()
+                            customDialog.start("서비스 이용을 위해 로그인 해주세요\uD83D\uDE06", "좋아요", "더 둘러볼게요")
                         }
                     }
                     R.id.menu_chat -> {
@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
                             customDialog.setOnOKClickedListener {
                                 startActivity(Intent(this@MainActivity, LoginActivity::class.java))
                             }
-                            customDialog.start()
+                            customDialog.start("서비스 이용을 위해 로그인 해주세요\uD83D\uDE06", "좋아요", "더 둘러볼게요")
                         }
                     }
                     else -> {
@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
                             customDialog.setOnOKClickedListener {
                                 startActivity(Intent(this@MainActivity, LoginActivity::class.java))
                             }
-                            customDialog.start()
+                            customDialog.start("서비스 이용을 위해 로그인 해주세요\uD83D\uDE06", "좋아요", "더 둘러볼게요")
                         }
                     }
                 }
