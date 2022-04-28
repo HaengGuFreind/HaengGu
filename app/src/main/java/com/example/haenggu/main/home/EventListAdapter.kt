@@ -37,7 +37,7 @@ class EventViewHolder(private val binding: ItemCategoryBinding, val itemClick: (
             binding.tvTag2.text = myData.tag[1]
             binding.tvTag3.text = myData.tag[2]
         }
-        if(myData.image_url.isNotEmpty()) Glide.with(itemView).load(myData.image_url[0]).into(binding.ivEvent)
+        if(myData.event_image_uri.isNotEmpty()) Glide.with(itemView).load(myData.event_image_uri[0]).into(binding.ivEvent)
         binding.tvLike.text = myData.favorite.toString()
     }
 }

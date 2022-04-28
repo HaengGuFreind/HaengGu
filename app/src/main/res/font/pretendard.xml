@@ -4,6 +4,9 @@
         android:font="@font/pretendard_bold"
         android:fontWeight="700"/>
     <font
+        android:font="@font/pretendard_semi_bold"
+        android:fontWeight="600"/>
+    <font
         android:font="@font/pretendard_medium"
         android:fontWeight="500"/>
     <font

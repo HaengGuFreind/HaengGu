@@ -64,31 +64,31 @@
 
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/imageView"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
             android:layout_width="0dp"
-            android:layout_height="102dp"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
-            android:background="@drawable/gray1_box_10"
             android:layout_marginTop="24dp"
+            android:paddingVertical="16dp"
+            android:paddingHorizontal="20dp"
+            android:background="@drawable/gray1_box_10"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/LinearLayout" />
+            app:layout_constraintTop_toBottomOf="@+id/LinearLayout">
 
         <TextView
             android:id="@+id/tv_haenggu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="23dp"
             android:fontFamily="@font/pretendard"
             android:includeFontPadding="false"
-            android:text="행구 구하기"
+            android:text="지역별 행사"
             android:textColor="@color/haenggu_main"
             android:textFontWeight="700"
             android:textSize="19dp"
-            android:layout_marginTop="17dp"
-            app:layout_constraintStart_toStartOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="@+id/imageView" />
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
 
         <TextView
             android:id="@+id/tv_haenggu2"
@@ -97,10 +97,10 @@
             android:fontFamily="@font/pretendard"
             android:textFontWeight="700"
             android:includeFontPadding="false"
-            android:text='"행사 같이가지 않을래?"'
+            android:text='"그 행사 너도 관심있어?"'
             android:textColor="@color/gray07"
             android:textSize="12dp"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintStart_toStartOf="@+id/tv_haenggu"
             app:layout_constraintTop_toBottomOf="@+id/tv_haenggu" />
 
@@ -113,17 +113,18 @@
             android:text="함께 할 행사 친구를 구해보세요!"
             android:textColor="@color/gray07"
             android:textSize="12dp"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="4dp"
             app:layout_constraintStart_toStartOf="@+id/tv_haenggu"
             app:layout_constraintTop_toBottomOf="@+id/tv_haenggu2"/>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="6dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView"
-            app:layout_constraintEnd_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="@+id/imageView" />
+            android:src="@drawable/ic_main_finding_haengu_button"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
             android:id="@+id/tv_category"
@@ -131,15 +132,30 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:fontFamily="@font/pretendard"
-            android:textFontWeight="700"
             android:includeFontPadding="false"
             android:lineSpacingExtra="0sp"
             android:text="카테고리"
             android:textColor="@color/standard_black"
+            android:textFontWeight="700"
             android:textSize="20dp"
             android:textStyle="normal"
-            app:layout_constraintStart_toStartOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+        <TextView
+            android:id="@+id/fragment_home_btn_category_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard"
+            android:lineSpacingExtra="3dp"
+            android:paddingVertical="4dp"
+            android:text="전체 보기"
+            android:textColor="@color/pink500"
+            android:textFontWeight="600"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_category"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+            app:layout_constraintTop_toTopOf="@+id/tv_category" />
 
         <GridLayout
             android:id="@+id/gridLayout"
@@ -155,7 +171,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
-                android:drawableTop="@drawable/ic_category_01"
+                android:drawableTop="@drawable/ic_club_event"
                 android:fontFamily="@font/pretendard"
                 android:textFontWeight="400"
                 android:drawablePadding="6dp"
@@ -174,7 +190,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
-                android:drawableTop="@drawable/ic_category_02"
+                android:drawableTop="@drawable/ic_expo"
                 android:fontFamily="@font/pretendard"
                 android:textFontWeight="400"
                 android:drawablePadding="6dp"
@@ -193,7 +209,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
-                android:drawableTop="@drawable/ic_category_03"
+                android:drawableTop="@drawable/ic_conference"
                 android:fontFamily="@font/pretendard"
                 android:textFontWeight="400"
                 android:drawablePadding="6dp"
@@ -212,7 +228,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
-                android:drawableTop="@drawable/ic_category_04"
+                android:drawableTop="@drawable/ic_theater_musical"
                 android:fontFamily="@font/pretendard"
                 android:textFontWeight="400"
                 android:drawablePadding="6dp"
@@ -231,7 +247,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
-                android:drawableTop="@drawable/ic_category_05"
+                android:drawableTop="@drawable/ic_exhibition"
                 android:fontFamily="@font/pretendard"
                 android:textFontWeight="400"
                 android:drawablePadding="6dp"
@@ -250,7 +266,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
-                android:drawableTop="@drawable/ic_category_06"
+                android:drawableTop="@drawable/ic_festival"
                 android:fontFamily="@font/pretendard"
                 android:textFontWeight="400"
                 android:drawablePadding="6dp"
@@ -269,7 +285,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
-                android:drawableTop="@drawable/ic_category_07"
+                android:drawableTop="@drawable/ic_concert"
                 android:fontFamily="@font/pretendard"
                 android:textFontWeight="400"
                 android:drawablePadding="6dp"
@@ -288,7 +304,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@color/transparent"
-                android:drawableTop="@drawable/ic_category_08"
+                android:drawableTop="@drawable/ic_etc"
                 android:fontFamily="@font/pretendard"
                 android:textFontWeight="400"
                 android:drawablePadding="6dp"
@@ -316,7 +332,7 @@
             android:id="@+id/tv_cutomized"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/pretendard"
             android:textFontWeight="700"
             android:includeFontPadding="false"
@@ -325,7 +341,7 @@
             android:textColor="@color/standard_black"
             android:textSize="20dp"
             android:textStyle="normal"
-            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout"
             app:layout_constraintTop_toBottomOf="@+id/divide_line01" />
 
         <TextView
@@ -333,13 +349,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/pretendard"
-            android:textFontWeight="700"
-            android:lineSpacingExtra="0.5sp"
-            android:text="더보기"
-            android:textColor="@color/haenggu_main"
-            android:textSize="12dp"
+            android:textFontWeight="600"
+            android:text="더 보기"
+            android:textColor="@color/pink500"
+            android:textSize="13dp"
             android:layout_marginRight="15dp"
             android:includeFontPadding="false"
+            android:paddingVertical="4dp"
             app:layout_constraintBottom_toBottomOf="@+id/tv_cutomized"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tv_cutomized" />
@@ -388,111 +404,112 @@
             android:rowCount="2"
             android:columnCount="4"
             android:layout_marginTop="20dp"
+            android:background="@drawable/grid_border"
             app:layout_constraintTop_toBottomOf="@id/tv_region">
 
             <Button
+                android:id="@+id/fragment_home_btn_all"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/pretendard"
                 android:textFontWeight="400"
-                android:textSize="14.4dp"
-                android:textColor="#0d0d0d"
-                android:lineSpacingExtra="2.9sp"
+                android:textSize="14dp"
+                android:textColor="@color/standard_black"
+                android:gravity="center"
+                android:layout_columnWeight="1"
+                android:background="@drawable/grid_border"
+                android:text="전체"/>
+
+            <Button
+                android:id="@+id/fragment_home_btn_seoul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard"
+                android:textFontWeight="400"
+                android:textSize="14dp"
+                android:textColor="@color/standard_black"
                 android:gravity="center"
                 android:layout_columnWeight="1"
                 android:background="@drawable/grid_border"
                 android:text="서울"/>
 
             <Button
+                android:id="@+id/fragment_home_btn_gyeonggi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/pretendard"
                 android:textFontWeight="400"
-                android:textSize="14.4dp"
-                android:textColor="#0d0d0d"
-                android:lineSpacingExtra="2.9sp"
+                android:textSize="14dp"
+                android:textColor="@color/standard_black"
                 android:gravity="center"
                 android:layout_columnWeight="1"
                 android:background="@drawable/grid_border"
                 android:text="경기"/>
 
             <Button
+                android:id="@+id/fragment_home_btn_gangwon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/pretendard"
                 android:textFontWeight="400"
-                android:textSize="14.4dp"
-                android:textColor="#0d0d0d"
-                android:lineSpacingExtra="2.9sp"
+                android:textSize="14dp"
+                android:textColor="@color/standard_black"
                 android:gravity="center"
                 android:layout_columnWeight="1"
                 android:background="@drawable/grid_border"
                 android:text="강원"/>
 
             <Button
+                android:id="@+id/fragment_home_btn_chungcheong"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/pretendard"
                 android:textFontWeight="400"
-                android:textSize="14.4dp"
-                android:textColor="#0d0d0d"
-                android:lineSpacingExtra="2.9sp"
+                android:textSize="14dp"
+                android:textColor="@color/standard_black"
                 android:gravity="center"
                 android:layout_columnWeight="1"
                 android:background="@drawable/grid_border"
-                android:text="춘천"/>
+                android:text="충청"/>
 
             <Button
+                android:id="@+id/fragment_home_btn_jeolla"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/pretendard"
                 android:textFontWeight="400"
-                android:textSize="14.4dp"
-                android:textColor="#0d0d0d"
-                android:lineSpacingExtra="2.9sp"
+                android:textSize="14dp"
+                android:textColor="@color/standard_black"
                 android:gravity="center"
                 android:layout_columnWeight="1"
                 android:background="@drawable/grid_border"
                 android:text="전라"/>
 
             <Button
+                android:id="@+id/fragment_home_btn_gyeongsang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/pretendard"
                 android:textFontWeight="400"
-                android:textSize="14.4dp"
-                android:textColor="#0d0d0d"
-                android:lineSpacingExtra="2.9sp"
+                android:textSize="14dp"
+                android:textColor="@color/standard_black"
                 android:gravity="center"
                 android:layout_columnWeight="1"
                 android:background="@drawable/grid_border"
                 android:text="경상"/>
 
             <Button
+                android:id="@+id/fragment_home_btn_jeju"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/pretendard"
                 android:textFontWeight="400"
-                android:textSize="14.4dp"
-                android:textColor="#0d0d0d"
-                android:lineSpacingExtra="2.9sp"
+                android:textSize="14dp"
+                android:textColor="@color/standard_black"
                 android:gravity="center"
                 android:layout_columnWeight="1"
                 android:background="@drawable/grid_border"
                 android:text="제주"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/pretendard"
-                android:textFontWeight="400"
-                android:textSize="14.4dp"
-                android:textColor="#0d0d0d"
-                android:lineSpacingExtra="2.9sp"
-                android:gravity="center"
-                android:layout_columnWeight="1"
-                android:background="@drawable/grid_border"
-                android:text="전체 보기"/>
         </GridLayout>
 
         <View

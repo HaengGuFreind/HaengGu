@@ -29,7 +29,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.fragmentHomeBtnExhibition.setOnClickListener {
+        binding.fragmentHomeBtnCategoryAll.setOnClickListener {
             startActivity(Intent(context as MainActivity, CategoryActivity::class.java))
         }
 

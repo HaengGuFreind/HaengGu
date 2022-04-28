@@ -17,11 +17,8 @@ data class EventData (
     val description: String,
     val started_date: String,
     val ended_date: String,
-    val reservation_ended_date: String,
-    val event_location: String,
     val category : String,
-    val region: String,
     val tag: List<String>,
-    val image_url: List<String>,
+    val event_image_uri: String,
     val favorite: Int,
 )

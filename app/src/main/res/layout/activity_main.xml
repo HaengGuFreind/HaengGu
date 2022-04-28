@@ -23,8 +23,8 @@
                 android:fontFamily="@font/pretendard"
                 android:textFontWeight="700"
                 android:includeFontPadding="false"
-                android:text="행구 찾기"
-                android:textColor="#383838"
+                android:text="행사 모아보기"
+                android:textColor="@color/standard_black"
                 android:textSize="20dp" />
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>

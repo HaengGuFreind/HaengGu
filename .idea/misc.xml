@@ -64,6 +64,7 @@
         <entry key="..\:/HaengGu/app/src/main/res/drawable/gray_button.xml" value="0.21" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/gray_stroke_button.xml" value="0.21" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/grid_border.xml" value="0.21" />
+        <entry key="..\:/HaengGu/app/src/main/res/drawable/grid_border_right.xml" value="0.1855" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/hcolor_button.xml" value="0.21" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_category_01.xml" value="0.229" />
         <entry key="..\:/HaengGu/app/src/main/res/drawable/ic_chat_check.xml" value="0.133" />
@@ -108,14 +109,14 @@
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_event_frilter.xml" value="0.1" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_event_list.xml" value="0.23227206946454415" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_find.xml" value="0.264" />
-        <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_home.xml" value="0.2847953216374269" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_login_login.xml" value="0.264" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_login_major.xml" value="0.1" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_login_searchschool.xml" value="0.18229166666666666" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_login_splash.xml" value="0.18229166666666666" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_login_useript.xml" value="0.18229166666666666" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/fragment_mypage.xml" value="0.2441123188405797" />
-        <entry key="..\:/HaengGu/app/src/main/res/layout/item_category.xml" value="0.136" />
+        <entry key="..\:/HaengGu/app/src/main/res/layout/item_category.xml" value="0.4" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/item_chatting_list.xml" value="0.536" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/item_customized_event.xml" value="0.536" />
         <entry key="..\:/HaengGu/app/src/main/res/layout/item_event_board.xml" value="0.4" />
